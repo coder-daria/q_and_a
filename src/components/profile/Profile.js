@@ -4,21 +4,18 @@ import { HorizontalDivider } from '../common/divider/Divider';
 import ArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
 import ArrowRight from 'material-ui-icons/KeyboardArrowRight';
 import Close from 'material-ui-icons/Clear';
+import Avatar from '../common/avatar/Avatar';
 
 class Profile extends React.Component {
   renderHeader = () => {
-    let person = {
-      name: "Dr. Halima",
-      img: "http://slodive.com/wp-content/uploads/2012/11/funny-pug-pictures/funnypugpictures200.jpg",
-    }
     return (
       <div className="profileHeader">
         <div className="closeButton">
           <Close />
         </div>
         <div className="profilePicAndName">
-          <img src={person.img} />
-          <h2>{person.name}</h2>
+          <Avatar src="http://www.wsp-pb.com/Globaln/WSP-Canada/Who%20We%20Are/Sustainability/2016/Claire.jpg" />
+          <h2>Dr. Halima</h2>
         </div>
         <div className="profileActivity">
           <p><span className="subTitle">Member for</span> 5 months</p>
@@ -43,13 +40,13 @@ class Profile extends React.Component {
               <p className="peers_text">46 peers</p>
             </div>
             <div className="square discussions">
-            <p className="discussions_text">29 discussions</p>
+              <p className="discussions_text">29 discussions</p>
             </div>
             <div className="square findings">
-            <p className="findings_text">19 findings</p>
+              <p className="findings_text">19 findings</p>
             </div>
             <div className="square questions">
-            <p className="questions_text">10 questions</p>
+              <p className="questions_text">10 questions</p>
             </div>
           </div>
         </div>
@@ -58,19 +55,19 @@ class Profile extends React.Component {
           <div className="people">
             <div className="person">
               <div className="profilePic">
-                <img src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
+                <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
               </div>
               <h3>S.E.N Waweru</h3>
             </div>
             <div className="person">
               <div className="profilePic">
-                <img src="http://www.trbimg.com/img-56dcb867/turbine/bal-baltimore-people-on-the-move-march-20160306/200/200x200" />
+                <Avatar src="http://www.trbimg.com/img-56dcb867/turbine/bal-baltimore-people-on-the-move-march-20160306/200/200x200" />
               </div>
               <h3>Patricia</h3>
             </div>
             <div className="person">
               <div className="profilePic">
-                <img src="http://www.trbimg.com/img-57015a41/turbine/bal-baltimore-people-on-the-move-april-20160403/200/200x200" />
+                <Avatar src="http://www.trbimg.com/img-57015a41/turbine/bal-baltimore-people-on-the-move-april-20160403/200/200x200" />
               </div>
               <h3>Joseph Aluoch</h3>
             </div>
@@ -84,7 +81,7 @@ class Profile extends React.Component {
       <div className="profileFooter">
         <h3 className="subTitle">The hottest discussion these days</h3>
         <div className="discussion">
-          <img src="https://www.digitalsurgeons.com/images/uploads/authors/rsz_1kiss_from_a_rose-1.jpg" />
+          <Avatar src="https://www.digitalsurgeons.com/images/uploads/authors/rsz_1kiss_from_a_rose-1.jpg" />
           <h5>Andrew<span className="subTitle"> Found the Guardian Article</span></h5>
           <h4>Vegan diet to stop diabetes progress</h4>
         </div>

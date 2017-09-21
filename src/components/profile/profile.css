@@ -29,8 +29,9 @@ body {
   font-size: 20px;
   font-weight: bold;
 }
-.profilePicAndName img {
-  border-radius: 50%;
+.profilePicAndName .MuiAvatar-root-9 {
+  height: 80px !important;
+  width: 80px !important;
 }
 .profileActivity {
   display: flex;
@@ -116,14 +117,14 @@ body {
   justify-content: center;
   align-items: center;
 }
+.profilePic .MuiAvatar-root-9, .discussion .MuiAvatar-root-9 {
+  height: 60px !important;
+  width: 60px !important;
+}
 .person {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.person img {
-  height: 60px;
-  border-radius: 50%;
 }
 .person h3 {
   padding-top: 10%;
