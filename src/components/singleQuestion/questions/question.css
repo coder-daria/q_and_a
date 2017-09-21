@@ -6,13 +6,10 @@
   box-shadow: 1px 1px 5px #BAB7B7;
   width: 100%;
 }
-
-
 .questionHeader {
   font-size: 110%;
   align-items: center;
 }
-
 .questionBody {
   background-color: white;
 }
