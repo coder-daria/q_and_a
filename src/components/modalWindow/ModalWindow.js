@@ -13,7 +13,8 @@ class ModalWindow extends React.Component {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
-        width: "40%"
+        width: "50%",
+        height: "90%"
       },
       overlay: {
         position: 'fixed',
