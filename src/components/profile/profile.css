@@ -231,15 +231,20 @@ body {
   .discussion h5  {
     color: rgb(23, 120, 193);
     font-weight: bold;
+    padding-top: 7%;
+    padding-bottom: 1%;
   }
   .discussion h4  {
     font-size: 18px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    /* border: 2px solid red; */
   }
   .discussionDetails {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
-    padding-top: 4%;
+    padding-top: 10%;
     padding-bottom: 4%;
   }
   .discussionDetails div:nth-child(2), .discussionDetails div:nth-child(4){
