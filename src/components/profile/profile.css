@@ -132,9 +132,6 @@ body {
   width: 55%;
   text-align: center;
 }
-/* QUERIES */
-
-/* FOOTER */
 .profileFooter {
   display: flex;
   flex-direction: column;
@@ -144,8 +141,8 @@ body {
   background-image: linear-gradient(45deg, transparent 46%, #E5D4D4 49%, rgb(240, 240, 240) 51%, transparent 55%);
 }
 .discussion {
-  width: 100%;
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
 }
@@ -158,26 +155,24 @@ body {
 .discussion h5  {
   color: rgb(23, 120, 193);
   font-weight: bold;
-  text-transform: none;
-  font-size: 15px;
 }
 .discussion h4  {
-  font-size: 40px;
   color: rgb(23, 120, 193);
-  font-weight: bold;
   font-style: italic;
-  font-size: 20px;
+  font-weight: bold;
 }
+/* QUERIES */
+
+/* FOOTER */
 .discussionDetails {
   display: flex;
-  justify-content: space-around;
-  width: 80%;
-  padding-top: 4%;
-  padding-bottom: 3%;
 }
 
 /* QUERIES */
 @media only screen and (max-width: 767px) {
+  body {
+    min-width: 617px;
+  }
   .profileContainer {
     font-size: 14px;
   }
@@ -232,7 +227,26 @@ body {
     justify-content: space-around;
     padding-top: 4%;
   }
-
+  .discussion h5  {
+    color: rgb(23, 120, 193);
+    font-weight: bold;
+  }
+  .discussion h4  {
+    font-size: 18px;
+  }
+  .discussionDetails {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+  .discussionDetails div:nth-child(2), .discussionDetails div:nth-child(4){
+    padding-left: 10%;
+  }
+  .discussionDetails div:nth-child(1), .discussionDetails div:nth-child(2){
+    padding-bottom: 2%;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
@@ -275,6 +289,16 @@ body {
     justify-content: space-between;
     padding-top: 4%;
   }
+  .discussion h4  {
+    font-size: 20px;
+  }
+  .discussionDetails {
+    justify-content: space-around;
+    width: 80%;
+    padding-top: 4%;
+    padding-bottom: 3%;
+  }
+ 
 }
 
 @media only screen and (min-width: 1200px){
@@ -305,11 +329,19 @@ body {
     padding-left: 9%;
   }
   .peopleJoinedPlatform {
-    border: 2px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 3%;
     width: 100%;
+  }
+  .discussion h4  {
+    font-size: 20px;
+  }
+  .discussionDetails {
+    justify-content: space-around;
+    width: 80%;
+    padding-top: 4%;
+    padding-bottom: 3%;
   }
 }
