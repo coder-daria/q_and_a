@@ -1,24 +1,10 @@
-.answerContainer {
-  box-shadow: 1px 1px 5px #BAB7B7;
+.answer {
+  box-shadow: 5px -3px 5px #BAB7B7;
   background-color: white;
   margin-bottom: 2%;
   flex: 1 0;
   width: 100%;
 }
-.answerContainer .centered_avatar {
+.answer .centered_avatar {
   border-right: solid 1px #BAB7B7;
-}
-
-.answerVotesContainer{
-  flex:1;
-}
-.answerVotesContainer .votes{
-  display: flex;
-  padding-top: 15%;
-  align-items: center;
-  justify-content: space-around;
-}
-.answerVotesContainer .arrows {
-  display: flex;
-  flex-direction: column;
 }

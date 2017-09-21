@@ -42,12 +42,12 @@ table {
 	border-spacing: 0;
 }
 /*End of the reset*/
-body {
+/* body {
   overflow: hidden;
   margin: 0;
   box-sizing: border-box;
   background-color: rgb(255, 225, 173);
-}
+} */
 html, body, #root, #root>div {
   height: 100%
 }
@@ -56,10 +56,9 @@ html, body, #root, #root>div {
 	background-color: white;
 	box-shadow: 0px 0px 5px grey;
 	height:20%;
-	max-height:20%;
-	min-height:20%;
 	width: 100%;
 	display: flex;
+  flex-direction: column;
 	justify-content: center;
 	align-items:center;
 }
@@ -71,22 +70,22 @@ html, body, #root, #root>div {
 }
 /* BODY */
 .app_body {
-  height: 100%;   
-  min-height: 100%;   
+  height: 100%;    
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(255, 225, 173);
   box-sizing: border-box;
 }
 .app_content{
-  display: flex;
-  flex-direction: column;
-  background-color: #FCF8F7;
+  /* display: flex; */
+  /* flex-direction: column; */
+  background-color: rgb(251, 251, 251);
   overflow-y: auto;
-	align-items: center;
-  max-height: 80%;
+	/* align-items: center; */
+  /* max-height: 80%; */
   height: 80%;
   width: 95%;
-  flex: 1;
+  /* flex: 1; */
 }

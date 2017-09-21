@@ -34,7 +34,7 @@ class Question extends React.Component {
           non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
         </div>
-        <div className="single_question_row_right_item votesContainer">
+        <div className="single_question_row_right_item answerVotesContainer">
           <div className="votes">
             <p>19 upvotes</p>
             <div className="arrows">
@@ -48,7 +48,7 @@ class Question extends React.Component {
   }
   render() {
     return (
-      <div className="all_questions_question">
+      <div className="question">
         {this.renderHeader()}
         {this.renderBody()}
       </div>

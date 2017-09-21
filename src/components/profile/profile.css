@@ -1,11 +1,10 @@
+/* GLOBAL CSS */
 body {
   box-sizing: border-box;
 }
-
 .profileContainer {
   border: 2px solid #D2C8C8;
-  background-color: white;
-  width: 70%;
+  background-color: #FFFFFF;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -26,20 +25,22 @@ body {
   align-items: center;
 }
 .profilePicAndName h2 {
-  color: #4C81DE;
+  color: rgb(23, 120, 193);
   font-size: 20px;
   font-weight: bold;
-  padding-top: 10%;
-  padding-bottom: 10%;
 }
-.profilePicAndName img {
-  height: 100px;
-  border-radius: 50%;
+.profilePicAndName .MuiAvatar-root-9 {
+  height: 80px !important;
+  width: 80px !important;
 }
 .profileActivity {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+}
+
+.subTitle {
+  text-transform: uppercase;
+  color: rgb(154, 155, 170);
 }
 /* BODY */
 .profileBody {
@@ -54,23 +55,19 @@ body {
   justify-content: space-between;
 }
 .howItStarted h2{
-  font-size: 30px;
   font-style: italic;
   font-weight: bold;
 }
-/* Last month activity */
 .lastMonthsActivity {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-top: 5%;
 }
 .activityData {
-  padding-top: 5%;
-  padding-bottom: 8%;
   display: flex;
 }
+/* Last month activity */
 .peers {
   transform: rotate(45deg);
 }
@@ -98,7 +95,7 @@ body {
   transform: rotate(5deg);
 }
 .square {
-  background-color: #CBE3F6;
+  background-color: rgb(229,245,253);
   margin-right: 25px;
   width: 100px;
   height: 100px;
@@ -107,51 +104,46 @@ body {
 .peopleJoinedPlatform {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-bottom: 3%;
 }
 .peopleJoinedPlatform .people {
-  max-width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding-top: 4%;
 }
 .profilePic {
   width: 100px;
   height: 100px;
   background-size: 6px 6px;
-  background-image:linear-gradient(45deg, transparent 46%, #FEFEFE 49%, #BEB7B7 51%, transparent 55%);
+  background-image:linear-gradient(45deg, transparent 46%, #E5D4D4 49%, rgb(240, 240, 240) 51%, transparent 55%);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.profilePic .MuiAvatar-root-9, .discussion .MuiAvatar-root-9 {
+  height: 60px !important;
+  width: 60px !important;
 }
 .person {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.person img {
-  height: 60px;
-  border-radius: 50%;
-}
 .person h3 {
   padding-top: 10%;
-  color: #4C81DE;
+  color: rgb(23, 120, 193);
   font-weight: bold;
   width: 55%;
   text-align: center;
 }
-/* FOOTER */
 .profileFooter {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-size: 6px 6px;
-  background-image: linear-gradient(45deg, transparent 46%, #FEFEFE 49%, #BEB7B7 51%, transparent 55%);
+  /* background: linear-gradient(bottom, grey, grey 80%, transparent 80%) ; */
+  background-image: linear-gradient(45deg, transparent 46%, #E5D4D4 49%, rgb(240, 240, 240) 51%, transparent 55%);
 }
 .discussion {
-  width: 100%;
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
 }
@@ -162,26 +154,200 @@ body {
   padding-bottom: 2%;
 }
 .discussion h5  {
-  color: #4C81DE;
+  color: rgb(23, 120, 193);
   font-weight: bold;
-  text-transform: none;
-  font-size: 15px;
 }
 .discussion h4  {
-  font-size: 40px;
-  color: #4C81DE;
-  font-weight: bold;
+  color: rgb(23, 120, 193);
   font-style: italic;
-  font-size: 20px;
+  font-weight: bold;
 }
+/* QUERIES */
+
+/* FOOTER */
 .discussionDetails {
   display: flex;
-  justify-content: space-around;
-  width: 80%;
-  padding-top: 4%;
-  padding-bottom: 3%;
 }
-.subTitle {
-  text-transform: uppercase;
-  color: grey;
+
+/* QUERIES */
+@media only screen and (max-width: 767px) {
+  body {
+    min-width: 617px;
+  }
+  .profileContainer {
+    font-size: 14px;
+  }
+  .profilePicAndName h2 {
+    font-size: 15px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .profilePicAndName img {
+    height: 80px;
+  }
+  .profileActivity {
+    display: flex;
+    flex-direction: column;
+  }
+  .profileActivity p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .howItStarted h2{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .lastMonthsActivity {
+    padding-top: 5%;
+  }
+  .lastMonthsActivity .subTitle {
+    text-align: center;
+  }
+  .activityData {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    padding-left: 9%;
+  }
+  .peopleJoinedPlatform {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 100%;
+  }
+  .peopleJoinedPlatform .subTitle {
+    text-align: center;
+  }
+  .peopleJoinedPlatform .people {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 4%;
+  }
+  .discussion h5  {
+    color: rgb(23, 120, 193);
+    font-weight: bold;
+    padding-top: 5%;
+    padding-bottom: 1%;
+  }
+  .discussion h4  {
+    font-size: 18px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    /* border: 2px solid red; */
+  }
+  .discussionDetails {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    padding-top: 10%;
+    padding-bottom: 4%;
+  }
+  .discussionDetails div:nth-child(2), .discussionDetails div:nth-child(4){
+    padding-left: 10%;
+  }
+  .discussionDetails div:nth-child(1), .discussionDetails div:nth-child(2){
+    padding-bottom: 2%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px){
+  .profilePicAndName h2 {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .profilePicAndName img {
+    height: 100px;
+  }
+  .profileActivity {
+    justify-content: space-around;
+  }
+  .howItStarted h2{
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .lastMonthsActivity {
+    padding-top: 5%;
+  }
+  .activityData {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8%;
+    padding-bottom: 8%;
+  }
+  .peopleJoinedPlatform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 3%;
+  }
+  
+  .peopleJoinedPlatform .people {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    padding-top: 4%;
+  }
+  .discussion h4  {
+    font-size: 20px;
+  }
+  .discussionDetails {
+    justify-content: space-around;
+    width: 80%;
+    padding-top: 4%;
+    padding-bottom: 3%;
+  }
+ 
+}
+
+@media only screen and (min-width: 1200px){
+  .profilePicAndName h2 {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .profilePicAndName img {
+    height: 100px;
+  }
+  .profileActivity {
+    justify-content: space-around;
+  }
+  .howItStarted h2{
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .lastMonthsActivity {
+    padding-top: 5%;
+  }
+  .activityData {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    padding-left: 9%;
+  }
+  .peopleJoinedPlatform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3%;
+    width: 100%;
+  }
+  .discussion h4  {
+    font-size: 20px;
+  }
+  .discussionDetails {
+    justify-content: space-around;
+    width: 80%;
+    padding-top: 4%;
+    padding-bottom: 3%;
+  }
 }
