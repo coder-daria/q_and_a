@@ -1,9 +1,10 @@
-body{
+body {
   box-sizing: border-box;
 }
 
 .profileContainer {
   border: 2px solid #D2C8C8;
+  background-color: white;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
