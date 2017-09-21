@@ -1,6 +1,9 @@
 import React from 'react';
 import './profile.css';
 import { HorizontalDivider } from '../common/divider/Divider';
+import ArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
+import ArrowRight from 'material-ui-icons/KeyboardArrowRight';
+import Close from 'material-ui-icons/Clear';
 
 class Profile extends React.Component {
   renderHeader = () => {
@@ -10,6 +13,9 @@ class Profile extends React.Component {
     }
     return (
       <div className="profileHeader">
+        <div className="closeButton">
+          <Close />
+        </div>
         <div className="profilePicAndName">
           <img src={person.img} />
           <h2>{person.name}</h2>
@@ -26,15 +32,25 @@ class Profile extends React.Component {
     return (
       <div className="profileBody">
         <div className="howItStarted">
+          <ArrowLeft />
           <h2>How it all started</h2>
+          <ArrowRight />
         </div>
         <div className="lastMonthsActivity">
           <div className="subTitle">That's where we have been these 5 months</div>
           <div className="activityData">
-            <div className="square peers">46 peers</div>
-            <div className="square discussions">29 discussions</div>
-            <div className="square findings">19 findings</div>
-            <div className="square questions">10 questions</div>
+            <div className="square peers">
+              <p className="peers_text">46 peers</p>
+            </div>
+            <div className="square discussions">
+            <p className="discussions_text">29 discussions</p>
+            </div>
+            <div className="square findings">
+            <p className="findings_text">19 findings</p>
+            </div>
+            <div className="square questions">
+            <p className="questions_text">10 questions</p>
+            </div>
           </div>
         </div>
         <div className="peopleJoinedPlatform">
