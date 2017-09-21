@@ -25,19 +25,22 @@ class SingleQuestion extends React.Component {
       </div>
     );
   }
+  renderContent = () => {
+    return (
+      <div className="single_question">
+        <Question />
+        <Answers />
+      </div>
+    )
+  }
   render() {
     return (
       <div className="app_body">
         {this.renderHeader()}
         <div className="app_content">
-          <div className="single_question_question" >
-            <Question />
-          </div>
-          <div className="single_question_answers" >
-            <Answers />
-          </div>
+          {this.renderContent()}
         </div>
-        <Modal/>
+        <Modal />
       </div>
     );
   }

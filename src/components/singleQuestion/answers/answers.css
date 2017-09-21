@@ -1,8 +1,9 @@
 .allAnswers {
-  padding-top: 5%;
   display: flex;
+  flex-basis: content;
   flex-direction: column;
   align-items: center;
+  width: 70%;
 }
 .howManyAnswers{
   font-size: 18px;

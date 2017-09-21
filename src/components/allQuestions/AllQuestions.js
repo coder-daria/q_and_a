@@ -7,7 +7,7 @@ import './allQuestions.css';
 class AllQuestions extends React.Component {
   renderHeader = () => {
     return (
-      <div className="app_top_section_search">
+      <div className="app_top_section">
         <div className="question_and_sort">
           <ArrowLeft />
           <div className="add_question">
@@ -33,14 +33,19 @@ class AllQuestions extends React.Component {
       </div>
     );
   }
+  renderContent = () => {
+    return (
+      <div className="single_question">
+        <QuestionDetails />
+      </div>
+    )
+  }
   render() {
     return (
       <div className="app_body">
         {this.renderHeader()}
         <div className="app_content">
-          <div className="single_question_question" >
-            <QuestionDetails />
-          </div>
+          {this.renderContent()}
         </div>
       </div>
     );
