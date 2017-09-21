@@ -1,0 +1,37 @@
+.addQuestion {
+  display: flex;
+  justify-content: space-around;
+  width: 10%;
+  font-size: 25px;
+}
+.lastInteraction {
+  font-size: 18px;
+}
+.single_question_question{
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+}
+.single_question_answers{
+  display: flex;
+  flex: 1 0;
+  width: 70%;
+  flex-direction: column;
+}
+.single_question_row {
+  display: flex;
+}
+.single_question_row .single_question_row_left_item{
+  flex: 0 0 10%;
+}
+.single_question_row .single_question_row_right_item{
+  flex: 0 0 20%;
+}
+.single_question_row .single_question_row_middle_item{
+  flex: 0 0 70%;
+}
+.centered_avatar {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}

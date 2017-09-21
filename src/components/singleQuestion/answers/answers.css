@@ -1,0 +1,12 @@
+.allAnswers {
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.howManyAnswers{
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  padding-bottom: 2%;
+}
