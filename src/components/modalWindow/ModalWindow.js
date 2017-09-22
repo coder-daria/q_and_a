@@ -27,7 +27,8 @@ class ModalWindow extends React.Component {
     };
     return (
       <Modal
-        isOpen={false}
+        contentLabel="Profile"
+        isOpen={true}
         style={customStyles}
       >
         <Profile />
