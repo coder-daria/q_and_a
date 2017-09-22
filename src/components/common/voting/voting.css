@@ -4,7 +4,7 @@
 .votes {
   display: flex;
 }
-.answerVotesContainer .arrows {
+.arrows {
   display: flex;
   flex-direction: column;
 }
@@ -15,12 +15,12 @@
     align-items: center;
     justify-content: space-between;
   }
-  .answerVotesContainer .arrows {
+  .arrows {
     display: flex;
     flex-direction: column;
     margin-left: -60%;
   }
-  .answerVotesContainer .arrow_answers {
+ .arrow_answers {
     display: flex;
     flex-direction: column;
     padding-left: 2%;
@@ -41,10 +41,9 @@
   .answerVotesContainer{
     flex:1;
   }
-  .answerVotesContainer .arrows {
+  .arrows {
     display: flex;
     flex-direction: column;
-    margin-left: -50%;
   }
   .votes {
     display: flex;
@@ -52,6 +51,15 @@
     justify-content: space-around;
     padding-top: 10%;
     padding-bottom: 10%;
+  }
+  .votes_answers {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .arrow_answers {
+    display: flex;
+    flex-direction: column;
     }
   }
   
@@ -63,7 +71,6 @@
     display: flex;
     flex-direction: column;
   }
-    
   .votes {
     display: flex;
     align-items: center;

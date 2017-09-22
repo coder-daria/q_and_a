@@ -19,10 +19,8 @@ class Answer extends React.Component {
         <VerticalDivider />
         <div className={middleItemClass}>
           <div className="answer_header">
-            <p>Eva is asking</p>
+            <p>Robert commented it yesterday</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
           </div>

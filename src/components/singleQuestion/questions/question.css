@@ -1,10 +1,12 @@
-.question { 
-  display: flex;
-  flex-direction: column;
-  background-color: #CDF2FD;
-  box-shadow: 1px 1px 5px #BAB7B7;
-  width: 70%;
-}
+/* Container */
+  .question { 
+    display: flex;
+    flex-direction: column;
+    background-color: #CDF2FD;
+    box-shadow: 1px 1px 5px #BAB7B7;
+    width: 70%;
+  }
+
 /* Header */
 .questionHeader {
   align-items: center;
@@ -28,8 +30,13 @@
 .single_question_unfollow_body {
   display: none;
 }
+
 /* QUERIES */
 @media only screen and (max-width: 767px) {
+  
+  .question {
+    width: 100%;
+  }
   .questionHeader {
     display: flex;
     flex-direction: column;
@@ -60,11 +67,20 @@
   .single_question_unfollow_body {
     display: flex;
   }
+  .app_content{
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
   .single_question_row_left_item p {
     display: none;
+  }
+  .question {
+    width: 100%;
+  }
+  .app_content{
+    width: 100%;
   }
 }
 

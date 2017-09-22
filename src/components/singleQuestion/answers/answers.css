@@ -33,6 +33,9 @@
     flex-grow: 1;
     padding-left: 5%;
   }
+  .allAnswers {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
@@ -41,6 +44,22 @@
     padding-top: 5%;
     padding-bottom: 2%;
   }
+  .main_answer {
+    display: flex;
+  }
+  .allAnswers {
+    width: 100%;
+  }
+  .main_answer .single_question_row_left_item {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+  .main_answer .single_question_row_left_item p {
+    display: none;
+  }
+
 }
 
 @media only screen and (min-width: 1200px){
