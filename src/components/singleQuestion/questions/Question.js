@@ -10,12 +10,13 @@ class Question extends React.Component {
       <div className="single_question_row questionHeader">
         <div className="centered_avatar single_question_row_left_item">
           <Avatar src="http://slodive.com/wp-content/uploads/2012/11/funny-pug-pictures/funnypugpictures200.jpg" props="profile_pic" />
+          <p>Eva is asking</p>
         </div>
         <div className="single_question_row_middle_item single_question_main_quesion">
-          <h4>Eva is asking</h4>
+          <p>Eva is asking</p>
           <h3>Will insulin make my patient gain weight?</h3>
         </div>
-        <div className="single_question_row_right_item single_question_unfollow">
+        <div className="single_question_row_right_item single_question_unfollow_header">
           <h4>unfollow</h4>
         </div>
       </div>
@@ -24,7 +25,7 @@ class Question extends React.Component {
   renderBody = () => {
     return (
       <div className="single_question_row questionBody">
-        <div className="single_question_row_left_item question_empty_space"/>
+        <div className="single_question_row_left_item question_empty_space" />
         <div className="single_question_row_middle_item question_content">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -36,6 +37,7 @@ class Question extends React.Component {
         </div>
         <div className="single_question_row_right_item answerVotesContainer">
           <div className="votes">
+            <p className="single_question_unfollow_body">unfollow</p>
             <p>19 upvotes</p>
             <div className="arrows">
               <ArrowUp />

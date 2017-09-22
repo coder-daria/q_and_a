@@ -36,10 +36,50 @@
   justify-content: center;
   align-self: center;
 }
-.votes {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding-top: 10%;
-  padding-bottom: 10%;
+
+/* QUERIES */
+@media only screen and (max-width: 767px) {
+  .app_content{
+    margin: 0;
+  }
+  .app_top_section {
+    height: 90px;
+    justify-content: space-around;
+  }
+  .app_top_section .add_question{
+    justify-content: space-around;
+    font-size: 45px;
+    width: 90%;
+  }
+  .app_top_section .returnArrow {
+    margin-right: -25%;
+  }
+  .app_top_section .lastInteraction {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px){
+  .app_body {
+    height: 100%;    
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 225, 173);
+    box-sizing: border-box;
+  }
+ 
+}
+
+@media only screen and (min-width: 1200px){
+  .app_body {
+    height: 100%;    
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 225, 173);
+    box-sizing: border-box;
+  }
 }

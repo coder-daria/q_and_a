@@ -6,9 +6,47 @@
   width: 70%;
 }
 .howManyAnswers{
-  font-size: 18px;
   font-weight: bold;
   font-style: italic;
-  padding-top: 5%;
-  padding-bottom: 2%;
+}
+/* QUERIES */
+@media only screen and (max-width: 767px) {
+  .howManyAnswers{
+    font-size: 14px;
+    padding-top: 5%;
+    padding-bottom: 2%;
+  }
+  .answer_header p:nth-child(1){
+    display: none;
+  }
+  .main_answer {
+    display: flex;
+    flex-direction: column;
+  }
+  .main_answer .single_question_row_left_item {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+  .main_answer .single_question_row_left_item p {
+    flex-grow: 1;
+    padding-left: 5%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px){
+  .howManyAnswers{
+    font-size: 18px;
+    padding-top: 5%;
+    padding-bottom: 2%;
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .howManyAnswers{
+    font-size: 18px;
+    padding-top: 5%;
+    padding-bottom: 2%;
+  }
 }

@@ -10,7 +10,7 @@ class SingleQuestion extends React.Component {
   renderHeader = () => {
     return (
       <div className="app_top_section">
-        <ArrowLeft />
+        <ArrowLeft className="returnArrow"/>
         <div className="add_question">
           <div>
             <p>Question</p>
