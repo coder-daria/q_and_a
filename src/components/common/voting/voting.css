@@ -1,81 +1,21 @@
-.answerVotesContainer{
-    flex:1;
-  }
-.votes {
-  display: flex;
-}
 .arrows {
   display: flex;
   flex-direction: column;
 }
-  /* QUERIES */
+.votes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.votesCounter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-basis: 100%;
+}
+ 
 @media only screen and (max-width: 767px) {
   .votes {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-  }
-  .arrows {
-    display: flex;
-    flex-direction: column;
-    margin-left: -60%;
-  }
- .arrow_answers {
-    display: flex;
-    flex-direction: column;
-    padding-left: 2%;
-  }
-  .votes {
-    display: flex;
-    align-items: center;
-    }
-  .votes_answers {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 2%;
-    }
-}
-  
-@media only screen and (min-width: 768px) and (max-width: 1200px){
-  .answerVotesContainer{
-    flex:1;
-  }
-  .arrows {
-    display: flex;
-    flex-direction: column;
-  }
-  .votes {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 10%;
-    padding-bottom: 10%;
-  }
-  .votes_answers {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .arrow_answers {
-    display: flex;
-    flex-direction: column;
-    }
-  }
-  
-@media only screen and (min-width: 1200px){
-  .answerVotesContainer{
-    flex:1;
-  }
-  .answerVotesContainer .arrows {
-    display: flex;
-    flex-direction: column;
-  }
-  .votes {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 10%;
-    padding-bottom: 10%;
   }
 }

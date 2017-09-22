@@ -42,12 +42,6 @@ table {
 	border-spacing: 0;
 }
 /*End of the reset*/
-/* body {
-  overflow: hidden;
-  margin: 0;
-  box-sizing: border-box;
-  background-color: rgb(255, 225, 173);
-} */
 html, body, #root, #root>div {
   height: 100%
 }
@@ -72,6 +66,7 @@ html, body, #root, #root>div {
 }
 /* BODY */
 .app_body {
+	height: 100%;   
   margin: 0;
   display: flex;
   flex-direction: column;

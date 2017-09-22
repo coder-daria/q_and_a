@@ -35,7 +35,7 @@ class AllQuestions extends React.Component {
   }
   renderContent = () => {
     return (
-      <div className="single_question">
+      <div className="all_questions">
         <QuestionDetails />
       </div>
     )

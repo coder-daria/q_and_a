@@ -25,12 +25,14 @@ class Answer extends React.Component {
               </p>
           </div>
         </div>
-        <div className="answerVotesContainer single_question_row_right_item">
-          <div className="votes_answers">
-            <p>19 upvotes</p>
-            <div className="arrow_answers">
-              <ArrowUp />
-              <ArrowDown />
+        <div className="single_question_row_right_item">
+          <div className="votes">
+            <div className="votesCounter">
+              <p>19 upvotes</p>
+              <div className="arrows">
+                <ArrowUp />
+                <ArrowDown />
+              </div>
             </div>
           </div>
         </div>

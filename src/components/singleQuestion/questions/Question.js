@@ -35,13 +35,15 @@ class Question extends React.Component {
           non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
         </div>
-        <div className="single_question_row_right_item answerVotesContainer">
+        <div className="single_question_row_right_item">
           <div className="votes">
             <p className="single_question_unfollow_body">unfollow</p>
-            <p>19 upvotes</p>
-            <div className="arrows">
-              <ArrowUp />
-              <ArrowDown />
+            <div className="votesCounter">
+              <p>19 upvotes</p>
+              <div className="arrows">
+                <ArrowUp />
+                <ArrowDown />
+              </div>
             </div>
           </div>
         </div>

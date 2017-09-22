@@ -21,3 +21,9 @@ input[type=text] {
     padding: 12px 20px 12px 40px;
     transition: width 0.4s ease-in-out;
 }
+.all_questions{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
