@@ -7,7 +7,7 @@ import './allQuestions.css';
 class AllQuestions extends React.Component {
   renderHeader = () => {
     return (
-      <div className="app_top_section">
+      <div className="app_top_section search_header">
         <div className="question_and_sort">
           <ArrowLeft />
           <div className="add_question">
