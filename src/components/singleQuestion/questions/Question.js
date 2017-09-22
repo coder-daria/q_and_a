@@ -11,11 +11,11 @@ class Question extends React.Component {
         <div className="centered_avatar single_question_row_left_item">
           <Avatar src="http://slodive.com/wp-content/uploads/2012/11/funny-pug-pictures/funnypugpictures200.jpg" props="profile_pic" />
         </div>
-        <div className="single_question_row_middle_item">
+        <div className="single_question_row_middle_item single_question_main_quesion">
           <h4>Eva is asking</h4>
           <h3>Will insulin make my patient gain weight?</h3>
         </div>
-        <div className="single_question_row_right_item">
+        <div className="single_question_row_right_item single_question_unfollow">
           <h4>unfollow</h4>
         </div>
       </div>

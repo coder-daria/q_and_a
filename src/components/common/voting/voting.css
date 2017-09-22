@@ -1,13 +1,8 @@
 .answerVotesContainer{
     flex:1;
   }
-  .answerVotesContainer .votes{
-    display: flex;
-    padding-top: 15%;
-    align-items: center;
-    justify-content: space-around;
-  }
   .answerVotesContainer .arrows {
     display: flex;
     flex-direction: column;
+    margin-left: -50%;
   }

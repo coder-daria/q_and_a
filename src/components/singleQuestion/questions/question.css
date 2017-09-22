@@ -5,16 +5,23 @@
   box-shadow: 1px 1px 5px #BAB7B7;
   width: 70%;
 }
+/* Header */
 .questionHeader {
   font-size: 110%;
   align-items: center;
 }
+.single_question_main_quesion {
+
+}
+.single_question_unfollow {
+ text-align: center; 
+}
+/* Body */
 .questionBody {
   background-color: white;
 }
 .question_empty_space {
   background-color: #CDF2FD;
-  /* background-color: red; */
   background-clip: padding-box;
 }
 .questionBody .question_content{

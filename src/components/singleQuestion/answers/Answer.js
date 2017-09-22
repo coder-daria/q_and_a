@@ -15,6 +15,7 @@ class Answer extends React.Component {
           <div className="centered_avatar single_question_row_left_item">
             <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" props="profile_pic" />
           </div>
+          <VerticalDivider />
           <div className={middleItemClass}>
             <div className="todo_class_for_single_question_row_middle_item_content">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
