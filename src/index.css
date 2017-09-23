@@ -45,6 +45,9 @@ table {
 html, body, #root, #root>div {
   height: 100%
 }
+body {
+  box-sizing: border-box;
+}
 /* HEADER */
 .app_top_section {
 	display: flex;

@@ -10,10 +10,10 @@ class Profile extends React.Component {
   renderHeader = () => {
     return (
       <div className="profileHeader">
-        <div className="closeButton">
+        <div className="profileCloseButton">
           <Close />
         </div>
-        <div className="profilePicAndName">
+        <div className="profileAvatar">
           <Avatar src="http://www.wsp-pb.com/Globaln/WSP-Canada/Who%20We%20Are/Sustainability/2016/Claire.jpg" />
           <h2>Dr. Halima</h2>
         </div>
@@ -28,12 +28,12 @@ class Profile extends React.Component {
   renderBody = () => {
     return (
       <div className="profileBody">
-        <div className="howItStarted">
+        <div className="navigationTable">
           <ArrowLeft />
           <h2>How it all started</h2>
           <ArrowRight />
         </div>
-        <div className="lastMonthsActivity">
+        <div className="profileStatistics">
           <div className="subTitle">That's where we have been these 5 months</div>
           <div className="activityData">
             <div className="square peers">
@@ -50,7 +50,7 @@ class Profile extends React.Component {
             </div>
           </div>
         </div>
-        <div className="peopleJoinedPlatform">
+        <div className="newPeople">
           <div className="subTitle">Who joined the platform that same period</div>
           <div className="people">
             <div className="person">
@@ -79,13 +79,13 @@ class Profile extends React.Component {
   renderFooter = () => {
     return (
       <div className="profileFooter">
-        <h3 className="subTitle">The hottest discussion these days</h3>
-        <div className="discussion">
+        <h3 className="subTitle hottest_discussion_title">The hottest discussion these days</h3>
+        <div className="hottest_discussion">
           <Avatar src="https://www.digitalsurgeons.com/images/uploads/authors/rsz_1kiss_from_a_rose-1.jpg" />
           <h5>Andrew<span className="subTitle"> Found the Guardian Article</span></h5>
           <h4>Vegan diet to stop diabetes progress</h4>
         </div>
-        <div className="discussionDetails">
+        <div className="hottest_discussion_details">
           <div>6 peers involved</div>
           <div>3 related discussion</div>
           <div>3 conversations</div>

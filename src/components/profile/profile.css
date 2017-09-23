@@ -1,74 +1,84 @@
 /* GLOBAL CSS */
-body {
-  box-sizing: border-box;
-}
 .profileContainer {
-  border: 2px solid #D2C8C8;
-  background-color: #FFFFFF;
-  margin-left: auto;
-  margin-right: auto;
+  /* border: 2px solid #D2C8C8; */
+  background-color: red;
   display: flex;
+  min-height: 100%;
   flex-direction: column;
 }
 /* HEADER */
-.profileHeader {
+ .profileHeader {
+  background-color: blue;
   display: flex;
+  flex-basis: 25%;
   flex-direction: column;
   align-items: center;
 }
-.profileHeader .closeButton{
+.profileCloseButton{
+  background-color: lightskyblue;
   align-self: flex-end;
+  flex-basis: 5%;
 }
-.profilePicAndName {
+.profileAvatar {
   display: flex;
+  flex-basis: 45%;
+  
+  background-color: lightblue;
   flex-direction: column;
   align-items: center;
 }
-.profilePicAndName h2 {
+/*.profileAvatar h2 {
   color: rgb(23, 120, 193);
   font-size: 20px;
   font-weight: bold;
 }
-.profilePicAndName .MuiAvatar-root-9 {
+.profileAvatar .MuiAvatar-root-9 {
   height: 80px !important;
   width: 80px !important;
-}
+}*/
 .profileActivity {
   display: flex;
   width: 100%;
+  
+  flex-basis: 50%;
+  background-color: lightskyblue;
 }
 
-.subTitle {
+/*.subTitle {
   text-transform: uppercase;
   color: rgb(154, 155, 170);
-}
+} */
 /* BODY */
 .profileBody {
+  background-color: yellow;
+  flex: 1 0 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 /* How it started */
-.howItStarted { 
+.navigationTable { 
   display: flex;
-  width: 100%;
+  flex-basis: 10%;
+  background-color: lightyellow;
   justify-content: space-between;
 }
-.howItStarted h2{
+/*.navigationTable h2{
   font-style: italic;
   font-weight: bold;
-}
-.lastMonthsActivity {
+}*/
+.profileStatistics {
   display: flex;
+  background-color: greenyellow;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  flex: 1 0 45%;
 }
-.activityData {
+/*.activityData {
   display: flex;
-}
+} */
 /* Last month activity */
-.peers {
+/* .peers {
   transform: rotate(45deg);
 }
 .peers_text, .findings_text{
@@ -99,13 +109,15 @@ body {
   margin-right: 25px;
   width: 100px;
   height: 100px;
-}
+} */
 /* People who joined the platform */
-.peopleJoinedPlatform {
+.newPeople {
   display: flex;
   flex-direction: column;
+  flex: 1 0 45%;
+  background-color: lightgoldenrodyellow;
 }
-.peopleJoinedPlatform .people {
+/*.newPeople .people {
   display: flex;
 }
 .profilePic {
@@ -117,7 +129,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.profilePic .MuiAvatar-root-9, .discussion .MuiAvatar-root-9 {
+.profilePic .MuiAvatar-root-9, .hottest_discussion .MuiAvatar-root-9 {
   height: 60px !important;
   width: 60px !important;
 }
@@ -132,55 +144,62 @@ body {
   font-weight: bold;
   width: 55%;
   text-align: center;
-}
+}*/
 .profileFooter {
+  /* background-color: green; */
   display: flex;
+  flex-basis: 25%;
   flex-direction: column;
   align-items: center;
   background-size: 6px 6px;
-  /* background: linear-gradient(bottom, grey, grey 80%, transparent 80%) ; */
   background-image: linear-gradient(45deg, transparent 46%, #E5D4D4 49%, rgb(240, 240, 240) 51%, transparent 55%);
 }
-.discussion {
+.hottest_discussion_title {
+  flex-basis: 10%;
+}
+.hottest_discussion {
+  flex-basis: 45%;
+  background-color: white;
   display: flex;
-  width: 100%;
   flex-direction: column;
   align-items: center;
 }
-.discussion img{
+/*.hottest_discussion img{
   height: 60px;
   border-radius: 50%;
   padding-top: 2%;
   padding-bottom: 2%;
 }
-.discussion h5  {
+.hottest_discussion h5  {
   color: rgb(23, 120, 193);
   font-weight: bold;
 }
-.discussion h4  {
+.hottest_discussion h4  {
   color: rgb(23, 120, 193);
   font-style: italic;
   font-weight: bold;
-}
+} */
 /* FOOTER */
-.discussionDetails {
+.hottest_discussion_details {
   display: flex;
+  flex-basis: 45%;
+  background-color: grey;
 }
 
 /* QUERIES */
-@media only screen and (max-width: 767px) {
+/*@media only screen and (max-width: 767px) {
   body {
     min-width: 617px;
   }
   .profileContainer {
     font-size: 14px;
   }
-  .profilePicAndName h2 {
+  .profileAvatar h2 {
     font-size: 15px;
     padding-top: 10%;
     padding-bottom: 10%;
   }
-  .profilePicAndName img {
+  .profileAvatar img {
     height: 80px;
   }
   .profileActivity {
@@ -192,15 +211,15 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  .howItStarted h2{
+  .navigationTable h2{
     font-size: 18px;
     font-style: italic;
     font-weight: bold;
   }
-  .lastMonthsActivity {
+  .profileStatistics {
     padding-top: 5%;
   }
-  .lastMonthsActivity .subTitle {
+  .profileStatistics .subTitle {
     text-align: center;
   }
   .activityData {
@@ -211,65 +230,64 @@ body {
     padding-bottom: 8%;
     padding-left: 9%;
   }
-  .peopleJoinedPlatform {
+  .newPeople {
     display: flex;
     flex-direction: column;
     padding-top: 3%;
     padding-bottom: 3%;
     width: 100%;
   }
-  .peopleJoinedPlatform .subTitle {
+  .newPeople .subTitle {
     text-align: center;
   }
-  .peopleJoinedPlatform .people {
+  .newPeople .people {
     display: flex;
     justify-content: space-around;
     padding-top: 4%;
   }
-  .discussion h5  {
+  .hottest_discussion h5  {
     color: rgb(23, 120, 193);
     font-weight: bold;
     padding-top: 5%;
     padding-bottom: 1%;
   }
-  .discussion h4  {
+  .hottest_discussion h4  {
     font-size: 18px;
     padding-top: 1%;
     padding-bottom: 1%;
-    /* border: 2px solid red; */
   }
-  .discussionDetails {
+  .hottest_discussion_details {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     padding-top: 10%;
     padding-bottom: 4%;
   }
-  .discussionDetails div:nth-child(2), .discussionDetails div:nth-child(4){
+  .hottest_discussion_details div:nth-child(2), .hottest_discussion_details div:nth-child(4){
     padding-left: 10%;
   }
-  .discussionDetails div:nth-child(1), .discussionDetails div:nth-child(2){
+  .hottest_discussion_details div:nth-child(1), .hottest_discussion_details div:nth-child(2){
     padding-bottom: 2%;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
-  .profilePicAndName h2 {
+  .profileAvatar h2 {
     padding-top: 10%;
     padding-bottom: 10%;
   }
-  .profilePicAndName img {
+  .profileAvatar img {
     height: 100px;
   }
   .profileActivity {
     justify-content: space-around;
   }
-  .howItStarted h2{
+  .navigationTable h2{
     font-size: 25px;
     font-style: italic;
     font-weight: bold;
   }
-  .lastMonthsActivity {
+  .profileStatistics {
     padding-top: 5%;
   }
   .activityData {
@@ -279,7 +297,7 @@ body {
     padding-top: 8%;
     padding-bottom: 8%;
   }
-  .peopleJoinedPlatform {
+  .newPeople {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -287,16 +305,16 @@ body {
     padding-bottom: 3%;
   }
   
-  .peopleJoinedPlatform .people {
+  .newPeople .people {
     display: flex;
     max-width: 100%;
     justify-content: space-between;
     padding-top: 4%;
   }
-  .discussion h4  {
+  .hottest_discussion h4  {
     font-size: 20px;
   }
-  .discussionDetails {
+  .hottest_discussion_details {
     justify-content: space-around;
     width: 80%;
     padding-top: 4%;
@@ -306,22 +324,22 @@ body {
 }
 
 @media only screen and (min-width: 1200px){
-  .profilePicAndName h2 {
+  .profileAvatar h2 {
     padding-top: 10%;
     padding-bottom: 10%;
   }
-  .profilePicAndName img {
+  .profileAvatar img {
     height: 100px;
   }
   .profileActivity {
     justify-content: space-around;
   }
-  .howItStarted h2{
+  .navigationTable h2{
     font-size: 30px;
     font-style: italic;
     font-weight: bold;
   }
-  .lastMonthsActivity {
+  .profileStatistics {
     padding-top: 5%;
   }
   .activityData {
@@ -332,20 +350,21 @@ body {
     padding-bottom: 8%;
     padding-left: 9%;
   }
-  .peopleJoinedPlatform {
+  .newPeople {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 3%;
     width: 100%;
   }
-  .discussion h4  {
+  .hottest_discussion h4  {
     font-size: 20px;
   }
-  .discussionDetails {
+  .hottest_discussion_details {
     justify-content: space-around;
     width: 80%;
     padding-top: 4%;
     padding-bottom: 3%;
   }
 }
+*/
