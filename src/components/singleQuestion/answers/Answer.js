@@ -8,7 +8,6 @@ import { VerticalDivider } from '../../common/divider/Divider';
 class Answer extends React.Component {
   renderAnswer(isReply) {
     const space = isReply ? <div className="empty_space single_question_row_empty_space" /> : null;
-    const middleItemClass = isReply ? "single_question_row_middle_item" : "single_question_row_middle_item_long";
     return (
       <div className="single_question_row main_answer">
         {space}
@@ -17,7 +16,7 @@ class Answer extends React.Component {
           <p>Robert commented it yesterday</p>
         </div>
         <VerticalDivider />
-        <div className={middleItemClass}>
+        <div className="single_question_row_middle_item">
           <div className="answer_header">
             <p>Robert commented it yesterday</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
