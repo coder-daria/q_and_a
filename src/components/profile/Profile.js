@@ -35,7 +35,7 @@ class Profile extends React.Component {
         </div>
         <div className="profileStatistics">
           <div className="subTitle">That's where we have been these 5 months</div>
-          <div className="activityData">
+          <div className="profileStatisticsData">
             <div className="square peers">
               <p className="peers_text">46 peers</p>
             </div>
