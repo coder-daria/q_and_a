@@ -1,13 +1,21 @@
-.answerVotesContainer{
-    flex:1;
+.arrows {
+  display: flex;
+  flex-direction: column;
+}
+.votes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.votesCounter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-basis: 100%;
+}
+ 
+@media only screen and (max-width: 767px) {
+  .votes {
+    justify-content: space-between;
   }
-  .answerVotesContainer .votes{
-    display: flex;
-    padding-top: 15%;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .answerVotesContainer .arrows {
-    display: flex;
-    flex-direction: column;
-  }
+}
