@@ -1,7 +1,9 @@
-.lastInteraction {
+.last_discussed {
   font-size: 18px;
 }
-
+.question_and_last_discussed {
+  display: flex;
+}
 .single_question_row {
   display: flex;
 }
@@ -31,7 +33,7 @@
   flex-direction: column;
   align-items: center;
 }
-.add_question {
+.question_and_last_discussed .add_question {
 	display: flex;
   justify-content: space-around;
   width: 10%;
@@ -40,17 +42,17 @@
 
 /* QUERIES */
 @media only screen and (max-width: 767px) {
-  .add_question{
+  .question_and_last_discussed .add_question{
     font-size: 45px;
     width: 90%;
   }
-  .lastInteraction {
+  .last_discussed {
     display: none;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
-  .add_question{
+  .question_and_last_discussed .add_question{
     font-size: 35px;
   }
 }

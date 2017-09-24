@@ -20,10 +20,10 @@ class AllQuestions extends React.Component {
               <Icon>add_circle</Icon>
             </div>
           </div>
-          <ul className="question_details">
-            <li>My shelf</li>
-            <li>All questions</li>
-          </ul>
+          <div className="question_details">
+            <p>My shelf</p>
+            <p>All questions</p>
+          </div>
           <div className="search_header_sort_by">
             <p>Sort by: recent or hot</p>
           </div>

@@ -13,9 +13,10 @@
   background-color: yellow;
   flex-basis: 20%;
 }
-.add_question {
+.question_and_sort .add_question {
   flex-grow: 1;
   flex-basis: 30%;
+  display: flex;
 }
 .question_details {
   
@@ -23,11 +24,15 @@
   flex-basis: 30%;
 }
 .search_header_sort_by {
-  
   background-color: yellow;
+  display: flex;
   flex-basis: 16%;
 }
 /* Search */
+.search_header {
+  flex-direction: column;
+  background-color: black;
+}
 .search {
   width: 66.6%;
   background-color: yellow;
@@ -55,8 +60,41 @@ input[type=text] {
   justify-content: center;
   align-items: center;
 }
-.search_header {
-  flex-direction: column;
-  
-  background-color: black;
+
+@media only screen and (max-width: 767px) {
+  .question_and_sort {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .search_header_return_arrow {
+    flex-basis: 30%;
+  }
+  .question_and_sort .add_question {
+    flex-basis: 70%;
+  }
+  .question_details {
+    flex-basis: 50%;
+  }
+  .search_header_sort_by {
+    flex-basis: 50%;
+  }
+  .search {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px){
+  .question_and_sort {
+    width: 100%;
+    flex: wrap;
+  }
+  .search {
+    width: 100%;
+  }
+  .question_and_sort .add_question {
+    flex-grow: 0;
+  }
+  .search_header_sort_by {
+  flex-basis: 20%;
+  }
 }
