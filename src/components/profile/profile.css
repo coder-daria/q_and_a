@@ -198,8 +198,26 @@
 .hottest_discussion_details {
   display: flex;
   flex-basis: 45%;
+  width: 80%;
   flex-wrap: wrap;
   background-color: grey;
+  /* justify-content: space-around; */
+}
+.hottest_discussion_details_left {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+  background-color: grey;
+  /* justify-content: space-around; */
+}
+.hottest_discussion_details_right {
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 50%;
+  /* flex-wrap: wrap; */
+  background-color: grey;
+  /* justify-content: space-around; */
 }
 /* QUERIES */
 @media only screen and (max-width: 767px) {
@@ -234,7 +252,18 @@
   width: 200px;
   }
   .hottest_discussion_details {
+    justify-content: space-around;
     width: 80%;
+  }
+  .hottest_discussion_details_left {
+    flex-basis: 40%;
+    justify-content: flex-start;
+    flex-wrap: wrap-reverse;
+  }
+  .hottest_discussion_details_right {
+    flex-basis: 40%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1200px){

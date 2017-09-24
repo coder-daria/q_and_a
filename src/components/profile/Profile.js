@@ -100,10 +100,14 @@ class Profile extends React.Component {
           <p>Vegan diet to stop diabetes progress</p>
         </div>
         <div className="hottest_discussion_details">
-          <div>6 peers involved</div>
-          <div>3 related discussion</div>
-          <div>3 conversations</div>
-          <div>19 upvotes</div>
+          <div className="hottest_discussion_details_left">
+            <div>6 peers involved</div>
+            <div>3 related discussion</div>
+          </div>
+          <div className="hottest_discussion_details_right">
+            <div>3 conversations</div>
+            <div>19 upvotes</div>
+          </div>
         </div>
       </div>
     )
