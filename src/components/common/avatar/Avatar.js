@@ -1,10 +1,17 @@
 import React from 'react';
-import ImageAvatars from 'material-ui/Avatar';
-
+import './avatar.css';
 
 class Avatar extends React.Component {
   render() {
-    return <ImageAvatars alt={this.props.alt} src={this.props.src} />
+    return (
+      <div className={`avatar ${"avatar-" + this.props.size}`}>
+        <img alt={this.props.alt} src={this.props.src} />
+      </div>
+    )
   }
 }
+
+Avatar.defaultProps = {
+  size: 'medium'
+};
 export default Avatar;

@@ -1,0 +1,20 @@
+.avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: content;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.avatar-big {
+  max-width: 90px;
+  max-height: 90px;
+}
+.avatar-medium {
+  max-width: 60px;
+  max-height: 60px;
+}

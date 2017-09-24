@@ -15,7 +15,7 @@ class Profile extends React.Component {
           <Close />
         </div>
         <div className="profileAvatar">
-          <Avatar src="http://www.wsp-pb.com/Globaln/WSP-Canada/Who%20We%20Are/Sustainability/2016/Claire.jpg" />
+          <Avatar size="big" src="http://www.wsp-pb.com/Globaln/WSP-Canada/Who%20We%20Are/Sustainability/2016/Claire.jpg" />
           <p>Dr. Halima</p>
         </div>
         <div className="profileActivity">

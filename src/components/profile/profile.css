@@ -31,10 +31,10 @@
   font-size: 20px;
   font-weight: bold;
 }
-.profileAvatar div {
+/* .profileAvatar div {
   height: 90px;
   width: 90px;
-}
+} */
 .profileActivity {
   background-color: lightskyblue;
   display: flex;
