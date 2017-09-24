@@ -15,7 +15,7 @@ class Profile extends React.Component {
         </div>
         <div className="profileAvatar">
           <Avatar src="http://www.wsp-pb.com/Globaln/WSP-Canada/Who%20We%20Are/Sustainability/2016/Claire.jpg" />
-          <h2>Dr. Halima</h2>
+          <p>Dr. Halima</p>
         </div>
         <div className="profileActivity">
           <p><span className="subTitle">Member for</span> 5 months</p>
@@ -30,7 +30,7 @@ class Profile extends React.Component {
       <div className="profileBody">
         <div className="navigationTable">
           <ArrowLeft />
-          <h2>How it all started</h2>
+          <p>How it all started</p>
           <ArrowRight />
         </div>
         <div className="profileStatistics">
@@ -54,22 +54,22 @@ class Profile extends React.Component {
           <div className="subTitle">Who joined the platform that same period</div>
           <div className="people">
             <div className="person">
-              <div className="profilePic">
+              <div className="personAvatar">
                 <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
               </div>
-              <h3>S.E.N Waweru</h3>
+              <p>S.E.N Waweru</p>
             </div>
             <div className="person">
-              <div className="profilePic">
+              <div className="personAvatar">
                 <Avatar src="http://www.trbimg.com/img-56dcb867/turbine/bal-baltimore-people-on-the-move-march-20160306/200/200x200" />
               </div>
-              <h3>Patricia</h3>
+              <p>Patricia</p>
             </div>
             <div className="person">
-              <div className="profilePic">
+              <div className="personAvatar">
                 <Avatar src="http://www.trbimg.com/img-57015a41/turbine/bal-baltimore-people-on-the-move-april-20160403/200/200x200" />
               </div>
-              <h3>Joseph Aluoch</h3>
+              <p>Joseph Aluoch</p>
             </div>
           </div>
         </div>
@@ -82,8 +82,8 @@ class Profile extends React.Component {
         <h3 className="subTitle hottest_discussion_title">The hottest discussion these days</h3>
         <div className="hottest_discussion">
           <Avatar src="https://www.digitalsurgeons.com/images/uploads/authors/rsz_1kiss_from_a_rose-1.jpg" />
-          <h5>Andrew<span className="subTitle"> Found the Guardian Article</span></h5>
-          <h4>Vegan diet to stop diabetes progress</h4>
+          <p>Andrew<span className="subTitle"> Found the Guardian Article</span></p>
+          <p>Vegan diet to stop diabetes progress</p>
         </div>
         <div className="hottest_discussion_details">
           <div>6 peers involved</div>

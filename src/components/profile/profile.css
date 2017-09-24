@@ -19,33 +19,32 @@
   flex-basis: 5%;
 }
 .profileAvatar {
+  background-color: lightblue;
   display: flex;
   flex-basis: 45%;
-  background-color: lightblue;
   flex-direction: column;
   align-items: center;
 }
-/*.profileAvatar h2 {
+.profileAvatar p {
   color: rgb(23, 120, 193);
   font-size: 20px;
   font-weight: bold;
 }
-.profileAvatar .MuiAvatar-root-9 {
-  height: 80px !important;
-  width: 80px !important;
-}*/
+.profileAvatar div {
+  height: 90px;
+  width: 90px;
+}
 .profileActivity {
+  background-color: lightskyblue;
   display: flex;
   width: 100%;
   flex-basis: 50%;
-  background-color: lightskyblue;
   align-items: center;
 }
-
-/*.subTitle {
+.subTitle {
   text-transform: uppercase;
   color: rgb(154, 155, 170);
-} */
+}
 
 /* BODY */
 .profileBody {
@@ -62,10 +61,10 @@
   flex-basis: 10%;
   justify-content: space-between;
 }
-/*.navigationTable h2{
+.navigationTable p{
   font-style: italic;
   font-weight: bold;
-}*/
+}
 .profileStatistics {
   background-color: greenyellow;
   display: flex;
@@ -79,7 +78,8 @@
   background-color: lightseagreen;
 }
 /* Last month activity */
-/* .peers {
+
+.peers {
   transform: rotate(45deg);
 }
 .peers_text, .findings_text{
@@ -104,24 +104,30 @@
 }
 .questions {
   transform: rotate(5deg);
-}*/
+}
 .profileStatisticsData .square {
   background-color: rgb(229,245,253);
-  margin-right: 25px;
   width: 100px;
   height: 100px;
 }
 /* People who joined the platform */
+
 .newPeople {
+  background-color: lightgoldenrodyellow;
   display: flex;
   flex-direction: column;
   flex: 1 0 45%;
-  background-color: lightgoldenrodyellow;
 }
 .newPeople .people {
   display: flex;
 }
-/*.profilePic {
+.person {
+  flex-basis: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.personAvatar {
   width: 100px;
   height: 100px;
   background-size: 6px 6px;
@@ -130,24 +136,16 @@
   justify-content: center;
   align-items: center;
 }
-.profilePic .MuiAvatar-root-9, .hottest_discussion .MuiAvatar-root-9 {
-  height: 60px !important;
-  width: 60px !important;
-}*/
-.person {
-  flex-basis: 33%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.personAvatar div, .hottest_discussion div {
+  height: 60px;
+  width: 60px;
 }
-/*.person h3 {
-  padding-top: 10%;
-  color: rgb(23, 120, 193);
-  font-weight: bold;
-  width: 55%;
+.person p {
   text-align: center;
-}*/
-
+  width: 55%;
+  font-weight: bold;
+  color: rgb(23, 120, 193);
+}
 /* FOOTER */
 .profileFooter {
   display: flex;
@@ -167,21 +165,17 @@
   flex-direction: column;
   align-items: center;
 }
-/*.hottest_discussion img{
-  height: 60px;
-  border-radius: 50%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-}
-.hottest_discussion h5  {
+
+.hottest_discussion  {
   color: rgb(23, 120, 193);
   font-weight: bold;
 }
-.hottest_discussion h4  {
+
+.hottest_discussion p:nth-child(3)  {
   color: rgb(23, 120, 193);
   font-style: italic;
   font-weight: bold;
-} */
+} 
 .hottest_discussion_details {
   display: flex;
   flex-basis: 45%;
@@ -196,13 +190,12 @@
   flex-direction: column;
   }
   .profileStatisticsData {
-    width: 90%;
+    width: 80%;
   }
   .hottest_discussion_details {
     width: 80%;
   }
 }
-
 
 /* QUERIES */
 /*@media only screen and (max-width: 767px) {
@@ -212,13 +205,10 @@
   .profileContainer {
     font-size: 14px;
   }
-  .profileAvatar h2 {
+  .profileAvatar p {
     font-size: 15px;
     padding-top: 10%;
     padding-bottom: 10%;
-  }
-  .profileAvatar img {
-    height: 80px;
   }
   .profileActivity {
     display: flex;
@@ -229,7 +219,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .navigationTable h2{
+  .navigationTable p{
     font-size: 18px;
     font-style: italic;
     font-weight: bold;
@@ -290,17 +280,14 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
-  .profileAvatar h2 {
+  .profileAvatar p {
     padding-top: 10%;
     padding-bottom: 10%;
-  }
-  .profileAvatar img {
-    height: 100px;
   }
   .profileActivity {
     justify-content: space-around;
   }
-  .navigationTable h2{
+  .navigationTable p{
     font-size: 25px;
     font-style: italic;
     font-weight: bold;
@@ -342,17 +329,14 @@
 }
 
 @media only screen and (min-width: 1200px){
-  .profileAvatar h2 {
+  .profileAvatar p {
     padding-top: 10%;
     padding-bottom: 10%;
-  }
-  .profileAvatar img {
-    height: 100px;
   }
   .profileActivity {
     justify-content: space-around;
   }
-  .navigationTable h2{
+  .navigationTable p{
     font-size: 30px;
     font-style: italic;
     font-weight: bold;
