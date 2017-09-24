@@ -2,7 +2,6 @@ import React from 'react';
 import Modal from 'react-modal';
 import Profile from '../profile/Profile';
 import MediaQuery from 'react-responsive';
-import './modalWindow.css';
 
 class ModalWindow extends React.Component {
 
@@ -30,7 +29,7 @@ class ModalWindow extends React.Component {
       bottom: 'auto',
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
-      width: "80%",
+      width: "50%",
       height: "90%",
       padding: 0
     };
