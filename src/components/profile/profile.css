@@ -1,8 +1,10 @@
 /* GLOBAL CSS */
 .profileContainer {
+  box-sizing: border-box;
   background-color: red;
   display: flex;
   flex-direction: column;
+  padding: 2%;
 }
 /* HEADER */
  .profileHeader {
@@ -37,12 +39,16 @@
   background-color: lightskyblue;
   display: flex;
   width: 100%;
-  flex-basis: 20%;
+  flex: 1 0 20%;
   align-items: center;
+}
+.profileActivity .profileActivityItem {
+  display: flex;
 }
 .subTitle {
   text-transform: uppercase;
   color: rgb(154, 155, 170);
+  text-align: center;
 }
 
 /* BODY */
@@ -71,11 +77,8 @@
   flex-direction: column;
   flex: 1 0 45%;
   align-items: center;
-  width: 100%;
-}
-.profileStatistics .subTitle {
-  padding: 1% 0%;
-  text-align: center;
+  width: 60%;
+  justify-content: space-around;
 }
 .profileStatisticsData {
   display: flex;
@@ -127,14 +130,16 @@
   display: flex;
   flex-direction: column;
   flex: 1 0 45%;
+  justify-content: space-around;
 }
 .newPeople .people {
   display: flex;
+  flex-basis: 60%;
+  justify-content: space-between;
 }
-.newPeople .subTitle {
-  text-align: center;
-  background-color: red;
-  padding: 2% 0%;
+.newPeople .people .person {
+  flex-basis: 30%;
+  background-color: magenta;
 }
 .person {
   flex-basis: 33%;
@@ -143,8 +148,8 @@
   align-items: center;
 }
 .personAvatar {
-  width: 100px;
-  height: 100px;
+  flex-basis: 70%;
+  width: 100%;
   background-size: 6px 6px;
   background-image:linear-gradient(45deg, transparent 46%, #E5D4D4 49%, rgb(240, 240, 240) 51%, transparent 55%);
   display: flex;
@@ -213,6 +218,9 @@
   .profileActivity {
     flex-direction: column;
     align-items: center;
+  }
+  .profileActivity .profileActivityItem {
+    flex-direction: column;
   }
   .profileAvatar p {
     font-size: 17px;

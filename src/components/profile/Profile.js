@@ -3,6 +3,7 @@ import './profile.css';
 import { HorizontalDivider } from '../common/divider/Divider';
 import ArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
 import ArrowRight from 'material-ui-icons/KeyboardArrowRight';
+import Stars from 'material-ui-icons/Stars';
 import Close from 'material-ui-icons/Clear';
 import Avatar from '../common/avatar/Avatar';
 
@@ -18,9 +19,22 @@ class Profile extends React.Component {
           <p>Dr. Halima</p>
         </div>
         <div className="profileActivity">
-          <p><span className="subTitle">Member for</span> 5 months</p>
-          <p><span className="subTitle">Last seen</span> Saturday afternoon</p>
-          <p className="subTitle">Activity level</p>
+          <div className="profileActivityItem">
+            <p className="profileActivityItemName subTitle">Member for</p>
+            <p className="profileActivityItemValue">5 months</p>
+          </div>
+          <div className="profileActivityItem">
+            <p className="profileActivityItemName subTitle">Last seen</p>
+            <p className="profileActivityItemValue">Saturday afternoon</p>
+          </div>
+          <div className="profileActivityItem">
+            <p className="profileActivityItemName subTitle">Activity level</p>
+            <div className="profileActivityItemValue">
+              <Stars />
+              <Stars />
+              <Stars />
+            </div>
+          </div>
         </div>
       </div>
     )
