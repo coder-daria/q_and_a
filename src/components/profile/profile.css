@@ -1,6 +1,5 @@
 /* GLOBAL CSS */
 .profileContainer {
-  /* border: 2px solid #D2C8C8; */
   background-color: red;
   display: flex;
   min-height: 100%;
@@ -22,7 +21,6 @@
 .profileAvatar {
   display: flex;
   flex-basis: 45%;
-  
   background-color: lightblue;
   flex-direction: column;
   align-items: center;
@@ -39,15 +37,16 @@
 .profileActivity {
   display: flex;
   width: 100%;
-  
   flex-basis: 50%;
   background-color: lightskyblue;
+  align-items: center;
 }
 
 /*.subTitle {
   text-transform: uppercase;
   color: rgb(154, 155, 170);
 } */
+
 /* BODY */
 .profileBody {
   background-color: yellow;
@@ -58,9 +57,9 @@
 }
 /* How it started */
 .navigationTable { 
+  background-color: lightyellow;
   display: flex;
   flex-basis: 10%;
-  background-color: lightyellow;
   justify-content: space-between;
 }
 /*.navigationTable h2{
@@ -68,11 +67,11 @@
   font-weight: bold;
 }*/
 .profileStatistics {
-  display: flex;
   background-color: greenyellow;
+  display: flex;
   flex-direction: column;
-  align-items: center;
   flex: 1 0 45%;
+  align-items: center;
 }
 .profileStatisticsData {
   display: flex;
@@ -148,8 +147,9 @@
   width: 55%;
   text-align: center;
 }*/
+
+/* FOOTER */
 .profileFooter {
-  /* background-color: green; */
   display: flex;
   flex-basis: 25%;
   flex-direction: column;
@@ -182,12 +182,27 @@
   font-style: italic;
   font-weight: bold;
 } */
-/* FOOTER */
 .hottest_discussion_details {
   display: flex;
   flex-basis: 45%;
+  flex-wrap: wrap;
   background-color: grey;
 }
+
+/* QUERIES */
+
+@media only screen and (max-width: 767px) {
+ .profileActivity {
+  flex-direction: column;
+  }
+  .profileStatisticsData {
+    width: 90%;
+  }
+  .hottest_discussion_details {
+    width: 80%;
+  }
+}
+
 
 /* QUERIES */
 /*@media only screen and (max-width: 767px) {
