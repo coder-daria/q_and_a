@@ -40,7 +40,6 @@ class SingleQuestion extends React.Component {
         <div className="app_content">
           {this.renderContent()}
         </div>
-        <Modal />
       </div>
     );
   }

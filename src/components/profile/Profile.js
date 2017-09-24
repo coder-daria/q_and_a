@@ -3,6 +3,7 @@ import './profile.css';
 import { HorizontalDivider } from '../common/divider/Divider';
 import ArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
 import ArrowRight from 'material-ui-icons/KeyboardArrowRight';
+import Stars from 'material-ui-icons/Stars';
 import Close from 'material-ui-icons/Clear';
 import Avatar from '../common/avatar/Avatar';
 
@@ -10,17 +11,30 @@ class Profile extends React.Component {
   renderHeader = () => {
     return (
       <div className="profileHeader">
-        <div className="closeButton">
+        <div className="profileCloseButton">
           <Close />
         </div>
-        <div className="profilePicAndName">
-          <Avatar src="http://www.wsp-pb.com/Globaln/WSP-Canada/Who%20We%20Are/Sustainability/2016/Claire.jpg" />
-          <h2>Dr. Halima</h2>
+        <div className="profileAvatar">
+          <Avatar size="big" src="http://www.wsp-pb.com/Globaln/WSP-Canada/Who%20We%20Are/Sustainability/2016/Claire.jpg" />
+          <p>Dr. Halima</p>
         </div>
         <div className="profileActivity">
-          <p><span className="subTitle">Member for</span> 5 months</p>
-          <p><span className="subTitle">Last seen</span> Saturday afternoon</p>
-          <p className="subTitle">Activity level</p>
+          <div className="profileActivityItem">
+            <p className="profileActivityItemName subTitle">Member for</p>
+            <p className="profileActivityItemValue">5 months</p>
+          </div>
+          <div className="profileActivityItem">
+            <p className="profileActivityItemName subTitle">Last seen</p>
+            <p className="profileActivityItemValue">Saturday afternoon</p>
+          </div>
+          <div className="profileActivityItem">
+            <p className="profileActivityItemName subTitle">Activity level</p>
+            <div className="profileActivityItemValue">
+              <Stars />
+              <Stars />
+              <Stars />
+            </div>
+          </div>
         </div>
       </div>
     )
@@ -28,14 +42,14 @@ class Profile extends React.Component {
   renderBody = () => {
     return (
       <div className="profileBody">
-        <div className="howItStarted">
+        <div className="navigationTable">
           <ArrowLeft />
-          <h2>How it all started</h2>
+          <p>How it all started</p>
           <ArrowRight />
         </div>
-        <div className="lastMonthsActivity">
-          <div className="subTitle">That's where we have been these 5 months</div>
-          <div className="activityData">
+        <div className="profileStatistics">
+          <div className="subTitle">That's where we have been these 5 months ago</div>
+          <div className="profileStatisticsData">
             <div className="square peers">
               <p className="peers_text">46 peers</p>
             </div>
@@ -50,26 +64,26 @@ class Profile extends React.Component {
             </div>
           </div>
         </div>
-        <div className="peopleJoinedPlatform">
+        <div className="newPeople">
           <div className="subTitle">Who joined the platform that same period</div>
           <div className="people">
             <div className="person">
-              <div className="profilePic">
+              <div className="personAvatar">
                 <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
               </div>
-              <h3>S.E.N Waweru</h3>
+              <p>S.E.N Waweru</p>
             </div>
             <div className="person">
-              <div className="profilePic">
+              <div className="personAvatar">
                 <Avatar src="http://www.trbimg.com/img-56dcb867/turbine/bal-baltimore-people-on-the-move-march-20160306/200/200x200" />
               </div>
-              <h3>Patricia</h3>
+              <p>Patricia</p>
             </div>
             <div className="person">
-              <div className="profilePic">
+              <div className="personAvatar">
                 <Avatar src="http://www.trbimg.com/img-57015a41/turbine/bal-baltimore-people-on-the-move-april-20160403/200/200x200" />
               </div>
-              <h3>Joseph Aluoch</h3>
+              <p>Joseph Aluoch</p>
             </div>
           </div>
         </div>
@@ -79,17 +93,21 @@ class Profile extends React.Component {
   renderFooter = () => {
     return (
       <div className="profileFooter">
-        <h3 className="subTitle">The hottest discussion these days</h3>
-        <div className="discussion">
+        <h3 className="subTitle hottest_discussion_title">The hottest discussion these days</h3>
+        <div className="hottest_discussion">
           <Avatar src="https://www.digitalsurgeons.com/images/uploads/authors/rsz_1kiss_from_a_rose-1.jpg" />
-          <h5>Andrew<span className="subTitle"> Found the Guardian Article</span></h5>
-          <h4>Vegan diet to stop diabetes progress</h4>
+          <p>Andrew<span className="subTitle"> Found the Guardian Article</span></p>
+          <p>Vegan diet to stop diabetes progress</p>
         </div>
-        <div className="discussionDetails">
-          <div>6 peers involved</div>
-          <div>3 related discussion</div>
-          <div>3 conversations</div>
-          <div>19 upvotes</div>
+        <div className="hottest_discussion_details">
+          <div className="hottest_discussion_details_left">
+            <div>6 peers involved</div>
+            <div>3 related discussion</div>
+          </div>
+          <div className="hottest_discussion_details_right">
+            <div>3 conversations</div>
+            <div>19 upvotes</div>
+          </div>
         </div>
       </div>
     )
