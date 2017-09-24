@@ -9,7 +9,9 @@ class AllQuestions extends React.Component {
     return (
       <div className="app_top_section search_header">
         <div className="question_and_sort">
-          <ArrowLeft />
+          <div className="search_header_return_arrow">
+            <ArrowLeft />
+          </div>
           <div className="add_question">
             <div>
               <p>Question</p>
@@ -21,8 +23,10 @@ class AllQuestions extends React.Component {
           <ul className="question_details">
             <li>My shelf</li>
             <li>All questions</li>
-            <li>Sort by: recent or hot</li>
           </ul>
+          <div className="search_header_sort_by">
+            <p>Sort by: recent or hot</p>
+          </div>
         </div>
         <div className="search">
           <form>

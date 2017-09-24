@@ -61,9 +61,6 @@ body {
 	justify-content: center;
   align-items:center;
 }
-.search_header {
-  flex-direction: column;
-}
 
 /* BODY */
 .app_body {
