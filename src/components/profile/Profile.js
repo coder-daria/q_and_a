@@ -94,19 +94,23 @@ class Profile extends React.Component {
     return (
       <div className="profileFooter">
         <h3 className="subTitle hottest_discussion_title">The hottest discussion these days</h3>
-        <div className="hottest_discussion">
-          <Avatar src="https://www.digitalsurgeons.com/images/uploads/authors/rsz_1kiss_from_a_rose-1.jpg" />
-          <p>Andrew<span className="subTitle"> Found the Guardian Article</span></p>
-          <p>Vegan diet to stop diabetes progress</p>
-        </div>
-        <div className="hottest_discussion_details">
-          <div className="hottest_discussion_details_left">
-            <div><span className="statistic_numbers">6</span> peers involved</div>
-            <div><span className="statistic_numbers">3</span> related discussion</div>
+        <div className="hottest_discussion_statistics">
+          <div className="hottest_discussion_avatar">
+            <Avatar src="https://www.digitalsurgeons.com/images/uploads/authors/rsz_1kiss_from_a_rose-1.jpg" />
           </div>
-          <div className="hottest_discussion_details_right">
-            <div><span className="statistic_numbers">3</span> conversations</div>
-            <div><span className="statistic_numbers">19</span> upvotes</div>
+          <div className="hottest_discussion_background">
+            <p>Andrew<span className="subTitle"> Found the Guardian Article</span></p>
+            <p className="hottest_discussion_article_title">Vegan diet to stop diabetes progress</p>
+            <div className="hottest_discussion_details">
+              <div className="hottest_discussion_details_left">
+                <div><span className="statistic_numbers">6</span> peers involved</div>
+                <div><span className="statistic_numbers">3</span> related discussion</div>
+              </div>
+              <div className="hottest_discussion_details_right">
+                <div><span className="statistic_numbers">3</span> conversations</div>
+                <div><span className="statistic_numbers">19</span> upvotes</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
