@@ -101,12 +101,12 @@ class Profile extends React.Component {
         </div>
         <div className="hottest_discussion_details">
           <div className="hottest_discussion_details_left">
-            <div>6 peers involved</div>
-            <div>3 related discussion</div>
+            <div><span className="statistic_numbers">6</span> peers involved</div>
+            <div><span className="statistic_numbers">3</span> related discussion</div>
           </div>
           <div className="hottest_discussion_details_right">
-            <div>3 conversations</div>
-            <div>19 upvotes</div>
+            <div><span className="statistic_numbers">3</span> conversations</div>
+            <div><span className="statistic_numbers">19</span> upvotes</div>
           </div>
         </div>
       </div>
