@@ -51,16 +51,16 @@ class Profile extends React.Component {
           <div className="subTitle">That's where we have been these 5 months ago</div>
           <div className="profileStatisticsData">
             <div className="square peers">
-              <p className="peers_text">46 peers</p>
+              <p className="peers_text"><span className="statistic_numbers">46</span> peers</p>
             </div>
             <div className="square discussions">
-              <p className="discussions_text">29 discussions</p>
+              <p className="discussions_text"><span className="statistic_numbers">29</span> discussions</p>
             </div>
             <div className="square findings">
-              <p className="findings_text">19 findings</p>
+              <p className="findings_text"><span className="statistic_numbers">19</span> findings</p>
             </div>
             <div className="square questions">
-              <p className="questions_text">10 questions</p>
+              <p className="questions_text"><span className="statistic_numbers">10</span> questions</p>
             </div>
           </div>
         </div>
@@ -94,19 +94,23 @@ class Profile extends React.Component {
     return (
       <div className="profileFooter">
         <h3 className="subTitle hottest_discussion_title">The hottest discussion these days</h3>
-        <div className="hottest_discussion">
-          <Avatar src="https://www.digitalsurgeons.com/images/uploads/authors/rsz_1kiss_from_a_rose-1.jpg" />
-          <p>Andrew<span className="subTitle"> Found the Guardian Article</span></p>
-          <p>Vegan diet to stop diabetes progress</p>
-        </div>
-        <div className="hottest_discussion_details">
-          <div className="hottest_discussion_details_left">
-            <div>6 peers involved</div>
-            <div>3 related discussion</div>
+        <div className="hottest_discussion_statistics">
+          <div className="hottest_discussion_avatar">
+            <Avatar src="https://www.digitalsurgeons.com/images/uploads/authors/rsz_1kiss_from_a_rose-1.jpg" />
           </div>
-          <div className="hottest_discussion_details_right">
-            <div>3 conversations</div>
-            <div>19 upvotes</div>
+          <div className="hottest_discussion_background">
+            <p>Andrew<span className="subTitle"> Found the Guardian Article</span></p>
+            <p className="hottest_discussion_article_title">Vegan diet to stop diabetes progress</p>
+            <div className="hottest_discussion_details">
+              <div className="hottest_discussion_details_left">
+                <div><span className="statistic_numbers">6</span> peers involved</div>
+                <div><span className="statistic_numbers">3</span> related discussion</div>
+              </div>
+              <div className="hottest_discussion_details_right">
+                <div><span className="statistic_numbers">3</span> conversations</div>
+                <div><span className="statistic_numbers">19</span> upvotes</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

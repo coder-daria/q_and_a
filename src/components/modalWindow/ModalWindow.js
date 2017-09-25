@@ -29,7 +29,7 @@ class ModalWindow extends React.Component {
       bottom: 'auto',
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
-      width: "50%",
+      width: "60%",
       height: "90%",
       padding: 0
     };
