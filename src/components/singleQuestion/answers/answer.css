@@ -1,7 +1,10 @@
 .answer {
   box-shadow: 5px -3px 5px #BAB7B7;
   background-color: white;
-  margin-bottom: 2%;
+  flex: 1 0;
+  width: 100%;
+}
+.answerContainer {
   flex: 1 0;
   width: 100%;
 }

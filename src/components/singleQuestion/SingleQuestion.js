@@ -10,17 +10,19 @@ class SingleQuestion extends React.Component {
   renderHeader = () => {
     return (
       <div className="app_top_section">
-        <ArrowLeft className="returnArrow"/>
-        <div className="add_question">
-          <div>
-            <p>Question</p>
+        <div className="question_and_last_discussed">
+          <ArrowLeft className="returnArrow" />
+          <div className="add_question">
+            <div>
+              <p>Question</p>
+            </div>
+            <div>
+              <Icon>add_circle</Icon>
+            </div>
           </div>
-          <div>
-            <Icon>add_circle</Icon>
+          <div className="last_discussed">
+            <p>Last time discussed 1 day ago</p>
           </div>
-        </div>
-        <div className="lastInteraction">
-          <p>Last time discussed 1 day ago</p>
         </div>
       </div>
     );

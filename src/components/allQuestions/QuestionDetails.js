@@ -25,53 +25,24 @@ class QuestionDetails extends React.Component {
   renderBody = () => {
     return (
       <div className="question_details_body">
-        <div className="question_details_asked">
-          <p>Asked</p>
-        </div>
-        <div className="question_details_content">
-          <div className="question_details_content_box more_activities">
-            <div className="profile_img">
-             3
-            </div>
-            <div>
-              more activities
-              </div>
+        <div className="my_question_details_content">
+          <div className="item item_asked"></div>
+          <div className="item more_activities"></div>
+          <div className="item commented">
+            <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
+            <p className="item_status">
+              COMMENTED
+            </p>
           </div>
-          <div className="question_details_content_box">
-            <div className="profile_img">
-              <img src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
-            </div>
-            <div className="commented">
-              Commented
-              </div>
+          <div className="item commented">
+            <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
           </div>
-
-          <div className="question_details_content_box">
-            <div className="profile_img">
-              <img src="http://www.trbimg.com/img-56dcb867/turbine/bal-baltimore-people-on-the-move-march-20160306/200/200x200" />
-            </div>
-            <div className="commented">
-              Commented
-              </div>
+          <div className="item commented">
+            <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
           </div>
-          <div className="question_details_content_box">
-            <div className="profile_img">
-              <img src="http://www.trbimg.com/img-56dcb867/turbine/bal-baltimore-people-on-the-move-march-20160306/200/200x200" />
-            </div>
-            <div className="commented">
-              Commented
-              </div>
+          <div className="item commented">
+            <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
           </div>
-
-          <div className="question_details_content_box">
-            <div className="profile_img">
-              <img src="http://www.trbimg.com/img-57015a41/turbine/bal-baltimore-people-on-the-move-april-20160403/200/200x200" />
-            </div>
-            <div className="answered">
-              Answered
-              </div>
-          </div>
-
         </div>
         <div className="question_details_popularity">
           <div>
@@ -84,6 +55,54 @@ class QuestionDetails extends React.Component {
     )
   }
   render() {
+    /*<div className="question_details_asked">
+  <p>Asked</p>
+</div>
+<div className="question_details_content">
+  <div className="question_details_content_box more_activities">
+    <div className="profile_img">
+     3
+    </div>
+    <div>
+      more activities
+      </div>
+  </div>
+  <div className="question_details_content_box">
+    <div className="profile_img">
+      <img src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
+    </div>
+    <div className="commented">
+      Commented
+      </div>
+  </div>
+
+  <div className="question_details_content_box">
+    <div className="profile_img">
+      <img src="http://www.trbimg.com/img-56dcb867/turbine/bal-baltimore-people-on-the-move-march-20160306/200/200x200" />
+    </div>
+    <div className="commented">
+      Commented
+      </div>
+  </div>
+  <div className="question_details_content_box">
+    <div className="profile_img">
+      <img src="http://www.trbimg.com/img-56dcb867/turbine/bal-baltimore-people-on-the-move-march-20160306/200/200x200" />
+    </div>
+    <div className="commented">
+      Commented
+      </div>
+  </div>
+
+  <div className="question_details_content_box">
+    <div className="profile_img">
+      <img src="http://www.trbimg.com/img-57015a41/turbine/bal-baltimore-people-on-the-move-april-20160403/200/200x200" />
+    </div>
+    <div className="answered">
+      Answered
+      </div>
+  </div>
+</div>
+  */
     return (
       <div className="question">
         {this.renderHeader()}

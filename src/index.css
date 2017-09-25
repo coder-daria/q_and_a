@@ -61,9 +61,6 @@ body {
 	justify-content: center;
   align-items:center;
 }
-.search_header {
-  flex-direction: column;
-}
 
 /* BODY */
 .app_body {
@@ -83,10 +80,10 @@ body {
 }
 @media only screen and (max-width: 767px) {
 	.app_top_section {
-    height: 10%;
+    height: 20%;
 	}
 	.app_content{
-		height: 90%;
+		height: 80%;
 		width: 100%;
 	}
 }

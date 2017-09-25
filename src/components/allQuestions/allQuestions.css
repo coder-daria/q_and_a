@@ -1,16 +1,49 @@
 /* Add question */
 .question_and_sort {
-  width: 100%;
+  background-color: green;
+  width: 83.3%;
   display: flex;
-  justify-content: space-around;
-  align-items:center;
+  justify-content: flex-start;
+  align-self: flex-start;
 } 
 .question_details{ 
   display: flex;
 }
+.search_header_return_arrow {
+  background-color: yellow;
+  flex-basis: 20%;
+}
+.question_and_sort .add_question {
+  flex-grow: 1;
+  flex-basis: 30%;
+  display: flex;
+}
+.question_details {
+  
+  background-color: red;
+  flex-basis: 30%;
+}
+.search_header_sort_by {
+  background-color: yellow;
+  display: flex;
+  flex-basis: 16%;
+}
 /* Search */
+.search_header {
+  flex-direction: column;
+  background-color: black;
+}
 .search {
-  align-self: center;
+  width: 66.6%;
+  background-color: yellow;
+}
+.search input[type=text] {
+  width: 80%;
+  background-color: magenta;
+}
+.search button{
+  width: 20%;
+  background-color: magenta;
 }
 input[type=text] {
     box-sizing: border-box;
@@ -26,4 +59,42 @@ input[type=text] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .question_and_sort {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .search_header_return_arrow {
+    flex-basis: 30%;
+  }
+  .question_and_sort .add_question {
+    flex-basis: 70%;
+  }
+  .question_details {
+    flex-basis: 50%;
+  }
+  .search_header_sort_by {
+    flex-basis: 50%;
+  }
+  .search {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px){
+  .question_and_sort {
+    width: 100%;
+    flex: wrap;
+  }
+  .search {
+    width: 100%;
+  }
+  .question_and_sort .add_question {
+    flex-grow: 0;
+  }
+  .search_header_sort_by {
+  flex-basis: 20%;
+  }
 }
