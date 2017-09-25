@@ -50,11 +50,21 @@ class Question extends React.Component {
       </div>
     )
   }
+  renderStickyChild() {
+    return (
+      <div className="sticky">
+        <button>hola hola hola</button>
+      </div>
+    )
+  }
   render() {
     return (
-      <div className="question">
-        {this.renderHeader()}
-        {this.renderBody()}
+      <div className="questionContainer">
+        <div className="question">
+          {this.renderHeader()}
+          {this.renderBody()}
+        </div>
+        {this.renderStickyChild()}
       </div>
     );
   }

@@ -7,25 +7,6 @@
 .question_details_mainQuestion{
   flex: 0 0 70%;
 }
-/* BODY */
-.question_details_body {
-  display: flex;
-}
-.question_details_asked{
-  flex: 0 0 10%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-.question_details_asked p{
-  border-top: 2px solid grey;
-}
-.question_details_content{
-  flex: 0 0 70%;
-  background-color: white;
-  display: flex;
-  padding-top: 4%;
-}
 .question_details_popularity{
   flex: 0 0 20%;
   background-color: white;
@@ -33,15 +14,34 @@
   flex-direction: column;
   align-items: center;
 }
+/* BODY */
+.question_details_body {
+  display: flex;
+}
+/* .question_details_asked{
+  flex: 0 0 10%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+} */
+/* .question_details_asked p{
+  border-top: 2px solid grey;
+} */
+/* .question_details_content{
+  flex: 0 0 70%;
+  background-color: white;
+  display: flex;
+  padding-top: 4%;
+} */
 
 /* Boxes */
-.question_details_content_box {
+/* .question_details_content_box {
   background-color: #D6D0D0;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.question_details_content_box img {
+} */
+/* .question_details_content_box img {
   height: 60px;
   border-radius: 50%;
 }
@@ -54,13 +54,45 @@
 }
 .more_activities {
   background-color: white;
+} */
+
+.my_question_details_content{
+  display: flex;
+  width: 500px;
+  height: 200px;
+  background-color: orange;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.item .avatar {
+  display: flex;
+  background-color: red;
+  flex-basis: 50%;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.item {
+  padding: 5px;
+  display: flex;
+  background-color: lightyellow;
+  flex-direction: column;
+  flex-basis: 15%;
+  height: 80%;
+  max-height: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+.item_asked {
+  background-color: lightblue;
+}
+.more_activities {
+  background-color: white;
 }
 .commented {
-  color: grey;
-  border-top: 2px solid grey;
-  background-image: radial-gradient(circle at center, grey 5px, transparent 5px), radial-gradient(circle at center, grey 5px, transparent 5px);
+  background-color: gray;
 }
-.answered {
-  border-top: 2px solid black;
-  background-image: radial-gradient(circle at center, black 5px, transparent 5px), radial-gradient(circle at center, black 5px, transparent 5px);
+.item .item_status {
+  font-size: 10px;
 }

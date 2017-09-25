@@ -3,7 +3,6 @@ import './answer.css';
 import Avatar from '../../common/avatar/Avatar';
 import ArrowUp from 'material-ui-icons/KeyboardArrowUp';
 import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
-import { VerticalDivider } from '../../common/divider/Divider';
 
 class Answer extends React.Component {
   renderAnswer(isReply) {
@@ -15,7 +14,6 @@ class Answer extends React.Component {
           <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" props="profile_pic" />
           <p>Robert commented it yesterday</p>
         </div>
-        <VerticalDivider />
         <div className="single_question_row_middle_item">
           <div className="answer_header">
             <p>Robert commented it yesterday</p>
@@ -39,14 +37,25 @@ class Answer extends React.Component {
     )
   }
 
+  renderStickyChild() {
+    return (
+      <div className="sticky">
+        <button>hola hola hola</button>
+      </div>
+    )
+  }
+
   renderReply() {
     return this.renderAnswer(true);
   }
   render() {
     return (
-      <div className="answer">
-        {this.renderAnswer()}
-        {this.renderReply()}
+      <div className="answerContainer">
+        <div className="answer">
+          {this.renderAnswer()}
+          {this.renderReply()}
+        </div>
+        {this.renderStickyChild()}
       </div>
     );
   }
