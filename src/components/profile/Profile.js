@@ -51,16 +51,16 @@ class Profile extends React.Component {
           <div className="subTitle">That's where we have been these 5 months ago</div>
           <div className="profileStatisticsData">
             <div className="square peers">
-              <p className="peers_text">46 peers</p>
+              <p className="peers_text"><span className="statistic_numbers">46</span> peers</p>
             </div>
             <div className="square discussions">
-              <p className="discussions_text">29 discussions</p>
+              <p className="discussions_text"><span className="statistic_numbers">29</span> discussions</p>
             </div>
             <div className="square findings">
-              <p className="findings_text">19 findings</p>
+              <p className="findings_text"><span className="statistic_numbers">19</span> findings</p>
             </div>
             <div className="square questions">
-              <p className="questions_text">10 questions</p>
+              <p className="questions_text"><span className="statistic_numbers">10</span> questions</p>
             </div>
           </div>
         </div>

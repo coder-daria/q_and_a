@@ -39,7 +39,6 @@
   width: 100%;
   flex: 1 0 20%;
   align-items: center;
-  border-bottom: 1px solid grey;
 }
 .profileActivityItem {
   display: flex;
@@ -53,6 +52,7 @@
 /* BODY */
 .profileBody {
   /* background-color: yellow; */
+  padding-top: 2%;
   height: 55%;
   display: flex;
   flex-direction: column;
@@ -72,44 +72,51 @@
   font-weight: bold;
   font-size: 42px;
 }
+.statistic_numbers {
+  font-weight: bold;
+  font-size: 27px;
+}
 .profileStatistics {
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
   display: flex;
   flex: 1 0 45%;
   flex-direction: column;
   align-items: center;
-  width: 90%;
+  width: 70%;
   justify-content: space-around;
 }
 .profileStatisticsData {
-  background-color: #B220AC;
+  /* background-color: #B220AC; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 430px;
+  width: 435px;
 }
 
-/* Last month activity */
+/* profile statistics data*/
 .peers {
   transform: rotate(45deg);
 }
 .peers_text, .findings_text{
   transform: rotate(-45deg);
-  transform-origin: 135% 30%;
-  width: 53%;
+  transform-origin: 80% 80%;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 .discussions_text {
   transform: rotate(15deg);
-  transform-origin: -90% 220%;
-  width: 75%;
+  transform-origin: -40% 75%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .questions_text {
   transform: rotate(-4deg);
-  transform-origin: 600% -500%;
-  width: 75%;
+  transform-origin: 350% 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .discussions {
   transform: rotate(-15deg);
@@ -121,13 +128,13 @@
   transform: rotate(5deg);
 }
 .profileStatisticsData .square {
-  background-color: rgb(229,245,253);
+  background-color: rgba(229,245,253, 0.8);
   width: 90px;
   height: 90px;
 }
 /* People who joined the platform */
 .newPeople {
-  background-color: lightgoldenrodyellow;
+  /* background-color: #F9F91D; */
   display: flex;
   flex-direction: column;
   flex: 1 0 45%;
@@ -138,34 +145,35 @@
   flex-basis: 60%;
   justify-content: space-between;
 }
+
 .newPeople .people .person {
   flex-basis: 30%;
-  background-color: magenta;
-}
-.person {
-  flex-basis: 33%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: magenta;
+  
+  padding-top: 5%;
 }
 .personAvatar {
-  flex-basis: 70%;
-  width: 100%;
   background-size: 6px 6px;
   background-image:linear-gradient(45deg, transparent 46%, #E5D4D4 49%, rgb(240, 240, 240) 51%, transparent 55%);
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  flex-basis: 70%;
 }
 .personAvatar div, .hottest_discussion div {
   height: 60px;
   width: 60px;
 }
 .person p {
+  color: rgb(23, 120, 193);
+  font-weight: bold;
   text-align: center;
   width: 55%;
-  font-weight: bold;
-  color: rgb(23, 120, 193);
+  padding-top: 8%;
 }
 /* FOOTER */
 .profileFooter {
@@ -254,9 +262,12 @@
   }
   .profileStatisticsData {
     justify-content: center;
-    
-  width: 200px;
+    width: 200px;
   }
+  .newPeople {
+    padding-bottom: 8%;
+  }
+
   .hottest_discussion_details {
     justify-content: space-around;
     width: 80%;
@@ -275,6 +286,8 @@
 @media only screen and (min-width: 768px) and (max-width: 1200px){
   .profileContainer {
     padding: 2% 5%;
+    min-height: 100%;
+    height: 100%;
   } 
   .profileAvatar p {
     padding-top: 35%;
@@ -310,15 +323,16 @@
     padding-left: 2%;
     width: 33%;
   }
-  .profileContainer{
-    min-height: 100%;
-    height: 100%;
+  .newPeople {
+    padding-bottom: 1%;
   }
 }
 
 @media only screen and (min-width: 1200px){
   .profileContainer {
     padding: 2% 14%;
+    min-height: 100%;
+    height: 100%;
   }
   .profileAvatar p {
     padding-top: 20%;
@@ -350,9 +364,8 @@
     padding-left: 2%;
     width: 32%;
   }
-  .profileContainer{
-    min-height: 100%;
-    height: 100%;
+  .newPeople {
+    padding-bottom: 1%;
 }
 
 }
