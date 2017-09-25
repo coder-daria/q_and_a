@@ -46,7 +46,8 @@ html, body, #root, #root>div {
   height: 100%
 }
 body {
-  box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Lora', serif;
 }
 /* HEADER */
 .app_top_section {
