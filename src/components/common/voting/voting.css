@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: flex-end;
   flex-basis: 100%;
+  color: rgb(64, 75, 81)
 }
 .votesCounter p {
   font-weight: bold;
@@ -47,6 +48,7 @@
 }
 
 @media only screen and (min-width: 1200px){
+  /* Question votes */
   .votes {
     padding-top: 5%;
   }
@@ -54,6 +56,16 @@
     padding-left: 15%;
   }
   .votesCounter {
-    padding-right: 15%;
+    padding-right: 30%;
+  }
+  /* Answer votes */
+  .main_answer .votes {
+    padding-top: 13%;
+  }
+  .main_answer .arrows {
+    padding-left: 15%;
+  }
+  .main_answer .votesCounter {
+    padding-right: 30%;
   }
 }

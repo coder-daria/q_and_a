@@ -1,5 +1,5 @@
 .answer {
-  box-shadow: 5px -3px 5px #BAB7B7;
+  box-shadow: 5px -3px 5px rgb(233, 233, 233);
   background-color: white;
   flex: 1 0;
   width: 100%;
@@ -16,7 +16,6 @@
   align-self: flex-start;
   align-items: center;
   width: 100%;
-  border-bottom: 1.5px solid rgb(226, 223, 223);
 }
 .answer_header {
   color: rgb(121, 121, 122);
@@ -87,15 +86,27 @@
     padding-left: 3%;
   }
   .answer_header p:nth-child(2){
-   line-height: 20px;
-   padding-right: 7%;
+    line-height: 20px;
+    padding-right: 7%;
   }
   .answer_header p:nth-child(1), .answer_header p:nth-child(2){
     padding-bottom: 3%;
   }
-
+  
 }
-
 @media only screen and (min-width: 1200px){
-
+  .main_answer .single_question_row_middle_item {
+    padding-top: 1.5%;
+    padding-left: 1.5%;;
+    border-left: 1px solid rgb(226, 223, 223);
+  }
+  .main_answer .single_question_row_left_item {
+    padding: 1%;
+  }
+  .answer_header p:nth-child(2){
+    line-height: 20px;
+  }
+  .answer_header p:nth-child(1), .answer_header p:nth-child(2){
+    padding-bottom: 2%;
+  }
 }
