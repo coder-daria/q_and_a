@@ -24,7 +24,6 @@
     flex-basis: 10%;
 }
 .centered_avatar {
-  border-right: 2px solid rgb(238, 238, 238);
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -71,7 +70,6 @@
   .single_question_row .single_question_row_middle_item{
     /* background-color: blue; */
     flex: 1 0 50%;
-    padding-left: 2.5%;
   }
 }
 

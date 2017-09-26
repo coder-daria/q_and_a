@@ -12,14 +12,14 @@ class Answer extends React.Component {
         {space}
         <div className="centered_avatar single_question_row_left_item">
           <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" props="profile_pic" />
-          <p>Robert <span className="subTitle">commented it</span> <span className="when">yesterday</span></p>
+          <p className="whoCommented">Robert <span className="subTitle">commented it</span><span className="when">yesterday</span></p>
         </div>
         <div className="single_question_row_middle_item">
           <div className="answer_header">
-            <p>Robert commented it yesterday</p>
+            <p className="whoCommented">Robert <span className="subTitle">commented it</span><span className="when">yesterday</span></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+            </p>
           </div>
         </div>
         <div className="single_question_row_right_item">

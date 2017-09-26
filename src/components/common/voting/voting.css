@@ -20,6 +20,7 @@
 .votes_number {
   font-style: normal;
 }
+
 @media only screen and (max-width: 767px) {
   .votes {
     justify-content: space-between;
@@ -40,6 +41,8 @@
   .votesCounter {
     justify-content: flex-start;
     padding-left: 10%;
+    padding-top: 5%;
+    font-size: 14px;
   }
 }
 
