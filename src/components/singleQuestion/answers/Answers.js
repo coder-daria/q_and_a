@@ -7,7 +7,7 @@ class Answers extends React.Component {
   render() {
     return (
       <div className="allAnswers">
-        <span className="howManyAnswers">2 peers already answered</span>
+        <div className="howManyAnswers"><span className="allAnswers_number">2</span> peers already answered</div>
         <Answer />
         <Answer />
         <Answer />
