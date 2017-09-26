@@ -39,6 +39,8 @@
   flex-direction: column;
   align-items: center;
   color: rgb(121, 121, 122);
+  line-height: 20px;
+  
 }
 /* Button */
 .sticky {
@@ -144,7 +146,7 @@
   }
   /* Body */
   .question_content{
-    padding-top: 3%;
+    padding: 2%;
     padding-bottom: 5%;
   }
   /* Button */
@@ -178,7 +180,7 @@
   padding-top: 2%;
 }
 /* Body */
-.question_content{
+.question_content {
   padding: 2%;
   padding-bottom: 3%;
 }

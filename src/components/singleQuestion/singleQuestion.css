@@ -60,16 +60,11 @@
   .last_discussed {
     display: none;
   }
-
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
   .question_and_last_discussed .add_question{
     font-size: 35px;
-  }
-  .single_question_row .single_question_row_middle_item{
-    /* background-color: blue; */
-    flex: 1 0 50%;
   }
 }
 
