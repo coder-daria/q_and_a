@@ -5,10 +5,10 @@ import QuestionDetails from './QuestionDetails';
 import './allQuestions.css';
 
 class AllQuestions extends React.Component {
-  renderHeader = () => {
+  renderHeader() {
     return (
       <div className="app_top_section search_header">
-        <div className="question_and_sort">
+        {/*<div className="question_and_sort">
           <div className="search_header_return_arrow">
             <ArrowLeft />
           </div>
@@ -20,7 +20,7 @@ class AllQuestions extends React.Component {
               <Icon>add_circle</Icon>
             </div>
           </div>
-          <div className="question_details">
+          <div className="search_header_question_details">
             <p>My shelf</p>
             <p>All questions</p>
           </div>
@@ -33,14 +33,25 @@ class AllQuestions extends React.Component {
             <input type="text" name="search" />
             <button>Search</button>
           </form>
-        </div>
+        </div>*/}
       </div>
     );
   }
-  renderContent = () => {
+  renderLoadMore() {
+    return (
+      <div className="all_questions_load_more">
+        {"load more"}
+      </div>
+    )
+  }
+  renderContent() {
     return (
       <div className="all_questions">
         <QuestionDetails />
+        <QuestionDetails />
+        <QuestionDetails />
+        <QuestionDetails />
+        {this.renderLoadMore()}
       </div>
     )
   }

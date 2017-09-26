@@ -1,4 +1,17 @@
+.question_details {
+  background-color: rgb(233, 243, 253);
+  box-shadow: 1px 1px 5px #BAB7B7;
+  /* display: flex; */
+  /* flex-direction: column; */
+  width: 70%;
+  justify-content: center;
+  /* flex: 1 0 calc(3.5 * 100% / 11); */
+  flex-grow: 1;
+  flex-basis: 30%;
+  flex-shrink: 0;
+}
 .question_details_header { 
+  background-color: black;
   display: flex;
 }
 .question_details_avatar{
@@ -9,13 +22,14 @@
 }
 .question_details_popularity{
   flex: 0 0 20%;
-  background-color: white;
+  /* background-color: white; */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 /* BODY */
 .question_details_body {
+  background-color: yellow;
   display: flex;
 }
 /* .question_details_asked{
@@ -58,8 +72,8 @@
 
 .my_question_details_content{
   display: flex;
-  width: 500px;
-  height: 200px;
+  /* width: 500px; */
+  /* height: 200px; */
   background-color: orange;
   justify-content: space-between;
   align-items: flex-end;
