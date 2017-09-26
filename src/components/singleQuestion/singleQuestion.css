@@ -12,30 +12,31 @@
   /* background-color: greenyellow; */
 }
 .single_question_header .add_question {
-  flex-basis: 40%;
   display: flex;
+  flex-basis: 40%;
   align-items: center;
+  /* background-color: pink; */
 }
 .single_question_header .add_question p {
   font-size: 35px;
   font-weight: bold;
-  padding-right: 7%;
-  /* background-color: pink; */
+  padding-right: 8%;
 }
 .last_discussed {
   font-style: italic;
-  flex-basis: 26%;
+  flex-basis: 25.5%;
   display: flex;
-  /* justify-content: flex-end; */
+  justify-content: flex-end;
   align-items: center;
   color: rgb(121, 121, 122);
-  background-color: orchid;
+  /* background-color: orchid; */
 }
 
 .last_discussed .number {
+  /* background-color: yellow; */
   font-style: normal;
-  padding-left: 3%;
-  padding-right: 3%;
+  /* padding-left: 3%; */
+  /* padding-right: 3%; */
 }
 
 /* Single question body */
@@ -71,29 +72,44 @@
 
 /* QUERIES */
 @media only screen and (max-width: 767px) {
+  /* Single question header */
+  .single_question_header .add_question{
+    flex: 1;
+    justify-content: space-between;
+    padding-right: 2%;
+    /* background-color: yellow; */
+  }
+  /* Single question body */
   .single_question_row_left_item {
     padding-top: 2%;
     padding-bottom: 2%;
     border-bottom: 2px solid white;
   }
   .single_question_row .single_question_row_middle_item{
-    /* background-color: yellow; */
     padding: 2%;
     padding-bottom: 7%;
     line-height: 130%;
   }
-  .single_question_header .add_question{
-    font-size: 45px;
-    width: 90%;
-  }
+  
   .last_discussed {
     display: none;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
-  .single_question_header .add_question{
-    font-size: 35px;
+   /* Single question header */
+   .returnArrow {
+    flex-basis: 12%;
+  }
+   .single_question_header .add_question{
+    flex-basis: 53%;
+  }
+  .single_question_header .add_question p {
+    padding-right: 15%;
+  }
+  .last_discussed {
+    flex-basis: 35%;
+    justify-content: center;
   }
 }
 

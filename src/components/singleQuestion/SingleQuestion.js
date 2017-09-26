@@ -19,7 +19,7 @@ class SingleQuestion extends React.Component {
             <Icon>add_circle</Icon>
           </div>
           <div className="last_discussed">
-            <p>Last time discussed <span className="number">1</span>day ago</p>
+            <p>Last time discussed<span className="number"> 1 </span>day ago</p>
           </div>
         </div>
       </div>
