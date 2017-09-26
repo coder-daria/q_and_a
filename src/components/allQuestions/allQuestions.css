@@ -19,7 +19,6 @@
   display: flex;
 }
 .question_details {
-  
   background-color: red;
   flex-basis: 30%;
 }
