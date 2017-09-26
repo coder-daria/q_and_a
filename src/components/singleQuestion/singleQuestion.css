@@ -29,14 +29,14 @@
   justify-content: flex-end;
   align-items: center;
   color: rgb(121, 121, 122);
-  /* background-color: orchid; */
+  background-color: orchid;
 }
 
 .last_discussed .number {
   /* background-color: yellow; */
   font-style: normal;
-  /* padding-left: 3%; */
-  /* padding-right: 3%; */
+  /* padding-left: 2%; */
+  /* padding-right: 2%; */
 }
 
 /* Single question body */
