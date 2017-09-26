@@ -71,4 +71,8 @@ class Question extends React.Component {
   }
 }
 
+Question.defaultProps = {
+  timeSinceLastChange: {unit: 4, time: "days ago"}
+};
+
 export default Question;

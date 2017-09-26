@@ -60,5 +60,7 @@ class Answer extends React.Component {
     );
   }
 }
+ Answer.defaultProps = {
+ };
 
 export default Answer;
