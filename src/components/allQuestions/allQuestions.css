@@ -14,7 +14,6 @@
 }
 .all_questions_load_more {
   background-color: green;
-  /* flex: 1 0 calc(100% / 11); */
   flex-basis: 10%;
   flex-shrink: 0;
   width: 70%;

@@ -16,15 +16,13 @@ class QuestionDetails extends React.Component {
           <h4>{this.props.user.name} is asking</h4>
           <h3>{this.props.user.question}</h3>
         </div>
-        <div className="question_details_popularity">
-        </div>
       </div>
     )
   }
   renderBody = () => {
     return (
       <div className="question_details_body">
-        <div className="my_question_details_content">
+        <div className="question_details_content">
           <div className="item item_asked"></div>
           <div className="item more_activities"></div>
           <div className="item commented">
