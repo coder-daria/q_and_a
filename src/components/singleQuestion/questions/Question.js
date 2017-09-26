@@ -6,18 +6,19 @@ import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
 
 class Question extends React.Component {
   renderHeader = () => {
+    const whoIsAsking = <p>Eva <span className="subTitle">is asking:</span></p>;
     return (
       <div className="single_question_row questionHeader">
         <div className="centered_avatar single_question_row_left_item">
           <Avatar src="http://slodive.com/wp-content/uploads/2012/11/funny-pug-pictures/funnypugpictures200.jpg" props="profile_pic" />
-          <p>Eva is asking</p>
+          {whoIsAsking}
         </div>
-        <div className="single_question_row_middle_item single_question_main_quesion">
-          <p>Eva is asking</p>
-          <h3>Will insulin make my patient gain weight?</h3>
+        <div className="single_question_row_middle_item single_question_main_question">
+          {whoIsAsking}
+          <p>Will insulin make my patient gain weight?</p>
         </div>
         <div className="single_question_row_right_item single_question_unfollow_header">
-          <h4>unfollow</h4>
+          <p>unfollow</p>
         </div>
       </div>
     )
@@ -53,7 +54,7 @@ class Question extends React.Component {
   renderStickyChild() {
     return (
       <div className="sticky">
-        <button>hola hola hola</button>
+        <button>GIVE new answer</button>
       </div>
     )
   }
