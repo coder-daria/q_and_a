@@ -6,6 +6,8 @@
   /* min-height: 100%; */
   /* max-height: 100%; */
 }
+
+/* Body */
 .mycontent {
   height: 500px;
   width: 600px;
@@ -19,19 +21,24 @@
   width: 70%;
   display: flex;
 }
+
+/* Header*/
+.search_header {
+  flex-direction: column;
+  background-color: #174CDA;
+}
 /* Add question */
 .question_and_sort {
-  background-color: green;
-  width: 83.3%;
+  background-color: #006480;
+  width: 82.5%;
   display: flex;
-  justify-content: flex-start;
   align-self: flex-start;
 }
 .search_header_return_arrow {
   background-color: yellow;
   flex-basis: 20%;
 }
-.question_and_sort .add_question {
+.add_question {
   flex-grow: 1;
   flex-basis: 30%;
   display: flex;
@@ -42,26 +49,22 @@
   flex-basis: 30%;
 }
 .search_header_sort_by {
-  background-color: yellow;
   display: flex;
+  background-color: #00E6FF;
   flex-basis: 16%;
 }
 /* Search */
-.search_header {
-  flex-direction: column;
-  background-color: black;
-}
 .search {
-  width: 66.6%;
-  background-color: yellow;
+  width: 65%;
+  background-color: #009DFF;
 }
 .search input[type=text] {
-  width: 80%;
+  width: 75%;
   background-color: magenta;
 }
 .search button{
-  width: 20%;
-  background-color: magenta;
+  width: 15%;
+  background-color: #A900FF;
 }
 input[type=text] {
     box-sizing: border-box;

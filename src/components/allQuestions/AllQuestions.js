@@ -8,7 +8,7 @@ class AllQuestions extends React.Component {
   renderHeader() {
     return (
       <div className="app_top_section search_header">
-        {/*<div className="question_and_sort">
+        <div className="question_and_sort">
           <div className="search_header_return_arrow">
             <ArrowLeft />
           </div>
@@ -33,7 +33,7 @@ class AllQuestions extends React.Component {
             <input type="text" name="search" />
             <button>Search</button>
           </form>
-        </div>*/}
+        </div>
       </div>
     );
   }
