@@ -6,7 +6,6 @@ import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
 import './questionDetails.css';
 
 class QuestionDetails extends React.Component {
-
   renderHeader = () => {
     return (
       <div className="question_details_header">
