@@ -15,7 +15,7 @@ class Profile extends React.Component {
           <Close />
         </div>
         <div className="profileAvatar">
-          <Avatar size="big" src="http://www.wsp-pb.com/Globaln/WSP-Canada/Who%20We%20Are/Sustainability/2016/Claire.jpg" />
+          <Avatar size="big" src={this.props.user.avatar} />
           <p>{this.props.user.name}</p>
         </div>
         <div className="profileActivity">
@@ -125,6 +125,7 @@ class Profile extends React.Component {
 Profile.defaultProps = {
   user: {
     name: "Dr. Halima",
+    avatar: "http://www.wsp-pb.com/Globaln/WSP-Canada/Who%20We%20Are/Sustainability/2016/Claire.jpg",
     memberFor: { number: 5, howMany: "months" },
     lastSeen: "Saturday afternoon",
     activityLevel: 3,

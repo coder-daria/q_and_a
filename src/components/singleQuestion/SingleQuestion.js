@@ -5,7 +5,7 @@ import Answers from './answers/Answers';
 import ArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
 import Icon from 'material-ui/Icon';
 import Modal from '../modalWindow/ModalWindow';
-import moment from 'moment';
+// import moment from 'moment';
 
 class SingleQuestion extends React.Component {
   renderHeader = () => {

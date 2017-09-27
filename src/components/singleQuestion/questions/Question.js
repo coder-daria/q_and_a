@@ -11,7 +11,7 @@ class Question extends React.Component {
     return (
       <div className="single_question_row questionHeader">
         <div className="centered_avatar single_question_row_left_item">
-          <Avatar src="http://slodive.com/wp-content/uploads/2012/11/funny-pug-pictures/funnypugpictures200.jpg" props="profile_pic" />
+          <Avatar src={this.props.user.avatar} props="profile_pic" />
           {whoIsAsking}
         </div>
         <div className="single_question_row_middle_item single_question_main_question">
@@ -69,7 +69,8 @@ class Question extends React.Component {
 Question.defaultProps = {
   timeSinceLastChange: {unit: 4, time: "days ago"},
   user: { 
-    name: "Eva", 
+    name: "Eva",
+    avatar: "http://slodive.com/wp-content/uploads/2012/11/funny-pug-pictures/funnypugpictures200.jpg",
     question: "Will insulin make my patient gain weight?", 
     questionDescription: "All my patients with diabetes should see on opthalmologist yearly for a dialated beggining at diagnosis in people with type 2 diabetes, and after 5 years in people with type 1 diabetes after puberty.", 
     unfollow: "unfollow",
