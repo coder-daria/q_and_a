@@ -94,5 +94,5 @@
   background-color: gray;
 }
 .item .item_status {
-  font-size: 10px;
+  font-size: calc(10rem / 16);
 }

@@ -43,7 +43,7 @@
     justify-content: flex-start;
     padding-left: 10%;
     padding-top: 5%;
-    font-size: 14px;
+    font-size: calc(14rem / 16);
   }
 }
 
