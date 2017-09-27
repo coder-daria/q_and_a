@@ -5,6 +5,8 @@ import ArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
 import ArrowRight from 'material-ui-icons/KeyboardArrowRight';
 import Stars from 'material-ui-icons/Stars';
 import Close from 'material-ui-icons/Clear';
+import IconButton from 'material-ui/IconButton';
+import PropTypes from 'prop-types';
 import Avatar from '../common/avatar/Avatar';
 
 class Profile extends React.Component {
@@ -12,7 +14,9 @@ class Profile extends React.Component {
     return (
       <div className="profileHeader">
         <div className="profileCloseButton">
+        <IconButton aria-label="Close" onClick={this.props.closeModalWindow} >
           <Close />
+        </IconButton>
         </div>
         <div className="profileAvatar">
           <Avatar size="big" src={this.props.user.avatar} />
@@ -47,7 +51,7 @@ class Profile extends React.Component {
           <div className="personAvatar">
             <Avatar src={person.avatarURL} />
           </div>
-          <p>{person.name}</p>
+          <p className="person_name">{person.name}</p>
         </div>
       )
     });
@@ -141,6 +145,10 @@ Profile.defaultProps = {
     title: "Vegan diet to stop diabetes progress",
     statisticData: { peers: 6, relatedDiscussion: 3, conversations: 3, upvotes: 19 }
   }
+};
+
+Profile.propTypes = {
+  closeModalWindow: PropTypes.func.isRequired
 };
 
 export default Profile;

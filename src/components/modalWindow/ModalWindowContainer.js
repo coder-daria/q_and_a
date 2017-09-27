@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import ModalWindow from './ModalWindow';
+import * as actions from '../../redux/actions';
 
 const mapStateToProps = state => {
   return {
@@ -9,6 +10,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
+    closeModalWindow: () => dispatch(actions.toggleModalWindow())
   }
 };
 

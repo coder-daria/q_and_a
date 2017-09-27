@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import Profile from '../profile/Profile';
 import MediaQuery from 'react-responsive';
+import PropTypes from 'prop-types';
 
 class ModalWindow extends React.Component {
   render() {
@@ -50,7 +51,7 @@ class ModalWindow extends React.Component {
         isOpen={this.props.showModal}
         style={modalStyles}
       >
-        <Profile />
+        <Profile closeModalWindow={this.props.closeModalWindow}/>
       </Modal>
     )
   }
@@ -73,4 +74,8 @@ class ModalWindow extends React.Component {
     return this.renderWithCustomStyle();
   }
 }
+ModalWindow.propTypes = {
+  closeModalWindow: PropTypes.func.isRequired,
+  showModal: PropTypes.bool.isRequired,
+};
 export default ModalWindow;

@@ -6,14 +6,13 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
-    let showModalWindow = this.props.showModal ? <ModalWindowContainer /> : null;
     return (
       <Router>
-      <div>
-        <Route component={AllQuestions} />
-        <Route path={`/single_question`} component={SingleQuestionContainer} />
-        {showModalWindow}
-      </div>
+        <div>
+          <Route component={AllQuestions} />
+          <Route path={`/single_question`} component={SingleQuestionContainer} />
+          <ModalWindowContainer />
+        </div>
       </Router>
     );
   }
