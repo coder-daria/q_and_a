@@ -21,16 +21,22 @@ class AllQuestions extends React.Component {
             </div>
           </div>
           <div className="search_header_question_details">
-            <p>My shelf</p>
-            <p>All questions</p>
+            <form>
+              <div>
+                <input type="radio" name="sortBy" value="My shelf" checked />My shelf
+              </div>
+              <div>
+                <input type="radio" name="sortBy" value="All questions" />All questions
+              </div>
+            </form>
           </div>
           <div className="search_header_sort_by">
-            <p>Sort by: recent or hot</p>
+            <p>Sort by:<a href="#" className="recent">recent</a>or<span className="hot">hot</span></p>
           </div>
         </div>
         <div className="search">
           <form>
-            <input type="text" name="search" />
+            <input type="text" name="search" placeholder="Search questions"/>
             <button>Search</button>
           </form>
         </div>
