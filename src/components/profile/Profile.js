@@ -16,16 +16,16 @@ class Profile extends React.Component {
         </div>
         <div className="profileAvatar">
           <Avatar size="big" src="http://www.wsp-pb.com/Globaln/WSP-Canada/Who%20We%20Are/Sustainability/2016/Claire.jpg" />
-          <p>Dr. Halima</p>
+          <p>{this.props.user.name}</p>
         </div>
         <div className="profileActivity">
           <div className="profileActivityItem">
             <p className="profileActivityItemName subTitle">Member for</p>
-            <p className="profileActivityItemValue">5 months</p>
+            <p className="profileActivityItemValue">{this.props.user.memberFor.number} {this.props.user.memberFor.howMany}</p>
           </div>
           <div className="profileActivityItem">
             <p className="profileActivityItemName subTitle">Last seen</p>
-            <p className="profileActivityItemValue">Saturday afternoon</p>
+            <p className="profileActivityItemValue">{this.props.user.lastSeen}</p>
           </div>
           <div className="profileActivityItem">
             <p className="profileActivityItemName subTitle">Activity level</p>
@@ -40,6 +40,17 @@ class Profile extends React.Component {
     )
   }
   renderBody = () => {
+    let newPeople = this.props.newPeople;
+    let person = newPeople.map(person => {
+      return (
+        <div className="person">
+          <div className="personAvatar">
+            <Avatar src={person.avatarURL} />
+          </div>
+          <p>{person.name}</p>
+        </div>
+      )
+    });
     return (
       <div className="profileBody">
         <div className="navigationTable">
@@ -48,43 +59,26 @@ class Profile extends React.Component {
           <ArrowRight />
         </div>
         <div className="profileStatistics">
-          <div className="subTitle">That's where we have been these 5 months ago</div>
+          <div className="subTitle">That's where we have been these {this.props.user.memberFor.number} {this.props.user.memberFor.howMany} ago</div>
           <div className="profileStatisticsData">
             <div className="square peers">
-              <p className="peers_text"><span className="statistic_numbers">46</span> peers</p>
+              <p className="peers_text"><span className="statistic_numbers">{this.props.user.statisticData.peers}</span>peers</p>
             </div>
             <div className="square discussions">
-              <p className="discussions_text"><span className="statistic_numbers">29</span> discussions</p>
+              <p className="discussions_text"><span className="statistic_numbers">{this.props.user.statisticData.discussion}</span>discussions</p>
             </div>
             <div className="square findings">
-              <p className="findings_text"><span className="statistic_numbers">19</span> findings</p>
+              <p className="findings_text"><span className="statistic_numbers">{this.props.user.statisticData.findings}</span>findings</p>
             </div>
             <div className="square questions">
-              <p className="questions_text"><span className="statistic_numbers">10</span> questions</p>
+              <p className="questions_text"><span className="statistic_numbers">{this.props.user.statisticData.questions}</span>questions</p>
             </div>
           </div>
         </div>
         <div className="newPeople">
           <div className="subTitle">Who joined the platform that same period</div>
           <div className="people">
-            <div className="person">
-              <div className="personAvatar">
-                <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
-              </div>
-              <p>S.E.N Waweru</p>
-            </div>
-            <div className="person">
-              <div className="personAvatar">
-                <Avatar src="http://www.trbimg.com/img-56dcb867/turbine/bal-baltimore-people-on-the-move-march-20160306/200/200x200" />
-              </div>
-              <p>Patricia</p>
-            </div>
-            <div className="person">
-              <div className="personAvatar">
-                <Avatar src="http://www.trbimg.com/img-57015a41/turbine/bal-baltimore-people-on-the-move-april-20160403/200/200x200" />
-              </div>
-              <p>Joseph Aluoch</p>
-            </div>
+            {person}
           </div>
         </div>
       </div>
@@ -99,16 +93,16 @@ class Profile extends React.Component {
             <Avatar src="https://www.digitalsurgeons.com/images/uploads/authors/rsz_1kiss_from_a_rose-1.jpg" />
           </div>
           <div className="hottest_discussion_background">
-            <p>Andrew<span className="subTitle"> Found the Guardian Article</span></p>
-            <p className="hottest_discussion_article_title">Vegan diet to stop diabetes progress</p>
+            <p>{this.props.hottestDiscussion.autor.name}<span className="subTitle">{this.props.hottestDiscussion.autor.subName}</span></p>
+            <p className="hottest_discussion_article_title">{this.props.hottestDiscussion.title}</p>
             <div className="hottest_discussion_details">
               <div className="hottest_discussion_details_left">
-                <div><span className="statistic_numbers">6</span> peers involved</div>
-                <div><span className="statistic_numbers">3</span> related discussion</div>
+                <div><span className="statistic_numbers">{this.props.hottestDiscussion.statisticData.peers}</span>peers involved</div>
+                <div><span className="statistic_numbers">{this.props.hottestDiscussion.statisticData.relatedDiscussion}</span>related discussion</div>
               </div>
               <div className="hottest_discussion_details_right">
-                <div><span className="statistic_numbers">3</span> conversations</div>
-                <div><span className="statistic_numbers">19</span> upvotes</div>
+                <div><span className="statistic_numbers">{this.props.hottestDiscussion.statisticData.conversations}</span>conversations</div>
+                <div><span className="statistic_numbers">{this.props.hottestDiscussion.statisticData.upvotes}</span>upvotes</div>
               </div>
             </div>
           </div>
@@ -127,5 +121,25 @@ class Profile extends React.Component {
     )
   }
 }
+
+Profile.defaultProps = {
+  user: {
+    name: "Dr. Halima",
+    memberFor: { number: 5, howMany: "months" },
+    lastSeen: "Saturday afternoon",
+    activityLevel: 3,
+    statisticData: { peers: 46, discussion: 29, findings: 19, questions: 10 }
+  },
+  newPeople: [
+    { name: "S.E.N Waweru", avatarURL: "https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" },
+    { name: "Patricia", avatarURL: "http://www.trbimg.com/img-56dcb867/turbine/bal-baltimore-people-on-the-move-march-20160306/200/200x200" },
+    { name: "Joseph Aluoch", avatarURL: "http://www.trbimg.com/img-57015a41/turbine/bal-baltimore-people-on-the-move-april-20160403/200/200x200" }
+  ],
+  hottestDiscussion: {
+    autor: {name: "Andrew", subName:"Found the Guardian Article"},
+    title: "Vegan diet to stop diabetes progress",
+    statisticData: { peers: 6, relatedDiscussion: 3, conversations: 3, upvotes: 19 }
+  }
+};
 
 export default Profile;
