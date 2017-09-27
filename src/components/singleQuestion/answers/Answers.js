@@ -7,7 +7,7 @@ class Answers extends React.Component {
   render() {
     return (
       <div className="allAnswers">
-        <div className="howManyAnswers"><span className="allAnswers_number">2</span> peers already answered</div>
+        <div className="howManyAnswers"><span className="allAnswers_number">{this.props.answers.howMany}</span>peers already answered</div>
         <Answer />
         <Answer />
         <Answer />
@@ -21,5 +21,8 @@ class Answers extends React.Component {
     );
   }
 }
+Answers.defaultProps = {
+  answers: {howMany: 2}
+};
 
 export default Answers;
