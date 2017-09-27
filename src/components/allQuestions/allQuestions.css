@@ -47,9 +47,10 @@
   flex-grow: 1;
   flex-basis: 30%;
   font-size: calc(30rem / 16);
+  align-items: center;
   /* background-color: yellow; */
 }
-.add_question div:nth-child(1){
+.add_question p{
   padding-right: 5%;
 }
 .search_header_question_details {
@@ -87,21 +88,11 @@
   margin-left: -1%;
   padding-top: 1%;
   width: 66%;
-  justify-content: space-between;
   /* background-color: #009DFF; */
 }
 .search form {
   display: flex;
   justify-content: space-between;
-}
-.search button{
-  flex-basis: 20%;
-  background-color: white;
-  border: 2px solid rgb(202, 204, 205);
-  color: rgb(216, 215, 216);
-  font-weight: bold;
-  font-size: calc(16rem / 16);
-  text-transform: uppercase;
 }
 .search input[type=text] {
   flex-basis: 75%;
@@ -115,6 +106,15 @@
   background-color: rgb(251, 251, 251);
 }
 
+.search button{
+  flex-basis: 20%;
+  background-color: white;
+  border: 2px solid rgb(202, 204, 205);
+  color: rgb(216, 215, 216);
+  font-weight: bold;
+  font-size: calc(16rem / 16);
+  text-transform: uppercase;
+}
 @media only screen and (max-width: 767px) {
   .question_and_sort {
     width: 100%;
@@ -138,17 +138,57 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
-  .question_and_sort {
-    width: 100%;
-    flex: wrap;
+  /* HEADER */
+ /* Add question */
+ .question_and_sort {
+   width: 100%;
   }
+  .search_header_return_arrow {
+    flex-basis: 15%;
+    /* background-color: yellow; */
+  }
+ .question_and_sort .add_question {
+   flex-basis: 35%;
+   /* background-color: #FF0023; */
+ }
+ .add_question p{
+   padding-right: 15%;
+ }
+ 
+ .search_header_question_details {
+   justify-content: space-between;
+   flex-basis: 35%;
+   /* background-color: #83FF00; */
+ }
+ .search_header_question_details form{
+   justify-content: space-around;
+ }
+  .search_header_sort_by {
+    flex-basis: 30%;
+    justify-content: center;
+    /* background-color: #00E6FF; */
+  }
+ 
+  /* Search */
   .search {
     width: 100%;
+    margin-left: 0;
+    padding-top: 0;
   }
-  .question_and_sort .add_question {
-    flex-grow: 0;
+  .search form {
+    justify-content: space-around;
+  } 
+  /* BODY */
+  .question_details {
+    width: 100%;
   }
-  .search_header_sort_by {
-  flex-basis: 20%;
+
+  .search input[type=text] {
+    flex-basis: 73.5%;
   }
+  
+  .search button{
+    flex-basis: 20%;
+  }
+
 }

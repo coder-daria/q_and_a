@@ -13,12 +13,8 @@ class AllQuestions extends React.Component {
             <ArrowLeft />
           </div>
           <div className="add_question">
-            <div>
               <p>Question</p>
-            </div>
-            <div>
               <Icon>add_circle</Icon>
-            </div>
           </div>
           <div className="search_header_question_details">
             <form>
