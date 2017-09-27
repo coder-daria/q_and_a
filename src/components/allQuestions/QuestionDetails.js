@@ -24,7 +24,11 @@ class QuestionDetails extends React.Component {
       <div className="question_details_body">
         <div className="question_details_content">
           <div className="item item_asked"></div>
-          <div className="item more_activities"></div>
+          <div className="item more_activities">
+            <p className="item_status">
+              MORE
+            </p>
+          </div>
           <div className="item commented">
             <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
             <p className="item_status">
@@ -33,12 +37,21 @@ class QuestionDetails extends React.Component {
           </div>
           <div className="item commented">
             <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
+            <p className="item_status">
+              COMMENTED
+            </p>
+          </div>
+          <div className="item answered">
+            <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
+            <p className="item_status">
+              ANSWERED
+            </p>
           </div>
           <div className="item commented">
             <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
-          </div>
-          <div className="item commented">
-            <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
+            <p className="item_status">
+              COMMENTED
+            </p>
           </div>
         </div>
         <div className="question_details_popularity">
