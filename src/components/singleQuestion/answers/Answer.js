@@ -16,7 +16,7 @@ class Answer extends React.Component {
         </div>
         <div className="single_question_row_middle_item">
           <div className="answer_header">
-            <p className="whoCommented">Robert <span className="subTitle">commented it</span><span className="when">{this.props.date.whenCommented}</span></p>
+            <p className="whoCommented">{this.props.user.name}<span className="subTitle">commented it</span><span className="when">{this.props.date.whenCommented}</span></p>
             <p>{this.props.user.answer}</p>
           </div>
         </div>
