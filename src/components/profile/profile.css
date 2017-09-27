@@ -1,419 +1,72 @@
-/* GLOBAL CSS */
 .profileContainer {
   /* background-color: red; */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: min-content;
+  height: 100%;
+  /* min-height: 1000px !important; */
 }
-/* HEADER */
- .profileHeader {
+.profileHeader {
   /* background-color: blue; */
   display: flex;
-  min-width: 70%;
+  width: 70%;
   flex-basis: 20%;
   flex-direction: column;
   align-items: center;
   padding-bottom: 2%;
   padding-top: 1%;
 }
-.profileCloseButton{
-  /* background-color: lightskyblue; */
-  align-self: flex-end;
-  flex-basis: 5%;
-  color: #A09E9E;
-}
-.profileAvatar {
-  /* background-color: lightblue; */
-  display: flex;
-  /* flex-basis: 45%; */
-  flex-direction: column;
-  align-items: center;
-}
-.profileAvatar p {
-  color: rgb(23, 120, 193);
-  font-size: 20px;
-  font-weight: bold;
-}
-.profileActivity {
-  /* background-color: lightskyblue; */
-  display: flex;
-  width: 100%;
-  flex: 1 0 20%;
-  align-items: center;
-}
-.profileActivityItem {
-  display: flex;
-  align-items: center;
-}
-.subTitle {
-  text-transform: uppercase;
-  color: rgb(154, 155, 170);
-}
-
-/* BODY */
 .profileBody {
   /* background-color: yellow; */
-  min-width: 70%;
-  padding-top: 2%;
-  flex-basis: 45%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/* How it started */
-.navigationTable { 
-  /* background-color: lightyellow; */
-  display: flex;
-  flex-basis: 10%;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-.navigationTable p{
-  font-style: italic;
-  font-weight: bold;
-  font-size: 42px;
-}
-.statistic_numbers {
-  font-weight: bold;
-  font-size: 27px;
-}
-.profileStatistics {
-  /* background-color: greenyellow; */
-  display: flex;
-  flex: 1 0 45%;
-  flex-direction: column;
-  align-items: center;
   width: 70%;
-  justify-content: space-around;
-}
-.profileStatisticsData {
-  /* background-color: #B220AC; */
+  padding-top: 2%;
+  flex-basis: 50%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 435px;
-}
-
-/* profile statistics data*/
-.peers {
-  transform: rotate(45deg);
-}
-.peers_text, .findings_text{
-  transform: rotate(-45deg);
-  transform-origin: 80% 80%;
-  display: flex;
+  border-top: 1px solid #D1CDCD;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
 }
-.discussions_text {
-  transform: rotate(15deg);
-  transform-origin: -40% 75%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-.questions_text {
-  transform: rotate(-4deg);
-  transform-origin: 350% 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-.discussions {
-  transform: rotate(-15deg);
-}
-.findings {
-  transform: rotate(45deg);
-}
-.questions {
-  transform: rotate(5deg);
-}
-.profileStatisticsData .square {
-  background-color: rgba(229,245,253, 0.8);
-  width: 90px;
-  height: 90px;
-}
-/* People who joined the platform */
-.newPeople {
-  /* background-color: #F9F91D; */
-  display: flex;
-  flex-direction: column;
-  flex-basis: 45%;
-  justify-content: space-around;
-}
-.newPeople .people {
-  display: flex;
-  flex-basis: 60%;
-  flex-grow: 1;
-  padding-top: 4%;
-  padding-bottom: 1%;
-  justify-content: space-between;
-}
-
-.newPeople .people .person {
+.profileFooter {
+  padding-top: 3%;
+  min-width: 100%;
   flex-basis: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: magenta; */
 }
-.personAvatar {
-  background-size: 6px 6px;
-  background-image:linear-gradient(45deg, transparent 46%, #E5D4D4 49%, rgb(240, 240, 240) 51%, transparent 55%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  flex-basis: 70%;
+.subTitle {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: rgb(131, 144, 154);
 }
-.person p {
-  color: rgb(23, 120, 193);
+.person_name {
+  color: rgb(2, 102, 182);
   font-weight: bold;
   text-align: center;
-  width: 55%;
-  padding-top: 8%;
+  /* width: 55%; */
+  /* padding-top: 8%; */
 }
-/* FOOTER */
-.profileFooter {
-  min-width: 100%;
-  display: flex;
-  flex-basis: 35%;
-  flex-direction: column;
-  align-items: center;
-}
-.hottest_discussion_title {
-  flex-basis: 10%;
-}
-.hottest_discussion_avatar {
-  max-height: 60px;
-  position: relative;
-  top: 30px;
-  display: flex;
-  align-items: center;
-}
-.hottest_discussion_article_title {
-  color: rgb(23, 120, 193);
-  font-style: italic;
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 0.5px;
-} 
-
-.hottest_discussion_background {
-  background-size: 6px 6px;
-  background-image: linear-gradient(45deg, transparent 46%, #E5D4D4 49%, rgb(240, 240, 240) 51%, transparent 55%);
-  background-color: brown;
-  width: 100%;
-  display: flex;
-  flex-basis: 65%;
-  flex-grow: 1;
-  padding-top: 4%;
-  flex-direction: column;
-  align-items: center;
-}
-.hottest_discussion_statistics {
-  width: 100%;
-  flex-basis: 60%;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.hottest_discussion_details {
-  display: flex;
-  width: 70%;
-  flex-wrap: wrap;
-  padding-top: 3%;
-  /* border: 2px solid orange; */
-}
-.hottest_discussion_details_left {
-  display: flex;
-  flex-basis: 50%;
-  justify-content: space-around;
-}
-.hottest_discussion_details_right {
-  display: flex;
-  justify-content: space-around;
-  flex-basis: 50%;
-}
-/* QUERIES */
 @media only screen and (max-width: 767px) {
   .subTitle {
     text-align: center;
+    font-size: 0.8em;
   }
-  .navigationTable p {
-    font-size: 25px;
-  }
-  .profileHeader {
-    /* flex: 1 0 50%; */
-  }
-  /* Body */
-  .profileBody {
-    /* flex: 1 0 50%; */
-  }
-  .profileFooter {
-    /* flex: 1 0 50%; */
-  }
-  .profileActivity {
-    flex-direction: column;
-    align-items: center;
-  }
-  .profileActivity .profileActivityItem {
-    flex-direction: column;
-    padding-bottom: 5%;
-  }
-  .profileActivityItemName {
-    padding-bottom: 4%;
-  }
-  .profileAvatar p {
-    font-size: 17px;
-    padding-top: 10%;
-    padding-bottom: 15%;
-  }
-  .profileStatistics {
-    height: 300px;
-  }
-  .profileStatisticsData {
-    justify-content: center;
-    width: 200px;
-  }
-  .newPeople {
-    padding-bottom: 8%;
-  }
-  /*Footer */
-  .hottest_discussion_title {
-    padding-bottom: 4%;
-  }
-  .hottest_discussion_article_title  {
-    font-size: 16px;
+  .profileContainer {
+    height: fit-content;
   } 
-  .hottest_discussion_details {
-    width: 80%;
-    font-style: italic;
-    font-size: 14px;
-  }
-  .hottest_discussion_details .statistic_numbers {
-    font-size: 16px;
-    font-style: normal;
-  }
-  /* right site */
-  .hottest_discussion_details_right {
-    background-color: yellow;
-    flex-basis: 40%;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    padding-left: 10%;
-  }
-  .hottest_discussion_details_right div:nth-child(1){
-    padding-bottom: 10%;
-  }
-  
-  /* left site */
-    .hottest_discussion_details_left {
-      background-color: greenyellow;
-      flex-basis: 50%;
-      justify-content: flex-start;
-      flex-wrap: wrap-reverse;
-      display: flex;
-    }
-    .hottest_discussion_details_left div:nth-child(2){
-    padding-bottom: 10%;
-    }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 1200px){
-  .profileContainer {
-    min-height: 100%;
-    height: 100%;
-  } 
-  .profileAvatar p {
-    padding-top: 35%;
-    padding-bottom: 5%;
+  .profileHeader, .profileBody, .profileFooter {
+    width: 80%;
   }
-  .profileActivity {
-    justify-content: space-between;
-  }
-  .profileActivity .profileActivityItem:nth-child(1){
-    justify-content: flex-start;
-    flex-basis: 31%;
-  }
-  .profileActivity .profileActivityItem:nth-child(2){
-    justify-content: center;
-    flex-basis: 35%;
-  }
-  .profileActivity .profileActivityItem:nth-child(3){
-    justify-content: flex-end;
-    flex-basis: 32%;
-  }
-  .profileActivityItem p:nth-child(2){
-    padding-left: 2%;
-    width: 48%;
-  }
-  .profileActivity .profileActivityItem:nth-child(1) .profileActivityItemValue{
-    width: 40%;
-  }
-  .profileActivityItem p:nth-child(2){
-    padding-left: 2%;
-    width: 55%;
-  }
-  .profileActivityItem div{
-    padding-left: 2%;
-    width: 33%;
-  }
-  .newPeople {
-    padding-bottom: 1%;
-  }
-  .hottest_discussion_details .statistic_numbers {
-    font-size: 18px;
+  .subTitle {
+    /* text-align: center; */
+    font-size: 0.8em;
   }
 }
-
 @media only screen and (min-width: 1200px){
-  .profileContainer {
-    min-height: 100%;
-    height: 100%;
-    
-  min-height: 1000px !important;
-  }
-  .profileAvatar p {
-    padding-top: 20%;
-    padding-bottom: 7%;
-  }
-  .profileActivity {
-    justify-content: space-between;
-  }
-  .profileActivity .profileActivityItem:nth-child(1){
-    justify-content: flex-start;
-    flex-basis: 30%;
-  }
-  .profileActivity .profileActivityItem:nth-child(2){
-    justify-content: center;
-    flex-basis: 36%;
-  }
-  .profileActivity .profileActivityItem:nth-child(3){
-    justify-content: flex-end;
-    flex-basis: 34%;
-  }
-  .profileActivity .profileActivityItem:nth-child(1) .profileActivityItemValue{
-    width: 40%;
-  }
-  .profileActivityItem p:nth-child(2){
-    padding-left: 2%;
-    width: 55%;
-  }
-  .profileActivityItem div{
-    padding-left: 2%;
-    width: 32%;
-  }
-  .newPeople {
-    padding-bottom: 1%;
-  }
-  .hottest_discussion_details .statistic_numbers {
-    font-size: 20px;
-  }
-  
   .profileFooter {
     padding-bottom: 3%;
   }
