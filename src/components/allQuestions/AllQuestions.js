@@ -3,6 +3,8 @@ import ArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
 import Icon from 'material-ui/Icon';
 import QuestionDetails from './QuestionDetails';
 import './allQuestions.css';
+import './allQuestionsHeader.css';
+import './allQuestionsBody.css';
 
 class AllQuestions extends React.Component {
   renderHeader() {
