@@ -24,6 +24,7 @@
 
 /* Header*/
 .search_header {
+  display: flex;
   flex-direction: column;
   /* background-color: #174CDA; */
 }
@@ -55,13 +56,13 @@
 }
 .search_header_question_details {
   flex-basis: 26%;
-  /* background-color: #0033FF; */
 }
 .search_header_question_details form{
   display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 100%;
+  /* background-color: #0033FF; */
 }
 
 .search_header_sort_by {
@@ -101,7 +102,6 @@
   color: rgb(216, 215, 216);
   font-size: 16px;
   border: 2px solid rgb(242, 242, 242);
-  border-radius: 4px;
   box-sizing: border-box;
   background-color: rgb(251, 251, 251);
 }
@@ -116,29 +116,70 @@
   text-transform: uppercase;
 }
 @media only screen and (max-width: 767px) {
-  .question_and_sort {
-    width: 100%;
-    flex-wrap: wrap;
+  /* HEADER */
+  .search_header {
+    flex-basis: 25%;
+    padding-bottom: 2%;
   }
+  .question_details {
+    width: 100%;
+  }
+  /* Add question */
   .search_header_return_arrow {
     flex-basis: 30%;
+    /* background-color: green; */
   }
   .question_and_sort .add_question {
     flex-basis: 70%;
+    /* background-color: #6CDD6C; */
+  }
+  .question_and_sort {
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
   }
   .search_header_question_details {
-    flex-basis: 50%;
+    flex-basis: 55%;
+    font-size: 13px;
+    background-color: yellow;
+  }
+  .search_header_question_details form {
+    justify-content: center;
+  }
+  .search_header_question_details div {
+    display: flex;
+    align-items: flex-end;
   }
   .search_header_sort_by {
-    flex-basis: 50%;
+    flex-basis: 45%;
+    justify-content: center;
+    font-size: 13px;
+    /* background-color: pink; */
   }
+  /* Search */
   .search {
     width: 100%;
+  }
+  .search form {
+    justify-content: space-around;
+  }
+  .search input[type=text] {
+    flex-basis: 75%;
+
+  }
+  .search button{
+    flex-basis: 20%;
+
+  }
+  /* BODY */ 
+  .all_questions {
+    flex-basis: 75%;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
   /* HEADER */
+
  /* Add question */
  .question_and_sort {
    width: 100%;
@@ -168,6 +209,13 @@
     justify-content: center;
     /* background-color: #00E6FF; */
   }
+  
+  .search input[type=text] {
+    flex-basis: 73.5%;
+  }
+  .search button{
+    flex-basis: 20%;
+  }
  
   /* Search */
   .search {
@@ -181,14 +229,6 @@
   /* BODY */
   .question_details {
     width: 100%;
-  }
-
-  .search input[type=text] {
-    flex-basis: 73.5%;
-  }
-  
-  .search button{
-    flex-basis: 20%;
   }
 
 }
