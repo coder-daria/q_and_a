@@ -12,20 +12,18 @@ class Answer extends React.Component {
         {space}
         <div className="centered_avatar single_question_row_left_item">
           <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" props="profile_pic" />
-          <p className="whoCommented">Robert <span className="subTitle">commented it</span><span className="when">yesterday</span></p>
+          <p className="whoCommented">{this.props.user.name}<span className="subTitle">commented it</span><span className="when">{this.props.date.whenCommented}</span></p>
         </div>
         <div className="single_question_row_middle_item">
           <div className="answer_header">
-            <p className="whoCommented">Robert <span className="subTitle">commented it</span><span className="when">yesterday</span></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <p className="whoCommented">Robert <span className="subTitle">commented it</span><span className="when">{this.props.date.whenCommented}</span></p>
+            <p>{this.props.user.answer}</p>
           </div>
         </div>
         <div className="single_question_row_right_item">
           <div className="votes">
             <div className="votesCounter">
-              <p><span className="votes_number">19</span> upvotes</p>
+              <p><span className="votes_number">{this.props.user.votes}</span>upvotes</p>
               <div className="arrows">
                 <ArrowUp />
                 <ArrowDown />
@@ -60,5 +58,9 @@ class Answer extends React.Component {
     );
   }
 }
+ Answer.defaultProps = {
+   date: {whenCommented:  "yesterday"},
+   user: {name: "Robert", answer:"Numbers or tingling in your feet should be reported to your doctior at your regular visits.", votes : 8}
+ };
 
 export default Answer;

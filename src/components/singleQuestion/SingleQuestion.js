@@ -5,6 +5,7 @@ import Answers from './answers/Answers';
 import ArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
 import Icon from 'material-ui/Icon';
 import Modal from '../modalWindow/ModalWindow';
+// import moment from 'moment';
 
 class SingleQuestion extends React.Component {
   renderHeader = () => {
@@ -19,7 +20,7 @@ class SingleQuestion extends React.Component {
             <Icon>add_circle</Icon>
           </div>
           <div className="last_discussed">
-            <p>Last time discussed<span className="number"> 1 </span>day ago</p>
+            <p>Last time discussed<span className="number">{this.props.timeSinceLastChange.unit}</span>{this.props.timeSinceLastChange.time}</p>
           </div>
         </div>
       </div>
@@ -44,5 +45,9 @@ class SingleQuestion extends React.Component {
     );
   }
 }
+
+SingleQuestion.defaultProps = {
+  timeSinceLastChange: {unit: 4, time: "days ago"}
+};
 
 export default SingleQuestion;

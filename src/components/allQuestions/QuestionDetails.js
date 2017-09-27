@@ -6,7 +6,6 @@ import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
 import './questionDetails.css';
 
 class QuestionDetails extends React.Component {
-
   renderHeader = () => {
     return (
       <div className="question_details_header">
@@ -14,8 +13,8 @@ class QuestionDetails extends React.Component {
           <Avatar src="http://slodive.com/wp-content/uploads/2012/11/funny-pug-pictures/funnypugpictures200.jpg" props="profile_pic" />
         </div>
         <div className="question_details_mainQuestion">
-          <h4>Eva is asking</h4>
-          <h3>Will insulin make my patient gain weight?</h3>
+          <h4>{this.props.user.name} is asking</h4>
+          <h3>{this.props.user.question}</h3>
         </div>
         <div className="question_details_popularity">
         </div>
@@ -46,9 +45,9 @@ class QuestionDetails extends React.Component {
         </div>
         <div className="question_details_popularity">
           <div>
-            <p>1 related discussion</p>
-            <p>6 peers involved</p>
-            <p>3 conversations</p>
+            <p>{this.props.user.statisticData.relatedDiscussion} related discussion</p>
+            <p>{this.props.user.statisticData.peersInvolved} peers involved</p>
+            <p>{this.props.user.statisticData.conversations} conversations</p>
           </div>
         </div>
       </div>
@@ -111,5 +110,13 @@ class QuestionDetails extends React.Component {
     );
   }
 }
+
+QuestionDetails.defaultProps = {
+  user: { 
+    name: "Eva", 
+    question: "Will insulin make my patient gain weight?",
+    statisticData: {relatedDiscussion: 1, peersInvolved: 6, conversations: 3}
+  }
+};
 
 export default QuestionDetails;

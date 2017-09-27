@@ -6,19 +6,20 @@ import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
 
 class Question extends React.Component {
   renderHeader = () => {
-    const whoIsAsking = <p>Eva <span className="subTitle">is asking:</span></p>;
+ 
+    const whoIsAsking = <p>{this.props.user.name}<span className="subTitle">is asking:</span></p>;
     return (
       <div className="single_question_row questionHeader">
         <div className="centered_avatar single_question_row_left_item">
-          <Avatar src="http://slodive.com/wp-content/uploads/2012/11/funny-pug-pictures/funnypugpictures200.jpg" props="profile_pic" />
+          <Avatar src={this.props.user.avatar} props="profile_pic" />
           {whoIsAsking}
         </div>
         <div className="single_question_row_middle_item single_question_main_question">
           {whoIsAsking}
-          <p>Will insulin make my patient gain weight?</p>
+          <p>{this.props.user.question}</p>
         </div>
         <div className="single_question_row_right_item single_question_unfollow_header">
-          <p>unfollow</p>
+          <p>{this.props.user.unfollow}</p>
         </div>
       </div>
     )
@@ -28,19 +29,13 @@ class Question extends React.Component {
       <div className="single_question_row questionBody">
         <div className="single_question_row_left_item question_empty_space" />
         <div className="single_question_row_middle_item question_content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-          non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+          <p>{this.props.user.questionDescription}</p>
         </div>
         <div className="single_question_row_right_item">
           <div className="votes">
-            <p className="single_question_unfollow_body">unfollow</p>
+            <p className="single_question_unfollow_body">{this.props.user.unfollow}</p>
             <div className="votesCounter">
-              <p><span className="votes_number">19</span> upvotes</p>
+              <p><span className="votes_number">{this.props.user.votes}</span>upvotes</p>
               <div className="arrows">
                 <ArrowUp />
                 <ArrowDown />
@@ -70,5 +65,17 @@ class Question extends React.Component {
     );
   }
 }
+
+Question.defaultProps = {
+  timeSinceLastChange: {unit: 4, time: "days ago"},
+  user: { 
+    name: "Eva",
+    avatar: "http://slodive.com/wp-content/uploads/2012/11/funny-pug-pictures/funnypugpictures200.jpg",
+    question: "Will insulin make my patient gain weight?", 
+    questionDescription: "All my patients with diabetes should see on opthalmologist yearly for a dialated beggining at diagnosis in people with type 2 diabetes, and after 5 years in people with type 1 diabetes after puberty.", 
+    unfollow: "unfollow",
+    votes: 19
+  }
+};
 
 export default Question;
