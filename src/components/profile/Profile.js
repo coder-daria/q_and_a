@@ -1,22 +1,24 @@
 import React from 'react';
 import './profile.css';
-import { HorizontalDivider } from '../common/divider/Divider';
+import './profile_header.css';
+import './profile_content.css';
+import './profile_footer.css';
 import ArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
 import ArrowRight from 'material-ui-icons/KeyboardArrowRight';
 import Stars from 'material-ui-icons/Stars';
 import Close from 'material-ui-icons/Clear';
+import Avatar from '../common/avatar/Avatar';
 import IconButton from 'material-ui/IconButton';
 import PropTypes from 'prop-types';
-import Avatar from '../common/avatar/Avatar';
 
 class Profile extends React.Component {
   renderHeader = () => {
     return (
       <div className="profileHeader">
         <div className="profileCloseButton">
-        <IconButton aria-label="Close" onClick={this.props.closeModalWindow} >
-          <Close />
-        </IconButton>
+          <IconButton aria-label="Close" onClick={this.props.closeModalWindow} >
+            <Close />
+          </IconButton>
         </div>
         <div className="profileAvatar">
           <Avatar size="big" src={this.props.user.avatar} />
@@ -45,13 +47,13 @@ class Profile extends React.Component {
   }
   renderBody = () => {
     let newPeople = this.props.newPeople;
-    let person = newPeople.map(person => {
+    let people = newPeople.map(person => {
       return (
         <div className="person">
           <div className="personAvatar">
             <Avatar src={person.avatarURL} />
           </div>
-          <p className="person_name">{person.name}</p>
+          <p>{person.name}</p>
         </div>
       )
     });
@@ -63,7 +65,7 @@ class Profile extends React.Component {
           <ArrowRight />
         </div>
         <div className="profileStatistics">
-          <div className="subTitle">That's where we have been these {this.props.user.memberFor.number} {this.props.user.memberFor.howMany} ago</div>
+        <div className="subTitle">That's where we have been these {this.props.user.memberFor.number} {this.props.user.memberFor.howMany} ago</div>
           <div className="profileStatisticsData">
             <div className="square peers">
               <p className="peers_text"><span className="statistic_numbers">{this.props.user.statisticData.peers}</span>peers</p>
@@ -82,7 +84,7 @@ class Profile extends React.Component {
         <div className="newPeople">
           <div className="subTitle">Who joined the platform that same period</div>
           <div className="people">
-            {person}
+            {people}
           </div>
         </div>
       </div>
@@ -91,23 +93,36 @@ class Profile extends React.Component {
   renderFooter = () => {
     return (
       <div className="profileFooter">
-        <h3 className="subTitle hottest_discussion_title">The hottest discussion these days</h3>
-        <div className="hottest_discussion_statistics">
+        <div className="hottest_discussion_title">
+          <h3 className="subTitle hottest_discussion_description">The hottest discussion these days</h3>
           <div className="hottest_discussion_avatar">
             <Avatar src="https://www.digitalsurgeons.com/images/uploads/authors/rsz_1kiss_from_a_rose-1.jpg" />
           </div>
-          <div className="hottest_discussion_background">
-            <p>{this.props.hottestDiscussion.autor.name}<span className="subTitle">{this.props.hottestDiscussion.autor.subName}</span></p>
-            <p className="hottest_discussion_article_title">{this.props.hottestDiscussion.title}</p>
-            <div className="hottest_discussion_details">
-              <div className="hottest_discussion_details_left">
-                <div><span className="statistic_numbers">{this.props.hottestDiscussion.statisticData.peers}</span>peers involved</div>
-                <div><span className="statistic_numbers">{this.props.hottestDiscussion.statisticData.relatedDiscussion}</span>related discussion</div>
-              </div>
-              <div className="hottest_discussion_details_right">
-                <div><span className="statistic_numbers">{this.props.hottestDiscussion.statisticData.conversations}</span>conversations</div>
-                <div><span className="statistic_numbers">{this.props.hottestDiscussion.statisticData.upvotes}</span>upvotes</div>
-              </div>
+        </div>
+        <div className="hottest_discussion_statistics">
+          <div className="hottest_discussion_article">
+            <div className="hottest_discussion_author">
+              <p className="person_name">{this.props.hottestDiscussion.autor.name}</p>
+              <span className="subTitle">{this.props.hottestDiscussion.autor.subName}</span>
+            </div>
+            <p className="hottest_discussion_article_title title_name">{this.props.hottestDiscussion.title}</p>
+          </div>
+          <div className="hottest_discussion_article_details">
+            <div className="hottest_discussion_article_details_item hottest_discussion_article_details_item_related_peers">
+              <p className="statistic_numbers">{this.props.hottestDiscussion.statisticData.peers}</p>
+              <p className="description">peers involved</p>
+            </div>
+            <div className="hottest_discussion_article_details_item">
+              <p className="statistic_numbers">{this.props.hottestDiscussion.statisticData.relatedDiscussion}</p>
+              <p className="description">related discussion</p>
+            </div>
+            <div className="hottest_discussion_article_details_item">
+              <p className="statistic_numbers">{this.props.hottestDiscussion.statisticData.conversations}</p>
+              <p className="description">conversations</p>
+            </div>
+            <div className="hottest_discussion_article_details_item hottest_discussion_article_details_item_related_upvotes">
+              <p className="statistic_numbers">{this.props.hottestDiscussion.statisticData.upvotes}</p>
+              <p className="description">upvotes</p>
             </div>
           </div>
         </div>
@@ -118,7 +133,6 @@ class Profile extends React.Component {
     return (
       <div className="profileContainer">
         {this.renderHeader()}
-        <HorizontalDivider />
         {this.renderBody()}
         {this.renderFooter()}
       </div>
@@ -141,7 +155,7 @@ Profile.defaultProps = {
     { name: "Joseph Aluoch", avatarURL: "http://www.trbimg.com/img-57015a41/turbine/bal-baltimore-people-on-the-move-april-20160403/200/200x200" }
   ],
   hottestDiscussion: {
-    autor: {name: "Andrew", subName:"Found the Guardian Article"},
+    autor: { name: "Andrew", subName: "Found the Guardian Article" },
     title: "Vegan diet to stop diabetes progress",
     statisticData: { peers: 6, relatedDiscussion: 3, conversations: 3, upvotes: 19 }
   }

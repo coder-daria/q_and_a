@@ -1,0 +1,71 @@
+.profileCloseButton{
+  /* background-color: lightskyblue; */
+  align-self: flex-end;
+  flex-basis: 5%;
+  color: #A09E9E;
+}
+.profileAvatar {
+  /* background-color: lightblue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.avatar_title_name {
+  color: rgb(2, 102, 182);
+  font-size: 20px;
+  font-weight: bold;
+}
+.profileActivity {
+  /* background-color: lightskyblue; */
+  display: flex;
+  width: 100%;
+  flex: 1 0 20%;
+  justify-content: space-between;
+}
+.profileActivityItem {
+  display: flex;
+  align-items: center;
+  flex-basis: fit-content;
+}
+.profileActivityItemName:after {
+  content: "\00a0";
+}
+.profileActivityItemValue {
+  font-size: 0.8rem;
+}
+@media only screen and (max-width: 767px) {
+  .profileActivity {
+    flex-direction: column;
+  }
+  .profileActivityItem {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 5%;
+  }
+  .profileActivityItemName {
+    padding-bottom: 1%;
+  }
+  .avatar_title_name {
+    font-size: 17px;
+    padding-top: 10%;
+    padding-bottom: 15%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px){
+  .avatar_title_name {
+    padding-top: 35%;
+    padding-bottom: 5%;
+  }
+  .profileActivityItem {
+    /* align-items: baseline; */
+    /* flex-grow: 1; */
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .avatar_title_name {
+    padding-top: 20%;
+    padding-bottom: 7%;
+  }
+}
