@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import SingleQuestion from './components/singleQuestion/SingleQuestion';
+import SingleQuestionContainer from './components/singleQuestion/SingleQuestionContainer';
 import AllQuestions from './components/allQuestions/AllQuestions';
-import ModalWindow from './components/modalWindow/ModalWindow';
+import ModalWindowContainer from './components/modalWindow/ModalWindowContainer';
 
 class App extends Component {
   render() {
+    let showModalWindow = this.props.showModal ? <ModalWindowContainer /> : null;
     return (
       <div>
-        <AllQuestions />
+        <SingleQuestionContainer />
+        {showModalWindow}
       </div>
     );
   }
