@@ -18,7 +18,7 @@
   /* background-color: pink; */
 }
 .single_question_header .add_question p {
-  font-size: 35px;
+  font-size: calc(35rem / 16);
   font-weight: bold;
   padding-right: 8%;
 }

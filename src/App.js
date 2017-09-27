@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-import SingleQuestion from './components/singleQuestion/SingleQuestion';
+import SingleQuestionContainer from './components/singleQuestion/SingleQuestionContainer';
 import AllQuestions from './components/allQuestions/AllQuestions';
-import ModalWindow from './components/modalWindow/ModalWindow';
+import ModalWindowContainer from './components/modalWindow/ModalWindowContainer';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <AllQuestions />
-      </div>
+      <Router>
+        <div>
+          <Route component={AllQuestions} />
+          <Route path={`/single_question`} component={SingleQuestionContainer} />
+          <ModalWindowContainer />
+        </div>
+      </Router>
     );
   }
 }
