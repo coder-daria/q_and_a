@@ -18,12 +18,6 @@
   font-weight: bold;
   font-style: italic;
 }
-.votes_number {
-  font-style: normal;
-}
-.votes_number:after {
-  content: "\00a0";
-}
 
 @media only screen and (max-width: 767px) {
   .votes {

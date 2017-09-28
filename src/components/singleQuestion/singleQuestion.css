@@ -89,7 +89,6 @@
     border-bottom: 2px solid rgb(204, 211, 214);
   }
   .returnArrow {
-    display: flex;
     flex-basis: 15%;
   }
   .single_question_header .add_question{

@@ -37,7 +37,7 @@ class Question extends React.Component {
           <div className="votes">
             <p className="single_question_unfollow_body">{this.props.user.unfollow}</p>
             <div className="votesCounter">
-              <p><span className="votes_number">{this.props.user.votes}</span>upvotes</p>
+              <p><span className="bold_number_medium">{this.props.user.votes}</span>upvotes</p>
               <div className="arrows">
                 <ArrowUp />
                 <ArrowDown />

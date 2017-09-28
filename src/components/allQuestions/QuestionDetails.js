@@ -4,6 +4,7 @@ import Avatar from '../common/avatar/Avatar';
 import ArrowUp from 'material-ui-icons/KeyboardArrowUp';
 import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
 import './questionDetails.css';
+import './questionDetailsItem.css';
 
 class QuestionDetails extends React.Component {
   renderHeader = () => {
@@ -16,94 +17,74 @@ class QuestionDetails extends React.Component {
           <h4>{this.props.user.name} is asking</h4>
           <h3>{this.props.user.question}</h3>
         </div>
-        <div className="question_details_popularity">
-        </div>
       </div>
     )
   }
   renderBody = () => {
     return (
       <div className="question_details_body">
-        <div className="my_question_details_content">
-          <div className="item item_asked"></div>
-          <div className="item more_activities"></div>
+        <div className="question_details_content">
+          <div className="item item_asked" >
+            <div className="item_status">
+              ASKED
+              <div className="item_status_circle" />
+            </div>
+          </div>
+          <div className="item more_activities">
+            <div className="more_activities_count">
+              <p className="bold_number_small">3</p>
+            </div>
+            <div className="item_status">
+              more activities
+              <div className="item_status_circle" />
+            </div>
+          </div>
           <div className="item commented">
             <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
-            <p className="item_status">
+            <div className="item_status">
               COMMENTED
-            </p>
+              <div className="item_status_circle" />
+            </div>
           </div>
           <div className="item commented">
             <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
+            <div className="item_status">
+              COMMENTED
+              <div className="item_status_circle" />
+            </div>
           </div>
           <div className="item commented">
             <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
+            <div className="item_status">
+              COMMENTED
+              <div className="item_status_circle" />
+            </div>
           </div>
-          <div className="item commented">
+          <div className="item answered">
             <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
+            <div className="item_status">
+              ANSWERED
+              <div className="item_status_circle" />
+            </div>
           </div>
         </div>
         <div className="question_details_popularity">
-          <div>
-            <p>{this.props.user.statisticData.relatedDiscussion} related discussion</p>
-            <p>{this.props.user.statisticData.peersInvolved} peers involved</p>
-            <p>{this.props.user.statisticData.conversations} conversations</p>
-          </div>
+          <div className="question_details_popularity_item">
+            <p className="bold_number_small">{this.props.user.statisticData.relatedDiscussion}</p> related discussion
+            </div>
+          <div className="question_details_popularity_item">
+            <p className="bold_number_small">{this.props.user.statisticData.peersInvolved}</p> peers involved
+            </div>
+          <div className="question_details_popularity_item">
+            <p className="bold_number_small">{this.props.user.statisticData.conversations}</p> conversations
+            </div>
         </div>
       </div>
     )
   }
   render() {
-    /*<div className="question_details_asked">
-  <p>Asked</p>
-</div>
-<div className="question_details_content">
-  <div className="question_details_content_box more_activities">
-    <div className="profile_img">
-     3
-    </div>
-    <div>
-      more activities
-      </div>
-  </div>
-  <div className="question_details_content_box">
-    <div className="profile_img">
-      <img src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
-    </div>
-    <div className="commented">
-      Commented
-      </div>
-  </div>
-
-  <div className="question_details_content_box">
-    <div className="profile_img">
-      <img src="http://www.trbimg.com/img-56dcb867/turbine/bal-baltimore-people-on-the-move-march-20160306/200/200x200" />
-    </div>
-    <div className="commented">
-      Commented
-      </div>
-  </div>
-  <div className="question_details_content_box">
-    <div className="profile_img">
-      <img src="http://www.trbimg.com/img-56dcb867/turbine/bal-baltimore-people-on-the-move-march-20160306/200/200x200" />
-    </div>
-    <div className="commented">
-      Commented
-      </div>
-  </div>
-
-  <div className="question_details_content_box">
-    <div className="profile_img">
-      <img src="http://www.trbimg.com/img-57015a41/turbine/bal-baltimore-people-on-the-move-april-20160403/200/200x200" />
-    </div>
-    <div className="answered">
-      Answered
-      </div>
-  </div>
-</div>
-  */
     return (
-      <div className="question">
+      <div className="question_details">
         {this.renderHeader()}
         {this.renderBody()}
       </div>
@@ -112,10 +93,10 @@ class QuestionDetails extends React.Component {
 }
 
 QuestionDetails.defaultProps = {
-  user: { 
-    name: "Eva", 
+  user: {
+    name: "Eva",
     question: "Will insulin make my patient gain weight?",
-    statisticData: {relatedDiscussion: 1, peersInvolved: 6, conversations: 3}
+    statisticData: { relatedDiscussion: 1, peersInvolved: 6, conversations: 3 }
   }
 };
 

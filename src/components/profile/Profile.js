@@ -25,7 +25,7 @@ class Profile extends React.Component {
         </div>
         <div className="profileAvatar">
           <Avatar size="big" src={this.props.user.avatar} />
-          <p>{this.props.user.name}</p>
+          <p className="avatar_title_name">{this.props.user.name}</p>
         </div>
         <div className="profileActivity">
           <div className="profileActivityItem">
@@ -56,7 +56,7 @@ class Profile extends React.Component {
           <div className="personAvatar">
             <Avatar src={person.avatarURL} />
           </div>
-          <p>{person.name}</p>
+          <p className="person_name">{person.name}</p>
         </div>
       )
     });
@@ -71,16 +71,16 @@ class Profile extends React.Component {
         <div className="subTitle">That's where we have been these {this.props.user.memberFor.number} {this.props.user.memberFor.howMany} ago</div>
           <div className="profileStatisticsData">
             <div className="square peers">
-              <p className="peers_text"><span className="statistic_numbers">{this.props.user.statisticData.peers}</span>peers</p>
+              <p className="peers_text"><span className="bold_number_big">{this.props.user.statisticData.peers}</span>peers</p>
             </div>
             <div className="square discussions">
-              <p className="discussions_text"><span className="statistic_numbers">{this.props.user.statisticData.discussion}</span>discussions</p>
+              <p className="discussions_text"><span className="bold_number_big">{this.props.user.statisticData.discussion}</span>discussions</p>
             </div>
             <div className="square findings">
-              <p className="findings_text"><span className="statistic_numbers">{this.props.user.statisticData.findings}</span>findings</p>
+              <p className="findings_text"><span className="bold_number_big">{this.props.user.statisticData.findings}</span>findings</p>
             </div>
             <div className="square questions">
-              <p className="questions_text"><span className="statistic_numbers">{this.props.user.statisticData.questions}</span>questions</p>
+              <p className="questions_text"><span className="bold_number_big">{this.props.user.statisticData.questions}</span>questions</p>
             </div>
           </div>
         </div>
@@ -112,19 +112,19 @@ class Profile extends React.Component {
           </div>
           <div className="hottest_discussion_article_details">
             <div className="hottest_discussion_article_details_item hottest_discussion_article_details_item_related_peers">
-              <p className="statistic_numbers">{this.props.hottestDiscussion.statisticData.peers}</p>
+              <p className="bold_number_medium">{this.props.hottestDiscussion.statisticData.peers}</p>
               <p className="description">peers involved</p>
             </div>
             <div className="hottest_discussion_article_details_item">
-              <p className="statistic_numbers">{this.props.hottestDiscussion.statisticData.relatedDiscussion}</p>
+              <p className="bold_number_medium">{this.props.hottestDiscussion.statisticData.relatedDiscussion}</p>
               <p className="description">related discussion</p>
             </div>
             <div className="hottest_discussion_article_details_item">
-              <p className="statistic_numbers">{this.props.hottestDiscussion.statisticData.conversations}</p>
+              <p className="bold_number_medium">{this.props.hottestDiscussion.statisticData.conversations}</p>
               <p className="description">conversations</p>
             </div>
             <div className="hottest_discussion_article_details_item hottest_discussion_article_details_item_related_upvotes">
-              <p className="statistic_numbers">{this.props.hottestDiscussion.statisticData.upvotes}</p>
+              <p className="bold_number_medium">{this.props.hottestDiscussion.statisticData.upvotes}</p>
               <p className="description">upvotes</p>
             </div>
           </div>
