@@ -60,10 +60,6 @@
   box-shadow: 0 0 2px rgb(100, 105, 111);
 }
 
-.answerContainer .single_question_unfollow_body {
-  display: none;
-}
-
 /* QUERIES */
 @media only screen and (max-width: 767px) {
   .answer_header p:nth-child(1){

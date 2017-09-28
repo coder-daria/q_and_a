@@ -75,6 +75,9 @@
     flex-direction: column;
     align-items: center;
   }
+  .questionHeader .centered_avatar .subTitle:before{
+    content: "\00a0";
+  }
   .questionHeader .single_question_row_left_item {
     display: flex;
     align-items: center;
@@ -111,9 +114,14 @@
   .single_question_unfollow_header {
     display: none;
   }
-  .single_question_unfollow_body {
-    display: flex;
-    padding-left: 3%;
+  .questionContainer .single_question_unfollow_body {
+    display: inline;
+    padding-left: 4%;
+    color: rgb(2, 102, 182);
+    font-weight: bold;
+  }
+  .questionBody .votesCounter {
+    padding-right: 6%;
   }
   /* Button */
   .questionContainer .sticky > button {

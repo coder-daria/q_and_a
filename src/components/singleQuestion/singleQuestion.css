@@ -1,4 +1,4 @@
-/* Single question header */
+/* HEADER */
 .single_question_header {
   display: flex;
   width: 100%;
@@ -8,19 +8,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-basis: 17%;
+  flex-basis: 16.8%;
   /* background-color: greenyellow; */
 }
 .single_question_header .add_question {
   display: flex;
   flex-basis: 40%;
   align-items: center;
+  text-transform: uppercase;
   /* background-color: pink; */
 }
 .single_question_header .add_question p {
   font-size: calc(35rem / 16);
   font-weight: bold;
-  padding-right: 8%;
+}
+.single_question_header .add_question p:after {
+  content: "\00a0 \00a0";
 }
 .last_discussed {
   font-style: italic;
@@ -30,6 +33,9 @@
   align-items: center;
   color: rgb(121, 121, 122);
   /* background-color: orchid; */
+}
+.last_discussed .number:before, .last_discussed .number:after  {
+  content: "\00a0 \00a0";
 }
 
 .last_discussed .number {
@@ -75,22 +81,21 @@
 /* QUERIES */
 @media only screen and (max-width: 767px) {
   /* Single question header */
+  .returnArrow {
+    display: flex;
+    flex-basis: 15%;
+    /* background-color: greenyellow; */
+  }
   .single_question_header .add_question{
-    flex: 1;
     justify-content: space-between;
-    padding-right: 2%;
-    /* background-color: yellow; */
+    padding-right: 5%;
+    flex-basis: 85%;
   }
   /* Single question body */
   .single_question_row_left_item {
     padding-top: 2%;
     padding-bottom: 2%;
     border-bottom: 2px solid white;
-  }
-  .single_question_row .single_question_row_middle_item{
-    padding: 2%;
-    padding-bottom: 7%;
-    line-height: 130%;
   }
   
   .last_discussed {
@@ -106,9 +111,6 @@
    .single_question_header .add_question{
     flex-basis: 53%;
   }
-  .single_question_header .add_question p {
-    padding-right: 15%;
-  }
   .last_discussed {
     flex-basis: 35%;
     justify-content: center;
@@ -116,10 +118,7 @@
 }
 
 @media only screen and (min-width: 1200px){
-  /* Single question header */
-  
-
-  /* Single question content */
+  /* Single question body */
   .questionHeader .single_question_row_middle_item {
     padding-left: 1%;
   }
