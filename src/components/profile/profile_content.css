@@ -80,6 +80,7 @@
   flex-direction: column;
   flex-basis: 40%;
   justify-content: space-around;
+  padding-bottom: 1%;
 }
 .newPeople .people {
   display: flex;
@@ -123,13 +124,7 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
-  .newPeople {
-    padding-bottom: 1%;
-  }
 }
 
 @media only screen and (min-width: 1200px){
-  .newPeople {
-    padding-bottom: 1%;
-  }
 }
