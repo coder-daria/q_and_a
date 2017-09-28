@@ -52,7 +52,6 @@
 }
 .questionContainer .sticky > button {
   font-weight: bold;
-  padding: 0 2%;
   background-color: white;
   border: 1px solid rgb(229, 229, 229);
 }
@@ -188,6 +187,6 @@
   }
   /* Button */
   .questionContainer .sticky > button {
-    padding: 0 5%;
+    padding: 0 3%;
   }
 }
