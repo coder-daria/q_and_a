@@ -81,10 +81,12 @@
 /* QUERIES */
 @media only screen and (max-width: 767px) {
   /* Single question header */
+  .app_top_section {
+    border-bottom: 2px solid rgb(204, 211, 214);
+  }
   .returnArrow {
     display: flex;
     flex-basis: 15%;
-    /* background-color: greenyellow; */
   }
   .single_question_header .add_question{
     justify-content: space-between;
@@ -97,7 +99,6 @@
     padding-bottom: 2%;
     border-bottom: 2px solid white;
   }
-  
   .last_discussed {
     display: none;
   }
