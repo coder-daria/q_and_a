@@ -43,21 +43,20 @@
   
 }
 /* Button */
-.sticky {
-  display:flex;
+.questionContainer .sticky {
+  display: flex;
   justify-content: center;
-  width: 100%;
   position: relative;
   height: 35px;
   top: -15px;
 }
-.sticky > button {
+.questionContainer .sticky > button {
   font-weight: bold;
-  padding: 0 6%;
+  padding: 0 2%;
   background-color: white;
   border: 1px solid rgb(229, 229, 229);
 }
-.single_question_unfollow_body {
+.questionContainer .single_question_unfollow_body {
   display: none;
 }
 
@@ -114,7 +113,7 @@
   }
   /* Button */
   .questionContainer .sticky > button {
-    padding: 0 9%;
+    padding: 0 10%;
   }
 }
 
@@ -151,7 +150,7 @@
   }
   /* Button */
   .questionContainer .sticky {
-    align-self: flex-end;
+    /* align-self: flex-end; */
   }
 }
 

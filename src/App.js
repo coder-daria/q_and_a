@@ -11,7 +11,6 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <ModalWindowContainer />
           <Switch>
             <Route path="/" exact component={AllQuestions} />
             <Route path="/single_question" component={SingleQuestionContainer} />
