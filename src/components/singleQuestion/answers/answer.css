@@ -38,14 +38,13 @@
 .answerContainer .sticky {
   display:flex;
   justify-content: center;
-  width: 100%;
+  /* width: 100%; */
   position: relative;
   height: 35px;
   top: -15px;
 }
 .answerContainer .sticky > button {
   font-weight: bold;
-  padding: 0 6%;
   background-color: white;
   border: 1px solid rgb(229, 229, 229);
 }
@@ -72,6 +71,12 @@
   }
   .whoCommented {
     padding-left: 5%;
+  }
+  .answerContainer .sticky button{
+    padding: 4% 8%;
+  }
+  .answerContainer .sticky > button {
+    padding: 0 4%;
   }
 
 }
@@ -104,7 +109,9 @@
   .answer_header p:nth-child(1), .answer_header p:nth-child(2){
     padding-bottom: 3%;
   }
-  
+  .answerContainer .sticky > button {
+    padding: 0 2%;
+  }
 }
 @media only screen and (min-width: 1200px){
   .main_answer .single_question_row_middle_item {
@@ -120,5 +127,8 @@
   }
   .answer_header p:nth-child(1), .answer_header p:nth-child(2){
     padding-bottom: 2%;
+  }
+  .answerContainer .sticky > button {
+    padding: 0 2%;
   }
 }
