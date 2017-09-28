@@ -11,12 +11,12 @@ class Answer extends React.Component {
       <div className="single_question_row main_answer">
         {space}
         <div className="centered_avatar single_question_row_left_item">
-          <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" props="profile_pic" />
-          <p className="whoCommented">{this.props.user.name}<span className="subTitle">commented it</span><span className="when">{this.props.date.whenCommented}</span></p>
+          <Avatar showModal={this.props.showModal} src={this.props.user.avatar_url} props="profile_pic" />
+          <p className="whoCommented"><span className="clickable_user_name" onClick={this.props.showModal}>{this.props.user.name}</span><span className="subTitle">commented it</span><span className="when">{this.props.date.whenCommented}</span></p>
         </div>
         <div className="single_question_row_middle_item">
           <div className="answer_header">
-            <p className="whoCommented">{this.props.user.name}<span className="subTitle">commented it</span><span className="when">{this.props.date.whenCommented}</span></p>
+            <p className="whoCommented"><span className="clickable_user_name" onClick={this.props.showModal}>{this.props.user.name}</span><span className="subTitle">commented it</span><span className="when">{this.props.date.whenCommented}</span></p>
             <p>{this.props.user.answer}</p>
           </div>
         </div>
@@ -60,7 +60,12 @@ class Answer extends React.Component {
 }
  Answer.defaultProps = {
    date: {whenCommented:  "yesterday"},
-   user: {name: "Robert", answer:"Numbers or tingling in your feet should be reported to your doctior at your regular visits.", votes : 8}
+   user: {
+     name: "Robert",
+     avatar_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT3AnlaspR6f3tPP8qfO1vrdnoDmNul8DL5yVMShsJW5SKtUQEKQ",
+     answer:"Numbers or tingling in your feet should be reported to your doctior at your regular visits.", 
+     votes : 8
+    }
  };
 
 export default Answer;

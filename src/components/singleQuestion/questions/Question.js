@@ -6,12 +6,11 @@ import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
 
 class Question extends React.Component {
   renderHeader = () => {
- 
-    const whoIsAsking = <p>{this.props.user.name}<span className="subTitle">is asking:</span></p>;
+    const whoIsAsking = <p><span className="clickable_user_name" onClick={this.props.showModal}>{this.props.user.name}</span><span className="subTitle">is asking:</span></p>;
     return (
       <div className="single_question_row questionHeader">
         <div className="centered_avatar single_question_row_left_item">
-          <Avatar src={this.props.user.avatar} props="profile_pic" />
+          <Avatar src={this.props.user.avatar} props="profile_pic" showModal={this.props.showModal}/>
           {whoIsAsking}
         </div>
         <div className="single_question_row_middle_item single_question_main_question">
@@ -70,7 +69,7 @@ Question.defaultProps = {
   timeSinceLastChange: {unit: 4, time: "days ago"},
   user: { 
     name: "Eva",
-    avatar: "http://slodive.com/wp-content/uploads/2012/11/funny-pug-pictures/funnypugpictures200.jpg",
+    avatar: "https://www.mercer.com/content/dam/mercer/assets/content-images/wwt-pat_milligan.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg",
     question: "Will insulin make my patient gain weight?", 
     questionDescription: "All my patients with diabetes should see on opthalmologist yearly for a dialated beggining at diagnosis in people with type 2 diabetes, and after 5 years in people with type 1 diabetes after puberty.", 
     unfollow: "unfollow",

@@ -29,8 +29,8 @@ class SingleQuestion extends React.Component {
   renderContent = () => {
     return (
       <div className="single_question">
-        <Question />
-        <Answers />
+        <Question showModal={this.props.showModal}/>
+        <Answers showModal={this.props.showModal}/>
       </div>
     )
   }

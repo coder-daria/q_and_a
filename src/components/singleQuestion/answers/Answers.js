@@ -8,7 +8,7 @@ class Answers extends React.Component {
     return (
       <div className="allAnswers">
         <div className="howManyAnswers"><span className="allAnswers_number">{this.props.answers.howMany}</span>peers already answered</div>
-        <Answer />
+        <Answer showModal={this.props.showModal}/>
         <Answer />
         <Answer />
         <Answer />

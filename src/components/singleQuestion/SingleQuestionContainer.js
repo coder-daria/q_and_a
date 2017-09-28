@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import SingleQuestion from './SingleQuestion';
+import {toggleModalWindow} from './../../redux/actions';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = state => {
@@ -9,6 +10,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
+    showModal: ()=> dispatch(toggleModalWindow())
   }
 };
 
