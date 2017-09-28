@@ -14,7 +14,6 @@ import PropTypes from 'prop-types';
 class Profile extends React.Component {
   closeModalWindow = () => {
     this.props.closeModalWindow();
-    this.props.history.push('/');
   }
   renderHeader = () => {
     return (
