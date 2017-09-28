@@ -1,8 +1,10 @@
 .profileCloseButton{
   /* background-color: lightskyblue; */
-  align-self: flex-end;
+  /* align-self: flex-end; */
   flex-basis: 5%;
   color: #A09E9E;
+  position: relative;
+  left: 65%;
 }
 .profileAvatar {
   /* background-color: lightblue; */
@@ -50,6 +52,9 @@
     padding-top: 10%;
     padding-bottom: 15%;
   }
+  .profileCloseButton{
+    left: 40vw;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
@@ -57,9 +62,8 @@
     padding-top: 35%;
     padding-bottom: 5%;
   }
-  .profileActivityItem {
-    /* align-items: baseline; */
-    /* flex-grow: 1; */
+  .profileCloseButton{
+    left: 45vw;
   }
 }
 
