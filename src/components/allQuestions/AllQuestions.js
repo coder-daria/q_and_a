@@ -2,6 +2,7 @@ import React from 'react';
 import ArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
 import Icon from 'material-ui/Icon';
 import QuestionDetails from './QuestionDetails';
+import IconButton from 'material-ui/IconButton';
 import './allQuestions.css';
 import './allQuestionsHeader.css';
 import './allQuestionsBody.css';
@@ -15,8 +16,10 @@ class AllQuestions extends React.Component {
             <ArrowLeft />
           </div>
           <div className="add_question">
-              <p>Question</p>
+            <p>Question</p>
+            <IconButton aria-label="Add" onClick={() => { }} className="add_button">
               <Icon>add_circle</Icon>
+            </IconButton>
           </div>
           <div className="search_header_question_details">
             <form>
@@ -34,7 +37,7 @@ class AllQuestions extends React.Component {
         </div>
         <div className="search">
           <form>
-            <input type="text" name="search" placeholder="Search questions"/>
+            <input type="text" name="search" placeholder="Search questions" />
             <button>Search</button>
           </form>
         </div>
