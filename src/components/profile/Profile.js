@@ -24,7 +24,7 @@ class Profile extends React.Component {
           </IconButton>
         </div>
         <div className="profileAvatar">
-          <Avatar size="big" src={this.props.user.avatar} />
+          <Avatar className="avatar-self" size="big" src={this.props.user.avatar} />
           <p className="avatar_title_name">{this.props.user.name}</p>
         </div>
         <div className="profileActivity">
@@ -68,7 +68,7 @@ class Profile extends React.Component {
           <ArrowRight />
         </div>
         <div className="profileStatistics">
-        <div className="subTitle">That's where we have been these {this.props.user.memberFor.number} {this.props.user.memberFor.howMany} ago</div>
+          <div className="subTitle">That's where we have been these {this.props.user.memberFor.number} {this.props.user.memberFor.howMany} ago</div>
           <div className="profileStatisticsData">
             <div className="square peers">
               <p className="peers_text"><span className="bold_number_big">{this.props.user.statisticData.peers}</span>peers</p>
