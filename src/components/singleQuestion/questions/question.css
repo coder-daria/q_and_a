@@ -54,6 +54,12 @@
   background-color: white;
   border: 1px solid rgb(229, 229, 229);
 }
+/* Button */
+.questionContainer .sticky button:hover {
+  background-color: rgb(233, 243, 253);
+  box-shadow: 0 0 2px rgb(2, 102, 182);
+}
+
 .questionContainer .single_question_unfollow_body {
   display: none;
 }
