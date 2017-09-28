@@ -71,6 +71,7 @@
   flex-basis: 10%;
 }
 .centered_avatar {
+  border-right: 1px solid rgb(238, 238, 238);
   box-sizing: border-box;
   display: flex;
   justify-content: center;
