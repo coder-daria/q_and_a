@@ -72,7 +72,7 @@ Question.defaultProps = {
   timeSinceLastChange: {unit: 4, time: "days ago"},
   user: { 
     name: "Eva",
-    avatar: "https://www.mercer.com/content/dam/mercer/assets/content-images/wwt-pat_milligan.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg",
+    avatar: "http://placecorgi.com/100/100",
     question: "Will insulin make my patient gain weight?", 
     questionDescription: "All my patients with diabetes should see on opthalmologist yearly for a dialated beggining at diagnosis in people with type 2 diabetes, and after 5 years in people with type 1 diabetes after puberty.", 
     unfollow: "unfollow",

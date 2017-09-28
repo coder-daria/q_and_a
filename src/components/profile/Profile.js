@@ -99,7 +99,7 @@ class Profile extends React.Component {
         <div className="hottest_discussion_title">
           <h3 className="subTitle hottest_discussion_description">The hottest discussion these days</h3>
           <div className="hottest_discussion_avatar">
-            <Avatar src="https://www.digitalsurgeons.com/images/uploads/authors/rsz_1kiss_from_a_rose-1.jpg" />
+            <Avatar src="http://placecorgi.com/150/150" />
           </div>
         </div>
         <div className="hottest_discussion_statistics">
@@ -146,16 +146,16 @@ class Profile extends React.Component {
 Profile.defaultProps = {
   user: {
     name: "Dr. Halima",
-    avatar: "http://www.wsp-pb.com/Globaln/WSP-Canada/Who%20We%20Are/Sustainability/2016/Claire.jpg",
+    avatar: "http://placecorgi.com/260/180",
     memberFor: { number: 5, howMany: "months" },
     lastSeen: "Saturday afternoon",
     activityLevel: 3,
     statisticData: { peers: 46, discussion: 29, findings: 19, questions: 10 }
   },
   newPeople: [
-    { name: "S.E.N Waweru", avatarURL: "https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" },
-    { name: "Patricia", avatarURL: "http://www.trbimg.com/img-56dcb867/turbine/bal-baltimore-people-on-the-move-march-20160306/200/200x200" },
-    { name: "Joseph Aluoch", avatarURL: "http://www.trbimg.com/img-57015a41/turbine/bal-baltimore-people-on-the-move-april-20160403/200/200x200" }
+    { name: "S.E.N Waweru", avatarURL: "http://placecorgi.com/260/180" },
+    { name: "Patricia", avatarURL: "http://placecorgi.com/120/180" },
+    { name: "Joseph Aluoch", avatarURL: "http://placecorgi.com/160/280" }
   ],
   hottestDiscussion: {
     autor: { name: "Andrew", subName: "Found the Guardian Article" },

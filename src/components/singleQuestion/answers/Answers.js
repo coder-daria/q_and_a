@@ -13,7 +13,7 @@ class Answers extends React.Component {
       },
       user: {
         name: "Robert",
-        avatar: "https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square"
+        avatar: "http://placecorgi.com/70/70"
       },
       replies: [
         {
@@ -24,7 +24,7 @@ class Answers extends React.Component {
           },
           user: {
             name: "Tom",
-            avatar: "http://hairandbeautylagos.com/wp-content/uploads/2013/10/classic-cuts-men.jpg"
+            avatar: "http://placecorgi.com/70/70"
           }
         },
         {
@@ -35,7 +35,7 @@ class Answers extends React.Component {
           },
           user: {
             name: "Orson",
-            avatar: "http://www.goldwell.pl/fileadmin/_processed_/csm_Mens-Reshade_Benefits_With-men-reshade_e10d689fae.jpg"
+            avatar: "http://placecorgi.com/90/70"
           }
         },
         {
@@ -46,7 +46,7 @@ class Answers extends React.Component {
           },
           user: {
             name: "Julia",
-            avatar: "http://www.behairstyles.com/wp-content/uploads/Medium+Hairstyles+For+50+Year+Old+Woman-628x890.jpg"
+            avatar: "http://placecorgi.com/70/80"
           }
         }
       ]

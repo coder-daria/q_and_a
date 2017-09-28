@@ -11,7 +11,7 @@ class QuestionDetails extends React.Component {
     return (
       <div className="question_details_header">
         <div className="question_details_avatar centered_avatar">
-          <Avatar src="http://slodive.com/wp-content/uploads/2012/11/funny-pug-pictures/funnypugpictures200.jpg" props="profile_pic" />
+          <Avatar src="http://placecorgi.com/200/200" props="profile_pic" />
         </div>
         <div className="question_details_mainQuestion">
           <h4>{this.props.user.name} is asking</h4>
@@ -40,28 +40,28 @@ class QuestionDetails extends React.Component {
             </div>
           </div>
           <div className="item commented">
-            <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
+            <Avatar src="http://placecorgi.com/300/300" />
             <div className="item_status">
               COMMENTED
               <div className="item_status_circle" />
             </div>
           </div>
           <div className="item commented">
-            <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
+            <Avatar src="http://placecorgi.com/240/240" />
             <div className="item_status">
               COMMENTED
               <div className="item_status_circle" />
             </div>
           </div>
           <div className="item commented">
-            <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
+            <Avatar src="http://placecorgi.com/100/300" />
             <div className="item_status">
               COMMENTED
               <div className="item_status_circle" />
             </div>
           </div>
           <div className="item answered">
-            <Avatar src="https://gl-images.condecdn.net/image/9QP64MA4XvK/crop/200/square" />
+            <Avatar src="http://placecorgi.com/70/70" />
             <div className="item_status">
               ANSWERED
               <div className="item_status_circle" />
