@@ -12,11 +12,15 @@ import IconButton from 'material-ui/IconButton';
 import PropTypes from 'prop-types';
 
 class Profile extends React.Component {
+  closeModalWindow = () => {
+    this.props.closeModalWindow();
+    this.props.history.push('/');
+  }
   renderHeader = () => {
     return (
       <div className="profileHeader">
         <div className="profileCloseButton">
-          <IconButton aria-label="Close" onClick={this.props.closeModalWindow} >
+          <IconButton aria-label="Close" onClick={this.closeModalWindow} >
             <Close />
           </IconButton>
         </div>

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import ModalWindow from './ModalWindow';
 import * as actions from '../../redux/actions';
+import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = state => {
   return {
@@ -14,9 +15,10 @@ const mapDispatchToProps = dispatch => {
   }
 };
 
+const ModalWindowWithRouter = withRouter(ModalWindow);
 
 const ModalWindowContainer = connect(mapStateToProps, mapDispatchToProps)(
-  ModalWindow
+  ModalWindowWithRouter
 );
 
 export default ModalWindowContainer;

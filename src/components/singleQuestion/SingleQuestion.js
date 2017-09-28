@@ -5,7 +5,6 @@ import Answers from './answers/Answers';
 import ArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
 import Icon from 'material-ui/Icon';
 import Modal from '../modalWindow/ModalWindow';
-// import moment from 'moment';
 
 class SingleQuestion extends React.Component {
   renderHeader = () => {
@@ -29,7 +28,7 @@ class SingleQuestion extends React.Component {
   renderContent = () => {
     return (
       <div className="single_question">
-        <Question showModal={this.props.showModal} history={this.props.history}/>
+        <Question showModal={this.props.showModal} history={this.props.history} />
         <Answers showModal={this.props.showModal}/>
       </div>
     )
