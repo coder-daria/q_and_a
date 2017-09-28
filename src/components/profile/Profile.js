@@ -25,7 +25,7 @@ class Profile extends React.Component {
         </div>
         <div className="profileAvatar">
           <Avatar size="big" src={this.props.user.avatar} />
-          <p>{this.props.user.name}</p>
+          <p className="avatar_title_name">{this.props.user.name}</p>
         </div>
         <div className="profileActivity">
           <div className="profileActivityItem">
@@ -56,7 +56,7 @@ class Profile extends React.Component {
           <div className="personAvatar">
             <Avatar src={person.avatarURL} />
           </div>
-          <p>{person.name}</p>
+          <p className="person_name">{person.name}</p>
         </div>
       )
     });
