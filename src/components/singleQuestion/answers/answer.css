@@ -8,9 +8,6 @@
   flex: 1 0;
   width: 100%;
 }
-.main_answer {
-  display: flex;
-}
 .main_answer .single_question_row_left_item {
   display: flex;
   align-self: flex-start;

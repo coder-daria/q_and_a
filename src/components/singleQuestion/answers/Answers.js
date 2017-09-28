@@ -19,8 +19,8 @@ class Answers extends React.Component {
         {
           date: { whenCommented: "yesterday" },
           answer: {
-            text: "Numbers or tingling in your feet should be reported to your doctior at your regular visits.",
-            votes: 8
+            text: "1Numbers or tingling in your feet should be reported to your doctior at your regular visits.",
+            votes: 9
           },
           user: {
             name: "Tom",
@@ -30,7 +30,7 @@ class Answers extends React.Component {
         {
           date: { whenCommented: "yesterday" },
           answer: {
-            text: "Numbers or tingling in your feet should be reported to your doctior at your regular visits.",
+            text: "2Numbers or tingling in your feet should be reported to your doctior at your regular visits.",
             votes: 12
           },
           user: {
@@ -41,7 +41,7 @@ class Answers extends React.Component {
         {
           date: { whenCommented: "yesterday" },
           answer: {
-            text: "Numbers or tingling in your feet should be reported to your doctior at your regular visits.",
+            text: "3Numbers or tingling in your feet should be reported to your doctior at your regular visits.",
             votes: 1
           },
           user: {
@@ -54,7 +54,7 @@ class Answers extends React.Component {
     return (
       <div className="allAnswers">
         <div className="howManyAnswers"><span className="allAnswers_number">{this.props.answers.howMany}</span>peers already answered</div>
-        <Answer showModal={this.props.showModal} content={answer}/>
+        <Answer showModal={this.props.showModal} data={answer}/>
 
       </div>
     );

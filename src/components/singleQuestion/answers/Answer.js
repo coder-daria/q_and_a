@@ -3,29 +3,36 @@ import './answer.css';
 import Avatar from '../../common/avatar/Avatar';
 import ArrowUp from 'material-ui-icons/KeyboardArrowUp';
 import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
+import PropTypes from 'prop-types';
 
 class Answer extends React.Component {
-  renderAnswer(isReply) {
+  renderAnswer(content, isReply) {
     const space = isReply ? <div className="empty_space single_question_row_empty_space reply" /> : null;
-    const to = this.props.content;
-    console.log(to);
+    const replyTopBorder = isReply ? "border_top" : "";
     return (
       <div className="single_question_row main_answer">
         {space}
-        <div className="centered_avatar single_question_row_left_item">
-          <Avatar showModal={this.props.showModal} src={this.props.content.user.avatar} props="profile_pic" />
-          <p className="whoCommented"><span className="clickable_user_name" onClick={this.props.showModal}>{this.props.content.user.name}</span><span className="subTitle">commented it</span><span className="when">{this.props.content.date.whenCommented}</span></p>
+        <div className={`centered_avatar single_question_row_left_item ${replyTopBorder}`}>
+          <Avatar showModal={this.props.showModal} src={content.user.avatar} props="profile_pic" />
+          <p className="whoCommented">
+            <span className="clickable_user_name" onClick={this.props.showModal}>{content.user.name}</span>
+            <span className="subTitle">commented it</span>
+            <span className="when">{content.date.whenCommented}</span>
+          </p>
         </div>
-        <div className="single_question_row_middle_item">
+        <div className={`single_question_row_middle_item ${replyTopBorder}`}>
           <div className="answer_header">
-            <p className="whoCommented"><span className="clickable_user_name" onClick={this.props.showModal}>{this.props.content.user.name}</span><span className="subTitle">commented it</span><span className="when">{this.props.content.date.whenCommented}</span></p>
-            <p>{this.props.user.answer}</p>
+            <p className="whoCommented">
+              <span className="clickable_user_name" onClick={this.props.showModal}>{content.user.name}</span>
+              <span className="subTitle">commented it</span>
+              <span className="when">{content.date.whenCommented}</span></p>
+            <p>{content.answer.text}</p>
           </div>
         </div>
-        <div className="single_question_row_right_item">
+        <div className={`single_question_row_right_item ${replyTopBorder}`}>
           <div className="votes">
             <div className="votesCounter">
-              <p><span className="votes_number">{this.props.content.answer.votes}</span>upvotes</p>
+              <p><span className="votes_number">{content.answer.votes}</span>upvotes</p>
               <div className="arrows">
                 <ArrowUp />
                 <ArrowDown />
@@ -45,25 +52,29 @@ class Answer extends React.Component {
     )
   }
 
-  renderReply() {
-    return this.renderAnswer(true);
+  renderReply(reply) {
+    return this.renderAnswer(reply, true);
+  }
+  renderReplies(replies) {
+    return replies.map(reply => {
+      return this.renderReply(reply);
+    });
   }
   render() {
     return (
       <div className="answerContainer">
         <div className="answer">
-          {this.renderAnswer()}
-          {this.renderReply()}
+          {this.renderAnswer(this.props.data)}
+          {this.renderReplies(this.props.data.replies)}
         </div>
         {this.renderStickyChild()}
       </div>
     );
   }
 }
- Answer.defaultProps = {
-   user: {
-     answer:"Numbers or tingling in your feet should be reported to your doctior at your regular visits.", 
-    }
- };
 
+Answer.propTypes = {
+  showModal: PropTypes.func.isRequired,
+  data: PropTypes.object.isRequired,
+};
 export default Answer;
