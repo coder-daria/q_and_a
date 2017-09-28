@@ -19,11 +19,17 @@
 }
 .whoCommented {
   flex-grow: 1;
-  /* padding-left: 5%; */
   color: rgb(2, 102, 182);
   font-weight: bold;
   font-size: calc(15rem / 16);
   word-spacing: 4px;
+}
+.whoCommented .subTitle:before {
+  content: "\00a0";
+}
+.whoCommented .subTitle:after {
+  content: "\00B7";
+  padding-left: 1%;
 }
 .whoCommented .subTitle {
   font-size: calc(11rem / 16);
@@ -32,7 +38,7 @@
   font-style: italic;
   color: rgb(100, 105, 111);
   font-size: calc(12.5rem / 16);
-  padding-left: 2%;
+  padding-left: 1%;
 }
 /* Button */
 .answerContainer .sticky {
