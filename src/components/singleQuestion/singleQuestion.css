@@ -25,6 +25,9 @@
 .single_question_header .add_question p:after {
   content: "\00a0 \00a0";
 }
+.add_question .add_button {
+  color: rgb(2, 102, 182);
+}
 .last_discussed {
   font-style: italic;
   flex-basis: 25.5%;
