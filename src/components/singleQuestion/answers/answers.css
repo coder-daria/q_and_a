@@ -9,6 +9,9 @@
   font-weight: bold;
   font-style: italic;
 }
+.allAnswers_number:after {
+  content: "\00a0";
+}
 .allAnswers_number {
   font-style: normal;
 }

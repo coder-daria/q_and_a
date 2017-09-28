@@ -7,7 +7,6 @@ import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
 class Question extends React.Component {
   toggleModalWindow = () => {
     this.props.showModal();
-    this.props.history.push("/profile");
   }
   renderHeader = () => {
     const whoIsAsking = <p><span className="clickable_user_name" onClick={this.toggleModalWindow}>{this.props.user.name}</span><span className="subTitle">is asking:</span></p>;

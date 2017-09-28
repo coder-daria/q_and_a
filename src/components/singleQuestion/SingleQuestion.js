@@ -19,7 +19,9 @@ class SingleQuestion extends React.Component {
           </div>
           <div className="add_question">
             <p>Question</p>
+            <IconButton aria-label="Add" onClick={()=>{}} className="add_button">
               <Icon>add_circle</Icon>
+            </IconButton>
           </div>
           <div className="last_discussed">
             <p>Last time discussed<span className="number">{this.props.timeSinceLastChange.unit}</span>{this.props.timeSinceLastChange.time}</p>
@@ -49,7 +51,7 @@ class SingleQuestion extends React.Component {
 }
 
 SingleQuestion.defaultProps = {
-  timeSinceLastChange: {unit: 4, time: "days ago"}
+  timeSinceLastChange: { unit: 4, time: "days ago" }
 };
 
 export default SingleQuestion;

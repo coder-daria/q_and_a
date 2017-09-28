@@ -15,7 +15,7 @@ class App extends Component {
           <Switch>
             <Route path="/" exact component={AllQuestions} />
             <Route path="/single_question" component={SingleQuestionContainer} />
-            <Route component={PageNotFound}/>
+            <Route component={PageNotFound} />
           </Switch>
         </div>
       </Router>

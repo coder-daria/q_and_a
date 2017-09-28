@@ -51,7 +51,7 @@ class ModalWindow extends React.Component {
         isOpen={this.props.showModal}
         style={modalStyles}
       >
-        <Profile closeModalWindow={this.props.closeModalWindow} history={this.props.history}/>
+        <Profile closeModalWindow={this.props.closeModalWindow}/>
       </Modal>
     )
   }
