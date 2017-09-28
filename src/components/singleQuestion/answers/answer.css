@@ -65,6 +65,9 @@
   .answer_header p:nth-child(1){
     display: none;
   }
+  .answer_header p:nth-child(2){
+    padding: 2%;
+  }
   .main_answer {
     flex-direction: column;
   }
@@ -76,6 +79,9 @@
   }
   .whoCommented {
     padding-left: 5%;
+  }
+  .answerContainer .single_question_row_left_item {
+    border-bottom: 1.5px solid rgb(225, 225, 225);
   }
   .answerContainer .sticky button{
     padding: 4% 8%;
