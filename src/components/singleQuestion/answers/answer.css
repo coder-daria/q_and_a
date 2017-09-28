@@ -73,9 +73,6 @@
   .whoCommented {
     padding-left: 5%;
   }
-  .answerContainer .sticky button{
-    padding: 2% 8%;
-  }
 
 }
 @media only screen and (min-width: 768px) and (max-width: 1200px){
