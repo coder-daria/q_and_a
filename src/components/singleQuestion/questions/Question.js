@@ -5,12 +5,16 @@ import ArrowUp from 'material-ui-icons/KeyboardArrowUp';
 import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
 
 class Question extends React.Component {
+  toggleModalWindow = () => {
+    this.props.showModal();
+    this.props.history.push("/single_question/profile");
+  }
   renderHeader = () => {
-    const whoIsAsking = <p><span className="clickable_user_name" onClick={this.props.showModal}>{this.props.user.name}</span><span className="subTitle">is asking:</span></p>;
+    const whoIsAsking = <p><span className="clickable_user_name" onClick={this.toggleModalWindow}>{this.props.user.name}</span><span className="subTitle">is asking:</span></p>;
     return (
       <div className="single_question_row questionHeader">
         <div className="centered_avatar single_question_row_left_item">
-          <Avatar src={this.props.user.avatar} props="profile_pic" showModal={this.props.showModal}/>
+          <Avatar src={this.props.user.avatar} props="profile_pic" showModal={this.toggleModalWindow}/>
           {whoIsAsking}
         </div>
         <div className="single_question_row_middle_item single_question_main_question">
