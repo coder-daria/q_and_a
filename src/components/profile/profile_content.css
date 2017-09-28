@@ -111,8 +111,8 @@
   .navigationTable p {
     font-size: 25px;
   }
-  .profileStatistics {
-    height: 300px;
+  .profileBody {
+    height: 500px;
   }
   .profileStatisticsData {
     justify-content: center;
