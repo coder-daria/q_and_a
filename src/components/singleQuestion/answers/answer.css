@@ -80,9 +80,6 @@
   .answerContainer .sticky button{
     padding: 4% 8%;
   }
-  .answerContainer .sticky > button {
-    padding: 0 4%;
-  }
 
 }
 @media only screen and (min-width: 768px) and (max-width: 1200px){

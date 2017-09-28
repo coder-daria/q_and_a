@@ -53,7 +53,7 @@
     min-width: 300px;
   }
   .profileHeader, .profileBody, .profileFooter {
-    width: 100%;
+    width: 90%;
   }
   .subTitle {
     text-align: center;

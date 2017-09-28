@@ -61,15 +61,6 @@
   flex-grow: 1;
   justify-content: center;
   align-items: baseline;
-  background-color: yellow;
-  border: 1px solid blue;
-}
-.hottest_discussion_article_details .statistic_numbers {
-  font-size: calc(20rem / 16);
-  background-color: brown;
-}
-.hottest_discussion_article_details .statistic_numbers:after {
-  content: "\00a0";
 }
 .hottest_discussion_article_details .description {
   font-size: 0.8rem;
@@ -85,7 +76,7 @@
   .hottest_discussion_article_details_item {
     justify-content: flex-start;
     flex-basis: 50%;
-    padding-left: 1%;
+    padding-left: 5%;
   }
   .hottest_discussion_statistics {
     height: 150px;
@@ -96,15 +87,9 @@
   .hottest_discussion_article_details_item_related_upvotes {
     order: 2;
   }
-  .hottest_discussion_article_details .statistic_numbers {
-    font-size: 1rem;
-  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
-  .hottest_discussion_article_details .statistic_numbers {
-    font-size: calc(18rem / 16);
-  }
 }
 
 @media only screen and (min-width: 1200px){

@@ -32,7 +32,7 @@ class Answer extends React.Component {
         <div className={`single_question_row_right_item ${replyTopBorder}`}>
           <div className="votes">
             <div className="votesCounter">
-              <p><span className="votes_number">{content.answer.votes}</span>upvotes</p>
+              <p><span className="bold_number_medium">{content.answer.votes}</span>upvotes</p>
               <div className="arrows">
                 <ArrowUp />
                 <ArrowDown />
