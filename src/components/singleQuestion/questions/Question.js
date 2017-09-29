@@ -4,7 +4,7 @@ import './question.css';
 import Avatar from '../../common/avatar/Avatar';
 import ArrowUp from 'material-ui-icons/KeyboardArrowUp';
 import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
-import StickyButton from '../../common/StickyButton';
+import StickyButton from '../../common/stickyButton/StickyButton';
 
 class Question extends React.Component {
   renderHeader = () => {

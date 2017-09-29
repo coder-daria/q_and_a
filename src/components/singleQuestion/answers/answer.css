@@ -20,25 +20,6 @@
   font-weight: bold;
   font-size: calc(15rem / 16);
 }
-/* Button */
-.answerContainer .sticky {
-  display:flex;
-  justify-content: center;
-  position: relative;
-  height: 35px;
-  top: -15px;
-}
-.answerContainer .sticky > button {
-  font-weight: bold;
-  background-color: white;
-  border: 1px solid rgb(229, 229, 229);
-}
-
-/* Button */
-.answerContainer .sticky button:hover {
-  background-color: rgb(243, 243, 246);
-  box-shadow: 0 0 2px rgb(100, 105, 111);
-}
 
 /* QUERIES */
 @media only screen and (max-width: 767px) {
@@ -102,17 +83,11 @@
   .answer>.main_answer:last-child .answer_body {
     padding-bottom: 3%;
   }
-  .answerContainer .sticky > button {
-    padding: 0 2%;
-  }
 }
 @media only screen and (min-width: 1200px){
   .answer_content {
     line-height: calc(20rem / 16);
     padding: 2% 0%;
-  }
-  .answerContainer .sticky > button {
-    padding: 0 2%;
   }
   .answer>.main_answer:last-child .answer_body {
     padding-bottom: 3%;

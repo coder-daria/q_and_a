@@ -38,24 +38,6 @@
   color: rgb(121, 121, 122);
   line-height: 20px;
 }
-/* Button */
-.questionContainer .sticky {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  height: 35px;
-  top: -15px;
-}
-.questionContainer .sticky > button {
-  font-weight: bold;
-  background-color: white;
-  border: 1px solid rgb(229, 229, 229);
-}
-/* Button */
-.questionContainer .sticky button:hover {
-  background-color: rgb(233, 243, 253);
-  box-shadow: 0 0 2px rgb(2, 102, 182);
-}
 
 .questionContainer .single_question_unfollow_body {
   display: none;
@@ -116,10 +98,6 @@
   .questionBody .votesCounter {
     padding-right: 6%;
   }
-  /* Button */
-  .questionContainer .sticky > button {
-    padding: 0 10%;
-  }
   .questionContainer .votes {
     padding-bottom: 5%;
   }
@@ -177,9 +155,5 @@
   }
   .questionContainer .question_content {
     padding-bottom: 5%;
-  }
-  /* Button */
-  .questionContainer .sticky > button {
-    padding: 0 3%;
   }
 }
