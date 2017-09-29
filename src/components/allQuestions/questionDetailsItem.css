@@ -38,10 +38,7 @@
 .item.more_activities>.item_status {
   flex-grow: 1;
   border: none;
-  color: rgb(75, 74, 76);
   display: flex;
-  font-size: calc(13rem / 16);
-  font-style: italic;
   align-items: center;
 }
 .item .item_status_circle {

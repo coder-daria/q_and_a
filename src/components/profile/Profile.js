@@ -71,16 +71,28 @@ class Profile extends React.Component {
           <div className="subTitle">That's where we have been these {this.props.user.memberFor.number} {this.props.user.memberFor.howMany} ago</div>
           <div className="profileStatisticsData">
             <div className="square peers">
-              <p className="peers_text"><span className="bold_number_big">{this.props.user.statisticData.peers}</span>peers</p>
+              <div className="peers_text">
+                <span className="bold_number_big">{this.props.user.statisticData.peers}</span>
+                <p className="info_text">peers</p>
+                </div>
             </div>
             <div className="square discussions">
-              <p className="discussions_text"><span className="bold_number_big">{this.props.user.statisticData.discussion}</span>discussions</p>
+              <div className="discussions_text">
+                <span className="bold_number_big">{this.props.user.statisticData.discussion}</span>
+                <p className="info_text">discussions</p>
+                </div>
             </div>
             <div className="square findings">
-              <p className="findings_text"><span className="bold_number_big">{this.props.user.statisticData.findings}</span>findings</p>
+              <div className="findings_text">
+                <span className="bold_number_big">{this.props.user.statisticData.findings}</span>
+                <p className="info_text">findings</p>
+                </div>
             </div>
             <div className="square questions">
-              <p className="questions_text"><span className="bold_number_big">{this.props.user.statisticData.questions}</span>questions</p>
+              <div className="questions_text">
+                <span className="bold_number_big">{this.props.user.statisticData.questions}</span>
+                <p className="info_text">questions</p>
+                </div>
             </div>
           </div>
         </div>
@@ -113,19 +125,19 @@ class Profile extends React.Component {
           <div className="hottest_discussion_article_details">
             <div className="hottest_discussion_article_details_item hottest_discussion_article_details_item_related_peers">
               <p className="bold_number_medium">{this.props.hottestDiscussion.statisticData.peers}</p>
-              <p className="description">peers involved</p>
+              <span className="info_text">peers involved</span>
             </div>
             <div className="hottest_discussion_article_details_item">
               <p className="bold_number_medium">{this.props.hottestDiscussion.statisticData.relatedDiscussion}</p>
-              <p className="description">related discussion</p>
+              <span className="info_text">related discussion</span>
             </div>
             <div className="hottest_discussion_article_details_item">
               <p className="bold_number_medium">{this.props.hottestDiscussion.statisticData.conversations}</p>
-              <p className="description">conversations</p>
+              <span className="info_text">conversations</span>
             </div>
             <div className="hottest_discussion_article_details_item hottest_discussion_article_details_item_related_upvotes">
               <p className="bold_number_medium">{this.props.hottestDiscussion.statisticData.upvotes}</p>
-              <p className="description">upvotes</p>
+              <span className="info_text">upvotes</span>
             </div>
           </div>
         </div>

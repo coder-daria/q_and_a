@@ -9,15 +9,22 @@ import './questionDetailsItem.css';
 
 class QuestionDetails extends React.Component {
   renderHeader = () => {
+    const whoIsAsking = className => {
+      return (
+        <div className={`whoIsAsking ${className || ""}`}>
+          <span className="clickable_user_name person_name" onClick={this.props.onUserClick}>
+            {this.props.user.name}
+          </span>
+          <span className="subTitle">is asking:</span>
+        </div>);
+    }
     return (
       <div className="question_details_header">
         <div className="question_details_avatar centered_avatar">
           <Avatar onClick={this.props.onUserClick} src={this.props.user.avatar} props="profile_pic" />
         </div>
         <div className="question_details_mainQuestion">
-          <p className="whoIsAsking">
-            <span className="clickable_user_name person_name" onClick={this.props.onUserClick}>{this.props.user.name}</span>is asking:
-          </p>
+          {whoIsAsking()}
           <p className="user_question">{this.props.user.question}</p>
         </div>
       </div>
@@ -38,7 +45,7 @@ class QuestionDetails extends React.Component {
               <p className="bold_number_small">3</p>
             </div>
             <div className="item_status">
-              more activities
+              <span className="info_text">more activities</span>
               <div className="item_status_circle" />
             </div>
           </div>
@@ -73,13 +80,16 @@ class QuestionDetails extends React.Component {
         </div>
         <div className="question_details_popularity">
           <div className="question_details_popularity_item">
-            <p><span className="bold_number_small">{this.props.user.statisticData.relatedDiscussion} </span>related discussion</p>
+            <span className="bold_number_small">{this.props.user.statisticData.relatedDiscussion} </span>
+            <span className="info_text">related discussion </span>
           </div>
           <div className="question_details_popularity_item">
-            <p><span className="bold_number_small">{this.props.user.statisticData.peersInvolved} </span>peers involved</p>
+            <span className="bold_number_small">{this.props.user.statisticData.peersInvolved} </span>
+            <span className="info_text">peers involved</span>
           </div>
           <div className="question_details_popularity_item">
-            <p><span className="bold_number_small">{this.props.user.statisticData.conversations}</span> conversations</p>
+            <span className="bold_number_small">{this.props.user.statisticData.conversations} </span>
+            <span className="info_text">conversations</span>
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@ class Question extends React.Component {
           {whoIsAsking("big-device")}
           <p className="user_question">{this.props.user.question}</p>
         </div>
-        <div className="single_question_row_right_item single_question_unfollow_header">
+        <div className="single_question_row_right_item single_question_unfollow_header person_name">
           <p>{this.props.user.unfollow}</p>
         </div>
       </div>
@@ -42,9 +42,12 @@ class Question extends React.Component {
         </div>
         <div className="single_question_row_right_item">
           <div className="votes">
-            <p className="single_question_unfollow_body">{this.props.user.unfollow}</p>
+            <p className="single_question_unfollow_body person_name">{this.props.user.unfollow}</p>
             <div className="votesCounter">
-              <p><span className="bold_number_medium">{this.props.user.votes}</span>upvotes</p>
+              <div>
+                <span className="bold_number_medium">{this.props.user.votes}</span>
+                <span className="info_text">upvotes</span>
+              </div>
               <div className="arrows">
                 <ArrowUp />
                 <ArrowDown />
@@ -62,7 +65,7 @@ class Question extends React.Component {
           {this.renderHeader()}
           {this.renderBody()}
         </div>
-        <StickyButton text="GIVE new answer"/>
+        <StickyButton text="GIVE new answer" />
       </div>
     );
   }

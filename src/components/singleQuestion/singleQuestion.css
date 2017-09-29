@@ -3,17 +3,11 @@
 .last_discussed {
    display: flex; 
    justify-content: flex-end; 
-   font-style: italic; 
    align-items: center; 
-  color: rgb(121, 121, 122);
 }
-.last_discussed .number:before, .last_discussed .number:after  {
+.last_discussed .bold_number_small:before, .last_discussed .bold_number_small:after  {
   content: "\00a0 \00a0";
 }
-.last_discussed .number {
-  font-style: normal;
-}
-
 /* Single question body */
 .single_question_row {
   display: flex;

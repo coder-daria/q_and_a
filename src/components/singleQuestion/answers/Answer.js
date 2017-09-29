@@ -35,7 +35,10 @@ class Answer extends React.Component {
         <div className={`single_question_row_right_item ${replyTopBorder}`}>
           <div className="votes">
             <div className="votesCounter">
-              <p><span className="bold_number_medium">{content.answer.votes}</span>upvotes</p>
+              <div>
+                <span className="bold_number_medium">{content.answer.votes}</span>
+                <span className="info_text">upvotes</span>
+              </div>
               <div className="arrows">
                 <ArrowUp />
                 <ArrowDown />
@@ -62,7 +65,7 @@ class Answer extends React.Component {
           {this.renderAnswer(this.props.data)}
           {this.renderReplies(this.props.data.replies)}
         </div>
-        <StickyButton text="CONTINUE discussion"/>
+        <StickyButton text="CONTINUE discussion" />
       </div>
     );
   }

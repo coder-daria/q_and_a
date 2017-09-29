@@ -6,22 +6,24 @@ import IconButton from 'material-ui/IconButton';
 class AppHeader extends React.Component {
 
   renderHeaderRightPart(isSingleQuestion) {
-    if(isSingleQuestion){
+    if (isSingleQuestion) {
       return (
         <div className="last_discussed">
-            <p>Last time discussed<span className="number">{this.props.timeSinceLastChange.unit}</span>{this.props.timeSinceLastChange.time}</p>
-          </div>
+          <span className="info_text">Last time discussed</span>
+          <span className="bold_number_small">{this.props.timeSinceLastChange.unit}</span>
+          <span className="info_text">{this.props.timeSinceLastChange.time}</span>
+        </div>
       )
     } else {
       return (
         <div className="search_header_sort_by">
-            <div className="search_header_sorting">
-              <span>Sort by:</span>
-              <a href="#" className="currentSelection">recent</a>
-              <span>or</span>
-              <a href="#">hot</a>
-            </div>
+          <div className="search_header_sorting">
+            <span className="info_text">Sort by:</span>
+            <a href="#" className="currentSelection">recent</a>
+            <span className="info_text">or</span>
+            <a href="#">hot</a>
           </div>
+        </div>
       )
     }
   }

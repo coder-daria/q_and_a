@@ -62,10 +62,6 @@
   justify-content: center;
   align-items: baseline;
 }
-.hottest_discussion_article_details .description {
-  font-size: 0.8rem;
-  font-style: italic;
-}
 @media only screen and (max-width: 767px) {
   .hottest_discussion_article_title  {
     font-size: 1rem;

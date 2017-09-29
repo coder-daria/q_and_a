@@ -92,8 +92,6 @@
   .questionContainer .single_question_unfollow_body {
     display: inline;
     padding-left: 4%;
-    color: rgb(2, 102, 182);
-    font-weight: bold;
   }
   .questionBody .votesCounter {
     padding-right: 6%;
