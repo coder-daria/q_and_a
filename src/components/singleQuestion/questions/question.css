@@ -22,9 +22,6 @@
 .questionHeader .centered_avatar {
   border-right: none;
 }
-.single_question_main_question p:nth-child(2){
-  font-style: italic;
-}
 /* Body */
 .questionBody {
   background-color: white;

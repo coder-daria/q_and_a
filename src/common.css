@@ -13,7 +13,37 @@
 .bold_number_big:after,.bold_number_medium:after,.bold_number_small:after {
   content: "\00a0";
 }
-
 .border_top {
   border-top: 1px solid blue;
+}
+.clickable_user_name:hover {
+  color: grey;
+  text-shadow: 0 0 1px white;
+  cursor: pointer;
+}
+.person_name {
+  color: rgb(2, 102, 182);
+  font-weight: bold;
+  text-align: center;
+}
+.person_name:after {
+  content: "\00a0 \00a0";
+}
+.subTitle {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: rgb(131, 144, 154);
+  text-align: center;
+}
+.user_question {
+  font-style: italic;
+  color: rgb(2, 102, 182);
+  font-weight: bold;
+  font-size: calc(18rem/16);
+}
+.whoIsAsking {
+  font-weight: bold;
+  color: rgb(131, 144, 154);
+  text-transform: uppercase;
+  font-size: 0.8rem;
 }

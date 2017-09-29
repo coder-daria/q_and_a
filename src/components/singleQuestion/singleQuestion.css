@@ -46,11 +46,6 @@
 }
 
 /* Single question body */
-.clickable_user_name:hover {
-  color: grey;
-  text-shadow: 0 0 1px white;
-  cursor: pointer;
-}
 .single_question_row {
   display: flex;
 }

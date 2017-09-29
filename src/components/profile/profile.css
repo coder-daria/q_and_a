@@ -35,16 +35,6 @@
   flex-direction: column;
   align-items: center;
 }
-.subTitle {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  color: rgb(131, 144, 154);
-}
-.person_name {
-  color: rgb(2, 102, 182);
-  font-weight: bold;
-  text-align: center;
-}
 @media only screen and (max-width: 767px) {
   .profileContainer {
     min-width: 300px;
@@ -58,10 +48,6 @@
   .profileBody {
     height: 550px;
   }
-  .subTitle {
-    text-align: center;
-    font-size: 0.8em;
-  }
   .profileContainer {
     height: fit-content;
   } 
@@ -72,10 +58,6 @@
   } 
   .profileHeader, .profileBody, .profileFooter {
     width: 80%;
-  }
-  .subTitle {
-    /* text-align: center; */
-    font-size: 0.8em;
   }
 }
 @media only screen and (min-width: 1200px){
