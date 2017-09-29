@@ -1,5 +1,6 @@
 .search_header {
   flex-direction: column;
+  min-height: 165px;
 }
 
 /* Add question */
@@ -23,7 +24,7 @@
   flex-basis: 20%;
 }
 .search_header_question_details {
-  flex-basis: 14%;
+  flex-basis: 20%;
 }
 .search_header_question_details form{
   display: flex;

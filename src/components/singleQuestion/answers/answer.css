@@ -70,7 +70,7 @@
   .answer>.main_answer:last-child .single_question_row_right_item {
     padding-bottom: 3%;
   }
-  .answer .single_question_row_right_item .border_top{
+  .answer .single_question_row_right_item.border_top{
     border-top: none;
   }
   
