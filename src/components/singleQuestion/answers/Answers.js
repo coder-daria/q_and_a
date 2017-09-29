@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Answer from './Answer';
 import './answers.css';
 import '../../common/voting/voting.css';
@@ -57,9 +58,9 @@ class Answers extends React.Component {
           <span className="bold_number_medium">{this.props.answers.howMany}</span>
           <span className="info_text">peers already answered</span>
           </div>
-        <Answer showModal={this.props.showModal} data={answer}/>
-        <Answer showModal={this.props.showModal} data={answer}/>
-        <Answer showModal={this.props.showModal} data={answer}/>
+        <Answer onUserClick={this.props.onUserClick} data={answer}/>
+        <Answer onUserClick={this.props.onUserClick} data={answer}/>
+        <Answer onUserClick={this.props.onUserClick} data={answer}/>
 
       </div>
     );
@@ -69,4 +70,8 @@ Answers.defaultProps = {
   answers: { howMany: 2 }
 };
 
+Answers.propTypes = {
+  onUserClick: PropTypes.func.isRequired,
+  data: PropTypes.object.isRequired,
+};
 export default Answers;

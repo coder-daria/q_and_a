@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Question from '../singleQuestion/questions/Question';
 import Avatar from '../common/avatar/Avatar';
 import ArrowUp from 'material-ui-icons/KeyboardArrowUp';
@@ -11,11 +12,11 @@ class QuestionDetails extends React.Component {
     return (
       <div className="question_details_header">
         <div className="question_details_avatar centered_avatar">
-          <Avatar src={this.props.user.avatar} props="profile_pic" />
+          <Avatar onClick={this.props.onUserClick} src={this.props.user.avatar} props="profile_pic" />
         </div>
         <div className="question_details_mainQuestion">
           <p className="whoIsAsking">
-            <span className="clickable_user_name person_name" onClick={this.props.showModal}>{this.props.user.name}</span>is asking:
+            <span className="clickable_user_name person_name" onClick={this.props.onUserClick}>{this.props.user.name}</span>is asking:
           </p>
           <p className="user_question">{this.props.user.question}</p>
         </div>
@@ -42,28 +43,28 @@ class QuestionDetails extends React.Component {
             </div>
           </div>
           <div className="item commented">
-            <Avatar src="http://placecorgi.com/300/300" />
+            <Avatar onClick={this.props.onUserClick} src="http://placecorgi.com/300/300" />
             <div className="item_status">
               COMMENTED
               <div className="item_status_circle" />
             </div>
           </div>
           <div className="item commented">
-            <Avatar src="http://placecorgi.com/240/240" />
+            <Avatar onClick={this.props.onUserClick} src="http://placecorgi.com/240/240" />
             <div className="item_status">
               COMMENTED
               <div className="item_status_circle" />
             </div>
           </div>
           <div className="item commented">
-            <Avatar src="http://placecorgi.com/100/300" />
+            <Avatar onClick={this.props.onUserClick} src="http://placecorgi.com/100/300" />
             <div className="item_status">
               COMMENTED
               <div className="item_status_circle" />
             </div>
           </div>
           <div className="item answered">
-            <Avatar src="http://placecorgi.com/70/70" />
+            <Avatar onClick={this.props.onUserClick} src="http://placecorgi.com/70/70" />
             <div className="item_status">
               ANSWERED
               <div className="item_status_circle" />
@@ -101,6 +102,11 @@ QuestionDetails.defaultProps = {
     question: "Will insulin make my patient gain weight?",
     statisticData: { relatedDiscussion: 1, peersInvolved: 6, conversations: 3 }
   }
+};
+
+QuestionDetails.propTypes = {
+  onUserClick: PropTypes.func.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 export default QuestionDetails;

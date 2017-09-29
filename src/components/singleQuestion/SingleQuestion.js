@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './singleQuestion.css';
 import Question from './questions/Question';
 import Answers from './answers/Answers';
@@ -91,8 +92,8 @@ class SingleQuestion extends React.Component {
   renderContent = () => {
     return (
       <div className="single_question">
-        <Question showModal={this.props.showModal} history={this.props.history} />
-        <Answers showModal={this.props.showModal} />
+        <Question onUserClick={this.props.onUserClick} history={this.props.history} />
+        <Answers onUserClick={this.props.onUserClick} />
       </div>
     )
   }
@@ -110,6 +111,11 @@ class SingleQuestion extends React.Component {
 
 SingleQuestion.defaultProps = {
   timeSinceLastChange: { unit: 4, time: "days ago" }
+};
+
+SingleQuestion.propTypes = {
+  onUserClick: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
 };
 
 export default SingleQuestion;

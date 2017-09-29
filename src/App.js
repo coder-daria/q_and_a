@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SingleQuestionContainer from './components/singleQuestion/SingleQuestionContainer';
-import AllQuestions from './components/allQuestions/AllQuestions';
+import AllQuestionContainer from './components/allQuestions/AllQuestionsContainer';
 import ModalWindowContainer from './components/modalWindow/ModalWindowContainer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import PageNotFound from './components/pageNotFound/pageNotFound';
@@ -13,7 +13,7 @@ class App extends Component {
         <div>
           <ModalWindowContainer />
           <Switch>
-            <Route path="/" exact component={AllQuestions} />
+            <Route path="/" exact component={AllQuestionContainer} />
             <Route path="/single_question" component={SingleQuestionContainer} />
             <Route component={PageNotFound} />
           </Switch>

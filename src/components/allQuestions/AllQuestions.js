@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
 import Icon from 'material-ui/Icon';
 import QuestionDetails from './QuestionDetails';
@@ -18,11 +19,11 @@ class AllQuestions extends React.Component {
   renderContent() {
     return (
       <div className="all_questions">
-        <QuestionDetails />
-        <QuestionDetails />
-        <QuestionDetails />
-        <QuestionDetails />
-        {this.renderLoadMore()}
+        <QuestionDetails onUserClick={this.props.onUserClick}/>
+        <QuestionDetails onUserClick={this.props.onUserClick} />
+        <QuestionDetails onUserClick={this.props.onUserClick} />
+        <QuestionDetails onUserClick={this.props.onUserClick} />
+        {this.renderLoadMore()};
       </div>
     )
   }
@@ -37,5 +38,10 @@ class AllQuestions extends React.Component {
     );
   }
 }
+
+AllQuestions.propTypes = {
+  onUserClick: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired
+};
 
 export default AllQuestions;

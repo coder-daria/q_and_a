@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './answer.css';
 import Avatar from '../../common/avatar/Avatar';
 import ArrowUp from 'material-ui-icons/KeyboardArrowUp';
 import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
-import PropTypes from 'prop-types';
 import StickyButton from '../../common/StickyButton';
 import Button from 'material-ui/Button';
 
@@ -13,7 +13,7 @@ class Answer extends React.Component {
     const replyTopBorder = isReply ? "border_top" : "";
     const whoCommented = (
       <div className="whoCommented">
-        <span className="clickable_user_name person_name" onClick={this.props.showModal}>{content.user.name}</span>
+        <span className="clickable_user_name person_name" onClick={this.props.onUserClick}>{content.user.name}</span>
         <span className="subTitle">commented it</span>
         <p className="small_circle" />
         <span className="info_text">{content.date.whenCommented}</span>
@@ -23,7 +23,7 @@ class Answer extends React.Component {
       <div className="single_question_row main_answer">
         {space}
         <div className={`centered_avatar single_question_row_left_item ${replyTopBorder}`}>
-          <Avatar showModal={this.props.showModal} src={content.user.avatar} props="profile_pic" />
+          <Avatar onClick={this.props.onUserClick} src={content.user.avatar} props="profile_pic" />
           {whoCommented}
         </div>
         <div className={`single_question_row_middle_item ${replyTopBorder}`}>
@@ -69,7 +69,7 @@ class Answer extends React.Component {
 }
 
 Answer.propTypes = {
-  showModal: PropTypes.func.isRequired,
+  onUserClick: PropTypes.func.isRequired,
   data: PropTypes.object.isRequired,
 };
 export default Answer;
