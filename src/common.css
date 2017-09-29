@@ -37,7 +37,7 @@
 }
 .user_question {
   font-style: italic;
-  color: rgb(2, 102, 182);
+  color: rgb(0, 101, 182);
   font-weight: bold;
   font-size: calc(18rem/16);
 }

@@ -31,7 +31,12 @@ class AllQuestions extends React.Component {
             </form>
           </div>
           <div className="search_header_sort_by">
-            <p>Sort by:<a href="#" className="recent">recent</a>or<span className="hot">hot</span></p>
+            <div className="search_header_sorting">
+              <span>Sort by:</span>
+              <a href="#" className="currentSelection">recent</a>
+              <span>or</span>
+              <a href="#">hot</a>
+            </div>
           </div>
         </div>
         <div className="search">
