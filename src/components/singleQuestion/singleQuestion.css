@@ -100,4 +100,10 @@
   .questionHeader .single_question_row_middle_item {
     padding-left: 1%;
   }
+  .single_question_row_left_item .whoCommented {
+    display: none;
+  }
+  .single_question_row_left_item .whoIsAsking {
+    display: none;
+  }
 }
