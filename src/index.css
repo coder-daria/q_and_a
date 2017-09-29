@@ -65,18 +65,22 @@ body {
 .app_top_section {
 	display: flex;
 	background-color: white;
-	height: 10%;
+	height: 15%;
 	width: 100%;
 	justify-content: center;
 	align-items: center;
+	/* background-color: yellow; */
 }
 
 .app_content{
-  background-color: rgb(251, 251, 251);
+	background-color: rgb(251, 251, 251);
   overflow-y: auto;
-  height: 90%;
+  height: 85%;
   width: 95%;
+	/* background-color: #00FFA3; */
 }
+
+
 @media only screen and (max-width: 767px) {
 	.app_top_section {
     height: 10%;

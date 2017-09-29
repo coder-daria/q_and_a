@@ -9,7 +9,7 @@ class Question extends React.Component {
     this.props.showModal();
   }
   renderHeader = () => {
-    const whoIsAsking = <p><span className="clickable_user_name" onClick={this.toggleModalWindow}>{this.props.user.name}</span><span className="subTitle">is asking:</span></p>;
+    const whoIsAsking = <p className="whoIsAsking"><span className="clickable_user_name person_name" onClick={this.toggleModalWindow}>{this.props.user.name}</span><span className="subTitle">is asking:</span></p>;
     return (
       <div className="single_question_row questionHeader">
         <div className="centered_avatar single_question_row_left_item">
@@ -18,7 +18,7 @@ class Question extends React.Component {
         </div>
         <div className="single_question_row_middle_item single_question_main_question">
           {whoIsAsking}
-          <p>{this.props.user.question}</p>
+          <p className="user_question">{this.props.user.question}</p>
         </div>
         <div className="single_question_row_right_item single_question_unfollow_header">
           <p>{this.props.user.unfollow}</p>

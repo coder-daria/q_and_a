@@ -1,26 +1,20 @@
-
-/* Header*/
 .search_header {
-  display: flex;
   flex-direction: column;
 }
 
 /* Add question */
-.question_and_sort .add_question {
-  display: flex;
-  flex-grow: 1;
-  flex-basis: 30%;
-  font-size: calc(30rem / 16);
-  align-items: center;
-}
+
 .question_and_sort {
   width: 82.5%;
   display: flex;
   align-self: flex-start;
   justify-content: center;
+  flex-basis: 45%;
+  /* background-color: pink; */
 }
-.question_and_sort .add_question p{
-  padding-right: 5%;
+.question_and_sort .add_question {
+  flex-grow: 1;
+  flex-basis: 42%;
 }
 .search_header_return_arrow {
   display: flex;
@@ -29,11 +23,11 @@
   flex-basis: 20%;
 }
 .search_header_question_details {
-  flex-basis: 26%;
+  flex-basis: 14%;
 }
 .search_header_question_details form{
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
 }
@@ -44,25 +38,36 @@
   flex-basis: 20%;
   font-style: italic;
 }
-.search_header_sort_by .recent{
+
+.search_header_sorting {
+  display: flex;
+  min-width: 55%;
+  justify-content: space-between;
+}
+.search_header_sort_by a {
+  color: rgb(2, 102, 182);
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.search_header_sort_by .currentSelection{
   text-decoration: underline;
   font-style: normal;
-  color: grey;
+  color: rgb(202, 204, 205);
   font-weight: bold;
+  pointer-events: none;
 }
-.search_header_sort_by .hot{
-  color: blue;
-  font-weight: bold;
-  font-style: normal;
+.search_header_sort_by .currentSelection:hover{
+  cursor: default;
 }
-
 
 /* Search */
-
 .search {
   margin-left: -1%;
-  padding-top: 1%;
   width: 66%;
+  flex-basis: 10%;
+  /* background-color: yellow; */
 }
 .search form {
   display: flex;
@@ -80,13 +85,14 @@
 }
 
 .search button{
-  flex-basis: 20%;
+  flex-basis: 23%;
   background-color: white;
   border: 2px solid rgb(202, 204, 205);
   color: rgb(216, 215, 216);
   font-weight: bold;
   font-size: calc(16rem / 16);
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 767px) {

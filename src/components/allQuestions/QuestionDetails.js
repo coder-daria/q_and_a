@@ -11,11 +11,11 @@ class QuestionDetails extends React.Component {
     return (
       <div className="question_details_header">
         <div className="question_details_avatar centered_avatar">
-          <Avatar src="http://placecorgi.com/200/200" props="profile_pic" />
+          <Avatar src={this.props.user.avatar} props="profile_pic" />
         </div>
         <div className="question_details_mainQuestion">
-          <h4>{this.props.user.name} is asking</h4>
-          <h3>{this.props.user.question}</h3>
+          <p className="whoIsAsking"><span className="clickable_user_name person_name">{this.props.user.name}</span>is asking:</p>
+          <p className="user_question">{this.props.user.question}</p>
         </div>
       </div>
     )
@@ -70,14 +70,14 @@ class QuestionDetails extends React.Component {
         </div>
         <div className="question_details_popularity">
           <div className="question_details_popularity_item">
-            <p className="bold_number_small">{this.props.user.statisticData.relatedDiscussion}</p> related discussion
-            </div>
+            <p><span className="bold_number_small">{this.props.user.statisticData.relatedDiscussion} </span>related discussion</p>
+          </div>
           <div className="question_details_popularity_item">
-            <p className="bold_number_small">{this.props.user.statisticData.peersInvolved}</p> peers involved
-            </div>
+            <p><span className="bold_number_small">{this.props.user.statisticData.peersInvolved} </span>peers involved</p>
+          </div>
           <div className="question_details_popularity_item">
-            <p className="bold_number_small">{this.props.user.statisticData.conversations}</p> conversations
-            </div>
+            <p><span className="bold_number_small">{this.props.user.statisticData.conversations}</span> conversations</p>
+          </div>
         </div>
       </div>
     )
@@ -95,6 +95,7 @@ class QuestionDetails extends React.Component {
 QuestionDetails.defaultProps = {
   user: {
     name: "Eva",
+    avatar: "http://placecorgi.com/200/200",
     question: "Will insulin make my patient gain weight?",
     statisticData: { relatedDiscussion: 1, peersInvolved: 6, conversations: 3 }
   }
