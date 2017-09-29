@@ -3,6 +3,7 @@ import './question.css';
 import Avatar from '../../common/avatar/Avatar';
 import ArrowUp from 'material-ui-icons/KeyboardArrowUp';
 import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
+import StickyButton from '../../common/StickyButton';
 
 class Question extends React.Component {
   toggleModalWindow = () => {
@@ -56,13 +57,6 @@ class Question extends React.Component {
       </div>
     )
   }
-  renderStickyChild() {
-    return (
-      <div className="sticky">
-        <button>GIVE new answer</button>
-      </div>
-    )
-  }
   render() {
     return (
       <div className="questionContainer">
@@ -70,7 +64,7 @@ class Question extends React.Component {
           {this.renderHeader()}
           {this.renderBody()}
         </div>
-        {this.renderStickyChild()}
+        <StickyButton text="GIVE new answer"/>
       </div>
     );
   }

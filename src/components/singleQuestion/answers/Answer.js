@@ -4,6 +4,8 @@ import Avatar from '../../common/avatar/Avatar';
 import ArrowUp from 'material-ui-icons/KeyboardArrowUp';
 import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
 import PropTypes from 'prop-types';
+import StickyButton from '../../common/StickyButton';
+import Button from 'material-ui/Button';
 
 class Answer extends React.Component {
   renderAnswer(content, isReply) {
@@ -45,14 +47,6 @@ class Answer extends React.Component {
     )
   }
 
-  renderStickyChild() {
-    return (
-      <div className="sticky">
-        <button>CONTINUE discussion</button>
-      </div>
-    )
-  }
-
   renderReply(reply) {
     return this.renderAnswer(reply, true);
   }
@@ -68,7 +62,7 @@ class Answer extends React.Component {
           {this.renderAnswer(this.props.data)}
           {this.renderReplies(this.props.data.replies)}
         </div>
-        {this.renderStickyChild()}
+        <StickyButton text="CONTINUE discussion"/>
       </div>
     );
   }
