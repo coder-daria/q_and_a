@@ -29,7 +29,7 @@
 .question_empty_space {
   background-color: rgb(233, 243, 253);
   background-clip: padding-box;
-  padding-right: 11%;
+  /* padding-right: 11%; */
 }
 .question_content{
   display: flex;
@@ -186,7 +186,7 @@
     padding-bottom: 3%;
   }
   .question_empty_space {
-    padding-right: 8%;
+    /* padding-right: 8%; */
   }
   /* Button */
   .questionContainer .sticky > button {

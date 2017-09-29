@@ -8,7 +8,10 @@
   flex: 1 0;
   width: 100%;
 }
-.answer_header {
+.answer_body {
+  padding: 2% 3%;
+  /* background: red; */
+
   color: rgb(121, 121, 122);
 }
 .whoCommented {
@@ -53,10 +56,10 @@
 
 /* QUERIES */
 @media only screen and (max-width: 767px) {
-  .answer_header p:nth-child(1){
+  .answer_body .whoCommented{
     display: none;
   }
-  .answer_header p:nth-child(2){
+  .answer_body .answer_content{
     padding: 2%;
   }
   .main_answer {
@@ -68,20 +71,26 @@
   .main_answer .centered_avatar .avatar{
     padding-left: 2%;
   }
-  .whoCommented {
-    padding-left: 5%;
-  }
   .answerContainer .single_question_row_left_item {
     border-bottom: 1.5px solid rgb(225, 225, 225);
   }
   .answerContainer .sticky button{
     /* padding: 4% 8%; */
   }
-
+  
 }
 @media only screen and (min-width: 768px) and (max-width: 1200px){
-  .main_answer .answer_header {
-    padding-top: 3%;
+  .main_answer .answer_body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* padding: 2%; */
+    /* padding-top: 3%; */
+    justify-content: space-evenly;
+    /* padding-left: 3%; */
+  }
+  .whoCommented{
+    flex-grow: 0;
   }
   .main_answer .single_question_row_left_item .centered_avatar {
     border-right: none;
@@ -91,31 +100,28 @@
   }
   
   .main_answer .single_question_row_right_item{
-    padding-top: 3%;
+    /* padding-top: 3%; */
   }
-  .answer_header {
-    padding-left: 3%;
-  }
-  .answer_header p:nth-child(2){
+  /* .answer_body p:nth-child(2){
     line-height: 20px;
     padding-right: 7%;
-  }
-  .answer_header p:nth-child(1), .answer_header p:nth-child(2){
+  } */
+  /* .answer_body p:nth-child(1), .answer_body p:nth-child(2){
     padding-bottom: 3%;
-  }
+  } */
   .answerContainer .sticky > button {
     padding: 0 2%;
   }
 }
 @media only screen and (min-width: 1200px){
-  .main_answer .single_question_row_middle_item {
+  /* .main_answer .single_question_row_middle_item {
     padding-top: 1.5%;
     padding-left: 1.5%;
-  }
-  .answer_header p:nth-child(2){
+  } */
+  .answer_body p:nth-child(2){
     line-height: 20px;
   }
-  .answer_header p:nth-child(1), .answer_header p:nth-child(2){
+  .answer_body p:nth-child(1), .answer_body p:nth-child(2){
     padding-bottom: 2%;
   }
   .answerContainer .sticky > button {

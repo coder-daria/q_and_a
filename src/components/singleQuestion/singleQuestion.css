@@ -85,6 +85,9 @@
   .single_question_row_middle_item .whoIsAsking.big-device {
     display: none;
   }
+  .single_question_row_left_item .avatar {
+    padding-right: 5%;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
@@ -95,6 +98,12 @@
   .last_discussed {
     flex-basis: 40%;
     justify-content: center;
+  }
+  .single_question_row_left_item .whoIsAsking {
+    display: none;
+  }
+  .single_question_row_left_item .whoCommented {
+    display: none;
   }
   .single_question_row_left_item .whoIsAsking {
     display: none;

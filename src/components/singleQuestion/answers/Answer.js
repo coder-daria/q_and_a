@@ -9,24 +9,28 @@ class Answer extends React.Component {
   renderAnswer(content, isReply) {
     const space = isReply ? <div className="empty_space single_question_row_empty_space reply" /> : null;
     const replyTopBorder = isReply ? "border_top" : "";
+    const whoCommented = (
+      <div className="whoCommented">
+            <span className="clickable_user_name person_name" onClick={this.props.showModal}>{content.user.name}</span>
+            <span className="subTitle">commented it</span>
+            <span className="when">{content.date.whenCommented}</span>
+          </div>
+    )
     return (
       <div className="single_question_row main_answer">
         {space}
         <div className={`centered_avatar single_question_row_left_item ${replyTopBorder}`}>
           <Avatar showModal={this.props.showModal} src={content.user.avatar} props="profile_pic" />
-          <p className="whoCommented">
-            <span className="clickable_user_name person_name" onClick={this.props.showModal}>{content.user.name}</span>
-            <span className="subTitle">commented it</span>
-            <span className="when">{content.date.whenCommented}</span>
-          </p>
+          {whoCommented}
         </div>
         <div className={`single_question_row_middle_item ${replyTopBorder}`}>
-          <div className="answer_header">
-            <p className="whoCommented">
+          <div className="answer_body">
+            <div className="whoCommented">
               <span className="clickable_user_name person_name" onClick={this.props.showModal}>{content.user.name}</span>
               <span className="subTitle">commented it</span>
-              <span className="when">{content.date.whenCommented}</span></p>
-            <p>{content.answer.text}</p>
+              <span className="when">{content.date.whenCommented}</span>
+            </div>
+            <p className="answer_content">{content.answer.text}</p>
           </div>
         </div>
         <div className={`single_question_row_right_item ${replyTopBorder}`}>
