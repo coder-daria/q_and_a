@@ -3,7 +3,6 @@ import ArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
 import Icon from 'material-ui/Icon';
 import QuestionDetails from './QuestionDetails';
 import IconButton from 'material-ui/IconButton';
-import './allQuestions.css';
 import './allQuestionsHeader.css';
 import './allQuestionsBody.css';
 

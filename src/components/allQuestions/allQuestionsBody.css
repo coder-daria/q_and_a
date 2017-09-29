@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   height: 100%; 
+  flex-basis: 75%;
 }
 
 .all_questions_load_more {
