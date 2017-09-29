@@ -13,29 +13,21 @@
 /* QUERIES */
 @media only screen and (max-width: 767px) {
   .howManyAnswers{
-    font-size: calc(14rem / 16);
     padding-top: 5%;
     padding-bottom: 2%;
   }
   .main_answer .centered_avatar .avatar{
     padding-left: 2%;
   }
-  .main_answer .single_question_row_left_item .when {
-    font-style: italic;
-    color: rgb(100, 105, 111);
-    font-size: calc(12.5rem / 16);
-  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1200px){
   .howManyAnswers{
-    font-size: calc(18rem / 16);
     padding-top: 5%;
     padding-bottom: 2%;
   }
 }
 @media only screen and (min-width: 1200px){
   .howManyAnswers{
-    font-size: calc(18rem / 16);
     padding-top: 5%;
     padding-bottom: 2%;
   }

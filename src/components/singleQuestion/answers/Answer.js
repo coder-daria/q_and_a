@@ -11,10 +11,11 @@ class Answer extends React.Component {
     const replyTopBorder = isReply ? "border_top" : "";
     const whoCommented = (
       <div className="whoCommented">
-            <span className="clickable_user_name person_name" onClick={this.props.showModal}>{content.user.name}</span>
-            <span className="subTitle">commented it</span>
-            <span className="when">{content.date.whenCommented}</span>
-          </div>
+        <span className="clickable_user_name person_name" onClick={this.props.showModal}>{content.user.name}</span>
+        <span className="subTitle">commented it</span>
+        <p className="small_circle" />
+        <span className="info_text">{content.date.whenCommented}</span>
+      </div>
     )
     return (
       <div className="single_question_row main_answer">
@@ -25,11 +26,7 @@ class Answer extends React.Component {
         </div>
         <div className={`single_question_row_middle_item ${replyTopBorder}`}>
           <div className="answer_body">
-            <div className="whoCommented">
-              <span className="clickable_user_name person_name" onClick={this.props.showModal}>{content.user.name}</span>
-              <span className="subTitle">commented it</span>
-              <span className="when">{content.date.whenCommented}</span>
-            </div>
+            {whoCommented}
             <p className="answer_content">{content.answer.text}</p>
           </div>
         </div>

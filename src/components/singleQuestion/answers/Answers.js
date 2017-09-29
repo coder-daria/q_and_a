@@ -53,7 +53,10 @@ class Answers extends React.Component {
     }
     return (
       <div className="allAnswers">
-        <div className="howManyAnswers"><span className="bold_number_medium">{this.props.answers.howMany}</span>peers already answered</div>
+        <div className="howManyAnswers">
+          <span className="bold_number_medium">{this.props.answers.howMany}</span>
+          <span className="info_text">peers already answered</span>
+          </div>
         <Answer showModal={this.props.showModal} data={answer}/>
         <Answer showModal={this.props.showModal} data={answer}/>
         <Answer showModal={this.props.showModal} data={answer}/>

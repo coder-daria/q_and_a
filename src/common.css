@@ -1,6 +1,9 @@
 .hidden {
   visibility: hidden;
 }
+.small_circle:after {
+  content: "\00B7";
+}
 /* Header */
 .add_question {
   display: flex;
@@ -29,7 +32,7 @@
 }
 /* Borders */
 .border_top {
-  border-top: 1px solid blue;
+  border-top: 1px solid rgb(229, 229, 229);
 }
 /*Buttons  */
  .add_question .add_button {
@@ -58,4 +61,9 @@
   text-transform: uppercase;
   color: rgb(131, 144, 154);
   text-align: center;
+}
+.info_text {
+  font-size: calc(14rem / 16);
+  font-style: italic;
+  color: rgb(75, 74, 76);
 }

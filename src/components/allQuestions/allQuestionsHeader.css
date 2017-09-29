@@ -150,6 +150,7 @@
   /* HEADER */
 
  /* Add question */
+ 
 
  .question_and_sort {
    width: 100%;
@@ -168,6 +169,9 @@
  .search_header_question_details form{
    justify-content: space-around;
  }
+ .search_header_question_details.hidden {
+   flex-basis: 10%;
+ }
   .search_header_sort_by {
     flex-basis: 30%;
     justify-content: center;
@@ -182,6 +186,7 @@
  
   /* Search */
 
+
   .search {
     width: 100%;
     margin-left: 0;
@@ -190,6 +195,8 @@
   .search form {
     justify-content: space-around;
   } 
+
+
 
   /* BODY */
 }
