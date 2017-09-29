@@ -29,7 +29,7 @@
 .question_empty_space {
   background-color: rgb(233, 243, 253);
   background-clip: padding-box;
-  padding-right: 11%;
+  /* padding-right: 11%; */
 }
 .question_content{
   display: flex;
@@ -72,9 +72,6 @@
     flex-direction: column;
     align-items: center;
   }
-  .questionHeader .centered_avatar .subTitle:before{
-    content: "\00a0";
-  }
   .questionHeader .single_question_row_left_item {
     display: flex;
     align-items: center;
@@ -89,7 +86,6 @@
     padding-top: 5%;
     padding-bottom: 5%;
     text-align: center;
-    word-spacing: 3px;
    }
   .single_question_main_question p:nth-child(1) {
     display: none;
@@ -124,12 +120,12 @@
   .questionContainer .sticky > button {
     padding: 0 10%;
   }
+  .questionContainer .votes {
+    padding-bottom: 5%;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
-  .single_question_row_left_item p {
-    display: none;
-  }
   .questionContainer {
     width: 100%;
   }
@@ -143,13 +139,8 @@
   .single_question_main_question p:nth-child(1){
     font-size: 1rem;
   }
-  .single_question_main_question .subTitle {
-    padding-left: 1%;
-    font-size: calc(13rem / 16);
-  }
   .single_question_main_question p:nth-child(2){
     font-size: calc(18rem / 16);
-    word-spacing: 2px;
     padding-top: 3%;
   }
   /* Body */
@@ -157,16 +148,13 @@
     padding: 2%;
     padding-bottom: 5%;
   }
-  /* Button */
-  .questionContainer .sticky {
-    /* align-self: flex-end; */
+  .questionContainer .question_content {
+    padding-bottom: 5%;
   }
 }
 
 @media only screen and (min-width: 1200px){
-  .single_question_row_left_item p {
-    display: none;
-  }
+
   /* Header */
   .questionHeader {
     padding-top: 2%;
@@ -178,13 +166,8 @@
   .single_question_main_question p:nth-child(1){
     font-size: 1rem;
   }
-  .single_question_main_question .subTitle {
-    padding-left: 1%;
-    font-size: calc(13rem / 16);
-  }
   .single_question_main_question p:nth-child(2){
     font-size: calc(18rem / 16);
-    word-spacing: 2px;
     padding-top: 2%;
   }
   /* Body */
@@ -192,8 +175,8 @@
     padding: 2%;
     padding-bottom: 3%;
   }
-  .question_empty_space {
-    padding-right: 8%;
+  .questionContainer .question_content {
+    padding-bottom: 5%;
   }
   /* Button */
   .questionContainer .sticky > button {

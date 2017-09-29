@@ -14,7 +14,9 @@ class QuestionDetails extends React.Component {
           <Avatar src={this.props.user.avatar} props="profile_pic" />
         </div>
         <div className="question_details_mainQuestion">
-          <p className="whoIsAsking"><span className="clickable_user_name person_name">{this.props.user.name}</span>is asking:</p>
+          <p className="whoIsAsking">
+            <span className="clickable_user_name person_name" onClick={this.props.showModal}>{this.props.user.name}</span>is asking:
+          </p>
           <p className="user_question">{this.props.user.question}</p>
         </div>
       </div>

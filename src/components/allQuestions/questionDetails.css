@@ -9,7 +9,7 @@
 }
 .question_details_header { 
   display: flex;
-  flex: 0 0 26%;
+  flex: 0 0 30%;
   width: 75%;
   background-color: rgb(233, 243, 253);
 }
