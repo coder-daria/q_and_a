@@ -15,7 +15,6 @@
 }
 .question_and_sort .add_question {
   flex-grow: 1;
-  flex-basis: 42%;
 }
 .search_header_return_arrow {
   display: flex;
