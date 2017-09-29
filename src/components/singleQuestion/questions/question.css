@@ -145,7 +145,6 @@
   }
   .single_question_main_question .subTitle {
     padding-left: 1%;
-    font-size: calc(13rem / 16);
   }
   .single_question_main_question p:nth-child(2){
     font-size: calc(18rem / 16);
@@ -164,9 +163,7 @@
 }
 
 @media only screen and (min-width: 1200px){
-  .single_question_row_left_item p {
-    display: none;
-  }
+
   /* Header */
   .questionHeader {
     padding-top: 2%;
@@ -180,7 +177,6 @@
   }
   .single_question_main_question .subTitle {
     padding-left: 1%;
-    font-size: calc(13rem / 16);
   }
   .single_question_main_question p:nth-child(2){
     font-size: calc(18rem / 16);
