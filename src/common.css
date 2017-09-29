@@ -47,9 +47,6 @@
   font-weight: bold;
   text-align: center;
 }
-.person_name:after {
-  content: "\00a0 \00a0";
-}
 .user_question {
   font-style: italic;
   color: rgb(0, 101, 182);

@@ -9,21 +9,23 @@ class Question extends React.Component {
     this.props.showModal();
   }
   renderHeader = () => {
-    const whoIsAsking = (
-      <div className="whoIsAsking">
-        <span className="clickable_user_name person_name" onClick={this.toggleModalWindow}>
-          {this.props.user.name}
-        </span>
-        <span className="subTitle">is asking:</span>
-      </div>);
+    const whoIsAsking = className => {
+      return (
+        <div className={`whoIsAsking ${className || ""}`}>
+          <span className="clickable_user_name person_name" onClick={this.toggleModalWindow}>
+            {this.props.user.name}
+          </span>
+          <span className="subTitle">is asking:</span>
+        </div>);
+    }
     return (
       <div className="single_question_row questionHeader">
         <div className="centered_avatar single_question_row_left_item">
           <Avatar src={this.props.user.avatar} props="profile_pic" showModal={this.toggleModalWindow} />
-          {whoIsAsking}
+          {whoIsAsking()}
         </div>
         <div className="single_question_row_middle_item single_question_main_question">
-          {whoIsAsking}
+          {whoIsAsking("big-device")}
           <p className="user_question">{this.props.user.question}</p>
         </div>
         <div className="single_question_row_right_item single_question_unfollow_header">

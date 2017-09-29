@@ -127,9 +127,6 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px){
-  .single_question_row_left_item p {
-    display: none;
-  }
   .questionContainer {
     width: 100%;
   }

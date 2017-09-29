@@ -81,6 +81,9 @@
   }
   .last_discussed {
     display: none;
+  } 
+  .single_question_row_middle_item .whoIsAsking.big-device {
+    display: none;
   }
 }
 
@@ -92,6 +95,9 @@
   .last_discussed {
     flex-basis: 40%;
     justify-content: center;
+  }
+  .single_question_row_left_item .whoIsAsking {
+    display: none;
   }
 }
 
