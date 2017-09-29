@@ -7,8 +7,12 @@
 }
 
 .all_questions_load_more {
+  display: flex;
+  align-items: center;
   flex-basis: 10%;
   flex-shrink: 0;
   width: 70%;
-  display: flex;
+  color: rgb(220, 26, 66);
+  font-weight: bold;
+  padding-left: 1%;
 }

@@ -46,7 +46,7 @@ class AllQuestions extends React.Component {
   renderLoadMore() {
     return (
       <div className="all_questions_load_more">
-        {"load more"}
+        {"load more questions"}
       </div>
     )
   }
