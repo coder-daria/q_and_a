@@ -4,7 +4,18 @@
 }
 
 /* Add question */
-
+.add_question {
+  display: flex;
+  font-size: calc(30rem / 16);
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  flex-grow: 1;
+  /* background-color: pink; */
+}
+ .add_question .add_button {
+  color: rgb(2, 102, 182);
+} 
 .question_and_sort {
   width: 82.5%;
   display: flex;
