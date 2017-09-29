@@ -42,6 +42,7 @@
   cursor: pointer;
 }
 .person_name {
+  font-size: 1rem;
   color: rgb(2, 102, 182);
   font-weight: bold;
   text-align: center;
@@ -54,13 +55,6 @@
   color: rgb(0, 101, 182);
   font-weight: bold;
   font-size: calc(18rem/16);
-}
-/* Titles */
-.whoIsAsking {
-  font-weight: bold;
-  color: rgb(131, 144, 154);
-  text-transform: uppercase;
-  font-size: 0.8rem;
 }
 .subTitle {
   font-size: 0.8rem;
