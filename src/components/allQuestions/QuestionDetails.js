@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Question from '../singleQuestion/questions/Question';
 import Avatar from '../common/avatar/Avatar';
-import ArrowUp from 'material-ui-icons/KeyboardArrowUp';
-import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
 import './questionDetails.css';
 import './questionDetailsItem.css';
 

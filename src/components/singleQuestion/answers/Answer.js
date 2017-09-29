@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import './answer.css';
 import Avatar from '../../common/avatar/Avatar';
 import StickyButton from '../../common/stickyButton/StickyButton';
-import Button from 'material-ui/Button';
 import Voting from '../../common/voting/Voting';
 
 class Answer extends React.Component {
-  renderAnswer(content, isReply) {
+  renderAnswer(content, isReply, index) {
     const space = isReply ? <div className="empty_space single_question_row_empty_space reply" /> : null;
     const replyTopBorder = isReply ? "border_top" : "";
     const whoCommented = (
@@ -19,7 +18,7 @@ class Answer extends React.Component {
       </div>
     )
     return (
-      <div className="single_question_row main_answer">
+      <div key={index} className="single_question_row main_answer">
         {space}
         <div className={`centered_avatar single_question_row_left_item ${replyTopBorder}`}>
           <Avatar onClick={this.props.onUserClick} src={content.user.avatar} props="profile_pic" />
@@ -35,17 +34,17 @@ class Answer extends React.Component {
           <div className="votes">
             <Voting votes={content.answer.votes} />
           </div>
-        </div>
+      </div>
       </div>
     )
   }
 
-  renderReply(reply) {
-    return this.renderAnswer(reply, true);
+  renderReply(reply, index) {
+    return this.renderAnswer(reply, true, index);
   }
   renderReplies(replies) {
-    return replies.map(reply => {
-      return this.renderReply(reply);
+    return replies.map((reply, index) => {
+      return this.renderReply(reply, index);
     });
   }
   render() {

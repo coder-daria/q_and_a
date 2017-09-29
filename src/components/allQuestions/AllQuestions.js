@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
-import Icon from 'material-ui/Icon';
 import QuestionDetails from './QuestionDetails';
-import IconButton from 'material-ui/IconButton';
 import './allQuestionsHeader.css';
 import './allQuestionsBody.css';
 import AppHeader from '../common/AppHeader';

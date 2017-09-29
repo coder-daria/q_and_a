@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import './singleQuestion.css';
 import Question from './questions/Question';
 import Answers from './answers/Answers';
-import ArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
-import Icon from 'material-ui/Icon';
-import Modal from '../modalWindow/ModalWindow';
-import IconButton from 'material-ui/IconButton';
 import AppHeader from '../common/AppHeader';
 
 class SingleQuestion extends React.Component {
