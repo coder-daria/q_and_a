@@ -31,6 +31,10 @@
 .border_top {
   border-top: 1px solid blue;
 }
+/*Buttons  */
+ .add_question .add_button {
+  color: rgb(2, 102, 182);
+} 
 /* User */
 .clickable_user_name:hover {
   color: grey;
