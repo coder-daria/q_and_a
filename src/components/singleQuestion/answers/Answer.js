@@ -2,10 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './answer.css';
 import Avatar from '../../common/avatar/Avatar';
-import ArrowUp from 'material-ui-icons/KeyboardArrowUp';
-import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
 import StickyButton from '../../common/stickyButton/StickyButton';
 import Button from 'material-ui/Button';
+import Voting from '../../common/voting/Voting';
 
 class Answer extends React.Component {
   renderAnswer(content, isReply) {
@@ -34,16 +33,7 @@ class Answer extends React.Component {
         </div>
         <div className={`single_question_row_right_item ${replyTopBorder}`}>
           <div className="votes">
-            <div className="votesCounter">
-              <div>
-                <span className="bold_number_medium">{content.answer.votes}</span>
-                <span className="info_text">upvotes</span>
-              </div>
-              <div className="arrows">
-                <ArrowUp />
-                <ArrowDown />
-              </div>
-            </div>
+            <Voting votes={content.answer.votes} />
           </div>
         </div>
       </div>

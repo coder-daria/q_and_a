@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './question.css';
 import Avatar from '../../common/avatar/Avatar';
-import ArrowUp from 'material-ui-icons/KeyboardArrowUp';
-import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
 import StickyButton from '../../common/stickyButton/StickyButton';
+import Voting from '../../common/voting/Voting';
 
 class Question extends React.Component {
   renderHeader = () => {
@@ -43,16 +42,7 @@ class Question extends React.Component {
         <div className="single_question_row_right_item">
           <div className="votes">
             <p className="single_question_unfollow_body person_name">{this.props.user.unfollow}</p>
-            <div className="votesCounter">
-              <div>
-                <span className="bold_number_medium">{this.props.user.votes}</span>
-                <span className="info_text">upvotes</span>
-              </div>
-              <div className="arrows">
-                <ArrowUp />
-                <ArrowDown />
-              </div>
-            </div>
+            <Voting votes={this.props.user.votes} />
           </div>
         </div>
       </div>
