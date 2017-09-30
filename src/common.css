@@ -34,7 +34,7 @@
   cursor: pointer;
 }
 .person_name {
-  background: lightgreen;
+  /* background: lightgreen; */
   font-size: 1rem;
   color: rgb(2, 102, 182);
   font-weight: bold;
@@ -47,26 +47,26 @@
   font-size: calc(18rem/16);
 }
 .subTitle {
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
   font-size: 0.8rem;
   text-transform: uppercase;
   color: rgb(131, 144, 154);
   text-align: center;
 }
 .info_text {
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
   font-size: calc(14rem / 16);
   font-style: italic;
   color: rgb(75, 74, 76);
 }
 .link_text {
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
   font-size: calc(14rem / 16);
   font-style: italic;
   color: rgb(75, 74, 76);
 }
 .link_text_big {
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
   font-size: calc(14rem / 16);
   font-style: italic;
   color: rgb(75, 74, 76);
