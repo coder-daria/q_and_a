@@ -5,17 +5,19 @@ import Avatar from '../../common/avatar/Avatar';
 import StickyButton from '../../common/stickyButton/StickyButton';
 import Voting from '../../common/voting/Voting';
 import UnsafeHtml from '../../common/unsafeHtml/UnsafeHtml';
+import moment from 'moment';
 
 class Answer extends React.Component {
   renderAnswer(content, isReply, index) {
     const space = isReply ? <div className="empty_space single_question_row_empty_space reply" /> : null;
     const replyTopBorder = isReply ? "border_top" : "";
+    const humanizedTime = moment(content.statistics.creationDate * 1000).fromNow();
     const whoCommented = (
       <div className="whoCommented">
         <span className="clickable_text person_name" onClick={this.props.onUserClick}>{content.user.name}</span>
         <span className="subTitle">commented it</span>
         <p className="small_circle" />
-        <span className="info_text">{content.statistics.creationDate}</span>
+        <span className="info_text">{humanizedTime}</span>
       </div>
     )
     return (

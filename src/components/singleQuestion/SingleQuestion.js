@@ -18,7 +18,7 @@ class SingleQuestion extends React.Component {
     return (
       <div className="single_question">
         <Question question={this.props.selectedQuestion} onUserClick={this.props.onUserClick} history={this.props.history} />
-        <Answers answers={this.props.selectedQuestion.answers} onUserClick={this.props.onUserClick} />
+        <Answers question={this.props.selectedQuestion} onUserClick={this.props.onUserClick} />
       </div>
     )
   }
