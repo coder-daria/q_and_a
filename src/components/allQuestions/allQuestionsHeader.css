@@ -53,7 +53,9 @@
 .search_header_sorting {
   display: flex;
   min-width: 55%;
-  justify-content: space-between;
+  flex-basis: 60%;
+  align-items: baseline;
+  justify-content: space-evenly;
 }
 .search_header_sort_by a {
   color: rgb(2, 102, 182);
@@ -141,6 +143,10 @@
     font-size: 13px;
   }
   
+  .search_header_sorting {
+    flex-basis: 90%;
+  }
+  
   /* Search */
   .search {
     width: 100%;
@@ -186,6 +192,10 @@
   .search_header_sort_by {
     flex-basis: 30%;
     justify-content: center;
+  }
+  
+  .search_header_sorting {
+    flex-basis: 90%;
   }
   
   .search input[type=text] {

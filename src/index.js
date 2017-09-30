@@ -6,6 +6,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import store from './redux/createStore';
 import { Provider } from 'react-redux';
+import getQuestions from './asyncActions/getQuestions';
 
 ReactDOM.render(
   <Provider store={store}>
@@ -13,4 +14,7 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
+store.dispatch(getQuestions());
+
 registerServiceWorker();

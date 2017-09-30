@@ -6,11 +6,19 @@ import Answers from './answers/Answers';
 import AppHeader from '../common/AppHeader';
 
 class SingleQuestion extends React.Component {
+
+  componentDidMount() {
+    this.props.loadQuestion(this.props.questionId);
+  }
+
   renderContent = () => {
+    if(!this.props.selectedQuestion){
+      return null;
+    }
     return (
       <div className="single_question">
-        <Question onUserClick={this.props.onUserClick} history={this.props.history} />
-        <Answers onUserClick={this.props.onUserClick} />
+        <Question question={this.props.selectedQuestion} onUserClick={this.props.onUserClick} history={this.props.history} />
+        <Answers question={this.props.selectedQuestion} onUserClick={this.props.onUserClick} />
       </div>
     )
   }
@@ -32,6 +40,9 @@ SingleQuestion.defaultProps = {
 
 SingleQuestion.propTypes = {
   onUserClick: PropTypes.func.isRequired,
+  loadQuestion: PropTypes.func.isRequired,
+  questionId: PropTypes.number.isRequired,
+  selectedQuestion: PropTypes.object.isRequired,
   history: PropTypes.object.isRequired,
 };
 

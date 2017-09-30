@@ -33,7 +33,9 @@ function convertQuestionFromApi(question) {
       name: question.owner.display_name,
       avatar: question.owner.profile_image,
     },
+    questionId: question.question_id,
     title: question.title,
+    content: question.body,
     statistics: {
       related: randomNumber(),
       peers: randomNumber(),
