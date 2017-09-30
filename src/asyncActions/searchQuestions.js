@@ -1,10 +1,8 @@
-import {fetchQuestions} from '../api/api';
+import {searchQuestionsBy} from '../api/api';
 import * as actions from '../redux/actions';
 
-const getQuestions = (sortBy) => dispatch => {
-  const page = 1;
-  const pageSize = 3;
-  fetchQuestions(page, pageSize, sortBy)
+const searchQuestions = textSearch => dispatch => {
+  searchQuestionsBy(textSearch)
   .then(response => {
     if (response.status > 399){
       return Promise.reject("Something went wrong. Please retry later.")
@@ -14,11 +12,10 @@ const getQuestions = (sortBy) => dispatch => {
   })
   .then(questions => {
     const convertedQuestions = questions.items.map(convertQuestionFromApi);
-    dispatch(actions.moreQuestions(convertedQuestions));
+    dispatch(actions.newQuestions(convertedQuestions));
   })
-  .catch(error => showError(error, dispatch));
+  .catch(error => showError(error, dispatch));;
 }
-
 function showError(errorMessage, dispatch){
   dispatch(actions.toggleError(errorMessage));
   setTimeout(() => {
@@ -43,5 +40,4 @@ function convertQuestionFromApi(question) {
     }
   }
 }
-
-export default getQuestions;
+export default searchQuestions;

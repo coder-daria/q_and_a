@@ -4,7 +4,7 @@ import * as actions from '../../redux/actions';
 
 const mapStateToProps = state => {
   return {
-    showModal: state.showModal
+    showModal: state.state.showModal
   };
 };
 

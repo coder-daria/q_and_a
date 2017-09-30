@@ -6,7 +6,7 @@ const initialState = {
   snackbarMessage: "",
   error: false,
   selectedQuestion: undefined,
-  sortBy: "votes"
+  sortBy: "hot"
 };
 
 const reducer = (state = initialState, action) => {
@@ -19,9 +19,11 @@ const reducer = (state = initialState, action) => {
       return Object.assign({}, state, {selectedQuestion: action.content});
     case actions.SEARCH_BY_CRITERIA:
       return Object.assign({}, state, {sortBy: action.content, questions: []});
-    case actions.NEW_QUESTIONS:
+    case actions.MORE_QUESTIONS:
       const questions = [...state.questions, ...action.content];
       return Object.assign({}, state, {questions});
+    case actions.NEW_QUESTIONS:
+      return Object.assign({}, state, {questions: [...action.content]});
     default:
       return state;
   }

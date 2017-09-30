@@ -6,8 +6,8 @@ import getQuestions from '../../asyncActions/getQuestions';
 
 const mapStateToProps = state => {
   return {
-    questions: state.questions,
-    sortBy: state.sortBy
+    questions: state.state.questions,
+    sortBy: state.state.sortBy
   };
 };
 

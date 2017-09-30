@@ -1,4 +1,5 @@
 export const TOGGLE_MODAL_WINDOW = "TOGGLE_MODAL_WINDOW";
+export const MORE_QUESTIONS = "MORE_QUESTIONS";
 export const NEW_QUESTIONS = "NEW_QUESTIONS";
 export const ERROR = "ERROR";
 export const DISPLAY_QUESTION = "DISPLAY_QUESTION";
@@ -7,6 +8,10 @@ export const CLEAR_QUESTIONS = "CLEAR_QUESTIONS";
 
 export const toggleModalWindow = () => {
   return { type: TOGGLE_MODAL_WINDOW };
+}
+
+export const moreQuestions = questions => {
+  return { type: MORE_QUESTIONS, content: questions };
 }
 
 export const newQuestions = questions => {

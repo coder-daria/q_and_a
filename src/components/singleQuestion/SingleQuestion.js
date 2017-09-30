@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './singleQuestion.css';
 import Question from './questions/Question';
 import Answers from './answers/Answers';
-import AppHeader from '../common/AppHeader';
+import AppHeaderContainer from '../common/AppHeaderContainer';
 
 class SingleQuestion extends React.Component {
 
@@ -25,7 +25,7 @@ class SingleQuestion extends React.Component {
   render() {
     return (
       <div className="app_body">
-        <AppHeader history={this.props.history} isSingleQuestion={true} />
+        <AppHeaderContainer isSingleQuestion={true} />
         <div className="app_content">
           {this.renderContent()}
         </div>

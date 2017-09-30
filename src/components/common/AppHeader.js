@@ -2,6 +2,7 @@ import React from 'react';
 import ArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
 import Icon from 'material-ui/Icon';
 import IconButton from 'material-ui/IconButton';
+import { Field } from 'redux-form'
 
 class AppHeader extends React.Component {
 
@@ -16,14 +17,14 @@ class AppHeader extends React.Component {
       )
     } else {
       const disableRecent = this.props.sortBy === "creation" ? "currentSelection" : ""
-      const disableHot = this.props.sortBy === "votes" ? "currentSelection" : ""
+      const disableHot = this.props.sortBy === "hot" ? "currentSelection" : ""
       return (
         <div className="search_header_sort_by">
           <div className="search_header_sorting">
             <span className="info_text">Sort by:</span>
             <span className={`${disableRecent} clickable_text person_name`} onClick={() => this.props.changeSortBy("creation")}>recent</span>
             <span className="info_text">or</span>
-            <span className={`${disableHot} clickable_text person_name`} onClick={() => this.props.changeSortBy("votes")}>hot</span>
+            <span className={`${disableHot} clickable_text person_name`} onClick={() => this.props.changeSortBy("hot")}>hot</span>
           </div>
         </div>
       )
@@ -58,9 +59,16 @@ class AppHeader extends React.Component {
           {this.renderHeaderRightPart(singleQuestionHeader)}
         </div>
         <div className={`search ${singleQuestionHeader}`}>
-          <form>
-            <input type="text" name="search" placeholder="Search questions" />
-            <button>Search</button>
+          <form onSubmit={this.props.handleSubmit}>
+            <Field
+              name="search"
+              component="input"
+              type="text"
+              placeholder="Search"
+            />
+            <button type="submit" disabled={this.props.pristine}>
+              Submit
+            </button>
           </form>
         </div>
       </div>
