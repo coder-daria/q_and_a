@@ -4,23 +4,28 @@ import QuestionDetails from './QuestionDetails';
 import './allQuestionsHeader.css';
 import './allQuestionsBody.css';
 import AppHeader from '../common/AppHeader';
+import Button from 'material-ui/Button';
 
 class AllQuestions extends React.Component {
   renderLoadMore() {
     return (
       <div className="all_questions_load_more">
-        {"load more questions"}
+        <Button color="accent" onClick={this.props.loadMore}>
+          load more questions
+    </Button>
       </div>
     )
   }
   renderContent() {
+    const questions = this.props.questions.map(question => {
+      return (
+        <QuestionDetails question={question} onUserClick={this.props.onUserClick} />
+      )
+    })
     return (
       <div className="all_questions">
-        <QuestionDetails onUserClick={this.props.onUserClick}/>
-        <QuestionDetails onUserClick={this.props.onUserClick} />
-        <QuestionDetails onUserClick={this.props.onUserClick} />
-        <QuestionDetails onUserClick={this.props.onUserClick} />
-        {this.renderLoadMore()};
+        {questions}
+        {this.renderLoadMore()}
       </div>
     )
   }
@@ -38,7 +43,9 @@ class AllQuestions extends React.Component {
 
 AllQuestions.propTypes = {
   onUserClick: PropTypes.func.isRequired,
-  history: PropTypes.object.isRequired
+  questions: PropTypes.array.isRequired,
+  history: PropTypes.object.isRequired,
+  loadMore:  PropTypes.func.isRequired
 };
 
 export default AllQuestions;

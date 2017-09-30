@@ -10,7 +10,7 @@ class QuestionDetails extends React.Component {
       return (
         <div className={`whoIsAsking ${className || ""}`}>
           <span className="clickable_user_name person_name" onClick={this.props.onUserClick}>
-            {this.props.user.name}
+            {this.props.question.user.name}
           </span>
           <span className="subTitle">is asking:</span>
         </div>);
@@ -18,11 +18,11 @@ class QuestionDetails extends React.Component {
     return (
       <div className="question_details_header">
         <div className="question_details_avatar centered_avatar">
-          <Avatar onClick={this.props.onUserClick} src={this.props.user.avatar} props="profile_pic" />
+          <Avatar onClick={this.props.onUserClick} src={this.props.question.user.avatar} props="profile_pic" />
         </div>
         <div className="question_details_mainQuestion">
           {whoIsAsking()}
-          <p className="user_question">{this.props.user.question}</p>
+          <p className="user_question">{this.props.question.title}</p>
         </div>
       </div>
     )
@@ -77,15 +77,15 @@ class QuestionDetails extends React.Component {
         </div>
         <div className="question_details_popularity">
           <div className="question_details_popularity_item">
-            <span className="bold_number_small">{this.props.user.statisticData.relatedDiscussion} </span>
+            <span className="bold_number_small">{this.props.question.statistics.related} </span>
             <span className="info_text">related discussion </span>
           </div>
           <div className="question_details_popularity_item">
-            <span className="bold_number_small">{this.props.user.statisticData.peersInvolved} </span>
+            <span className="bold_number_small">{this.props.question.statistics.peers} </span>
             <span className="info_text">peers involved</span>
           </div>
           <div className="question_details_popularity_item">
-            <span className="bold_number_small">{this.props.user.statisticData.conversations} </span>
+            <span className="bold_number_small">{this.props.question.statistics.conversations} </span>
             <span className="info_text">conversations</span>
           </div>
         </div>
@@ -102,18 +102,9 @@ class QuestionDetails extends React.Component {
   }
 }
 
-QuestionDetails.defaultProps = {
-  user: {
-    name: "Eva",
-    avatar: "http://placecorgi.com/200/200",
-    question: "Will insulin make my patient gain weight?",
-    statisticData: { relatedDiscussion: 1, peersInvolved: 6, conversations: 3 }
-  }
-};
-
 QuestionDetails.propTypes = {
   onUserClick: PropTypes.func.isRequired,
-  data: PropTypes.object.isRequired,
+  question: PropTypes.object.isRequired,
 };
 
 export default QuestionDetails;
