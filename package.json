@@ -2,7 +2,9 @@
   "name": "questions-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://darilla.github.io/q_and_a",
   "dependencies": {
+    "gh-pages": "^1.0.0",
     "material-design-icons": "^3.0.1",
     "material-ui": "^1.0.0-beta.11",
     "material-ui-icons": "^1.0.0-beta.10",
@@ -18,6 +20,7 @@
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
