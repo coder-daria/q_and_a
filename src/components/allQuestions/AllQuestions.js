@@ -19,7 +19,7 @@ class AllQuestions extends React.Component {
   renderContent() {
     const questions = this.props.questions.map((question, index) => {
       return (
-        <QuestionDetails key={index} question={question} onUserClick={this.props.onUserClick} />
+        <QuestionDetails history={this.props.history} key={index} question={question} onUserClick={this.props.onUserClick} />
       )
     })
     return (

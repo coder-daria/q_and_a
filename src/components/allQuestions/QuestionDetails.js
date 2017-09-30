@@ -5,11 +5,16 @@ import './questionDetails.css';
 import './questionDetailsItem.css';
 
 class QuestionDetails extends React.Component {
+
+  goToQuestion = () => {
+    this.props.history.push('/single_question');
+  }
+
   renderHeader = () => {
     const whoIsAsking = className => {
       return (
         <div className={`whoIsAsking ${className || ""}`}>
-          <span className="clickable_user_name person_name" onClick={this.props.onUserClick}>
+          <span className="clickable_text person_name" onClick={this.props.onUserClick}>
             {this.props.question.user.name}
           </span>
           <span className="subTitle">is asking:</span>
@@ -22,7 +27,7 @@ class QuestionDetails extends React.Component {
         </div>
         <div className="question_details_mainQuestion">
           {whoIsAsking()}
-          <p className="user_question">{this.props.question.title}</p>
+          <p className="clickable_text user_question" onClick={this.goToQuestion}>{this.props.question.title}</p>
         </div>
       </div>
     )
@@ -105,6 +110,7 @@ class QuestionDetails extends React.Component {
 QuestionDetails.propTypes = {
   onUserClick: PropTypes.func.isRequired,
   question: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
 };
 
 export default QuestionDetails;

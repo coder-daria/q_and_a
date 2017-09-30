@@ -10,7 +10,7 @@ class Question extends React.Component {
     const whoIsAsking = className => {
       return (
         <div className={`whoIsAsking ${className || ""}`}>
-          <span className="clickable_user_name person_name" onClick={this.props.onUserClick}>
+          <span className="clickable_text person_name" onClick={this.props.onUserClick}>
             {this.props.user.name}
           </span>
           <span className="subTitle">is asking:</span>

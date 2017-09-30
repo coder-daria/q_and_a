@@ -11,7 +11,7 @@ class Answer extends React.Component {
     const replyTopBorder = isReply ? "border_top" : "";
     const whoCommented = (
       <div className="whoCommented">
-        <span className="clickable_user_name person_name" onClick={this.props.onUserClick}>{content.user.name}</span>
+        <span className="clickable_text person_name" onClick={this.props.onUserClick}>{content.user.name}</span>
         <span className="subTitle">commented it</span>
         <p className="small_circle" />
         <span className="info_text">{content.date.whenCommented}</span>

@@ -28,7 +28,7 @@
 /*Buttons  */
 
 /* User */
-.clickable_user_name:hover {
+.clickable_text:hover {
   color: grey;
   text-shadow: 0 0 1px white;
   cursor: pointer;
