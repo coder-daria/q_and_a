@@ -23,9 +23,9 @@ class QuestionDetails extends React.Component {
         </div>
         <div className="question_details_mainQuestion">
           {whoIsAsking()}
-          <Link to={`/question/${this.props.questionId}`} className="clickable_text user_question">
+          <Link to={`/question/${this.props.questionId}`} className="clickable_text user_question" >
             {this.props.question.title}
-          </Link>
+            </Link>
         </div>
       </div>
     )

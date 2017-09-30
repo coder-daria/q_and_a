@@ -1,8 +1,8 @@
 import key from './key';
 
 const urls = {
-  getQuestions: (page, pageSize) => `https://api.stackexchange.com/2.2/questions?page=${page}&pagesize=${pageSize}&order=desc&sort=activity&site=stackoverflow&key=${key}&filter=withbody`,
-  getQuestion: questionId => `https://api.stackexchange.com/2.2/questions/${questionId}?site=stackoverflow&key=${key}&filter=!ORaDYJ3okK_*Cc5)lTaVKRTUwQ-CAmTa.Itr-p*0DVX`
+  getQuestions: (page, pageSize) => `https://api.stackexchange.com/2.2/questions?page=${page}&pagesize=${pageSize}&order=desc&sort=activity&site=health.meta&key=${key}&filter=withbody`,
+  getQuestion: questionId => `https://api.stackexchange.com/2.2/questions/${questionId}?site=health.meta&key=${key}&filter=!ORaDYJ3okK_*Cc5)lTaVKRTUwQ-CAmTa.Itr-p*0DVX`
 }
 
 export const fetchQuestions = (page, pageSize) => {

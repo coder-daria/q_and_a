@@ -4,6 +4,7 @@ import './answer.css';
 import Avatar from '../../common/avatar/Avatar';
 import StickyButton from '../../common/stickyButton/StickyButton';
 import Voting from '../../common/voting/Voting';
+import UnsafeHtml from '../../common/unsafeHtml/UnsafeHtml';
 
 class Answer extends React.Component {
   renderAnswer(content, isReply, index) {
@@ -27,7 +28,9 @@ class Answer extends React.Component {
         <div className={`single_question_row_middle_item ${replyTopBorder}`}>
           <div className="answer_body">
             {whoCommented}
-            <p className="answer_content">{content.content}</p>
+            <div className="answer_content">
+              <UnsafeHtml content={content.content} />
+            </div>
           </div>
         </div>
         <div className={`single_question_row_right_item ${replyTopBorder}`}>

@@ -4,6 +4,7 @@ import './question.css';
 import Avatar from '../../common/avatar/Avatar';
 import StickyButton from '../../common/stickyButton/StickyButton';
 import Voting from '../../common/voting/Voting';
+import UnsafeHtml from '../../common/unsafeHtml/UnsafeHtml';
 
 class Question extends React.Component {
   renderHeader = () => {
@@ -37,7 +38,7 @@ class Question extends React.Component {
       <div className="single_question_row questionBody">
         <div className="single_question_row_left_item question_empty_space" />
         <div className="single_question_row_middle_item question_content">
-          <p>{this.props.question.content}</p>
+          <UnsafeHtml content={this.props.question.content} />
         </div>
         <div className="single_question_row_right_item">
           <div className="votes">
