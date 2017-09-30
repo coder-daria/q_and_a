@@ -1,10 +1,10 @@
 import {fetchQuestions} from '../api/api';
 import * as actions from '../redux/actions';
 
-const getQuestions = () => dispatch => {
+const getQuestions = (sortBy) => dispatch => {
   const page = 1;
   const pageSize = 3;
-  fetchQuestions(page, pageSize)
+  fetchQuestions(page, pageSize, sortBy)
   .then(response => {
     if (response.status > 399){
       return Promise.reject("Something went wrong. Please retry later.")

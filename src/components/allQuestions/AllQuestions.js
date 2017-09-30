@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import QuestionDetails from './QuestionDetails';
 import './allQuestionsHeader.css';
 import './allQuestionsBody.css';
-import AppHeader from '../common/AppHeader';
+import AppHeaderContainer from '../common/AppHeaderContainer';
 import Button from 'material-ui/Button';
 
 class AllQuestions extends React.Component {
   renderLoadMore() {
     return (
       <div className="all_questions_load_more">
-        <Button color="accent" onClick={this.props.loadMore}>
+        <Button color="accent" onClick={() => this.props.loadMore(this.props.sortBy)}>
           load more questions
     </Button>
       </div>
@@ -32,7 +32,7 @@ class AllQuestions extends React.Component {
   render() {
     return (
       <div className="app_body">
-        <AppHeader history={this.props.history} isSingleQuestion={false} />
+        <AppHeaderContainer isSingleQuestion={false} />
         <div className="app_content">
           {this.renderContent()}
         </div>
@@ -45,7 +45,8 @@ AllQuestions.propTypes = {
   onUserClick: PropTypes.func.isRequired,
   questions: PropTypes.array.isRequired,
   history: PropTypes.object.isRequired,
-  loadMore:  PropTypes.func.isRequired
+  loadMore:  PropTypes.func.isRequired,
+  sortBy:  PropTypes.string.isRequired
 };
 
 export default AllQuestions;

@@ -15,13 +15,15 @@ class AppHeader extends React.Component {
         </div>
       )
     } else {
+      const disableRecent = this.props.sortBy === "creation" ? "currentSelection" : ""
+      const disableHot = this.props.sortBy === "votes" ? "currentSelection" : ""
       return (
         <div className="search_header_sort_by">
           <div className="search_header_sorting">
             <span className="info_text">Sort by:</span>
-            <a href="#" className="currentSelection">recent</a>
+            <span className={`${disableRecent} clickable_text person_name`} onClick={() => this.props.changeSortBy("creation")}>recent</span>
             <span className="info_text">or</span>
-            <a href="#">hot</a>
+            <span className={`${disableHot} clickable_text person_name`} onClick={() => this.props.changeSortBy("votes")}>hot</span>
           </div>
         </div>
       )

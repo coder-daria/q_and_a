@@ -6,14 +6,15 @@ import getQuestions from '../../asyncActions/getQuestions';
 
 const mapStateToProps = state => {
   return {
-    questions: state.questions
+    questions: state.questions,
+    sortBy: state.sortBy
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     onUserClick: ()=> dispatch(toggleModalWindow()),
-    loadMore: ()=> dispatch(getQuestions())
+    loadMore: sortBy => dispatch(getQuestions(sortBy))
   }
 };
 
