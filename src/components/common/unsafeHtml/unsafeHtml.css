@@ -8,11 +8,18 @@
   max-width: 80%;
 }
 
+.unsafe_html img {
+  max-width: 700px;
+}
+
 @media only screen and (max-width: 767px) {
   .question .question_content, .answer_content {
     max-width: 100%
   }
   .unsafe_html {
     max-width: 100%;
+  }
+  .unsafe_html img {
+    max-width: 300px;
   }
 }
