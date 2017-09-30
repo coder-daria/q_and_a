@@ -14,8 +14,8 @@ class App extends Component {
         <div>
           <ModalWindowContainer />
           <Switch>
-            <Route path="/" exact component={AllQuestionContainer} />
-            <Route path="/single_question" component={SingleQuestionContainer} />
+            <Route path="/" exact component={AllQuestionContainer} onEnter={() => console.log("hola")}/>
+            <Route path="/question/:questionId" component={SingleQuestionContainer}  onEnter={() => console.log("hola")}/>
             <Route component={PageNotFound} />
           </Switch>
           <SnackbarContainer />

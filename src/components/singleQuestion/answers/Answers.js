@@ -6,7 +6,7 @@ import '../../common/voting/voting.css';
 
 class Answers extends React.Component {
   render() {
-    const answer = {
+    const data = {
       date: { whenCommented: "yesterday" },
       answer: {
         text: "Numbers or tingling in your feet should be reported to your doctior at your regular visits.",
@@ -52,15 +52,18 @@ class Answers extends React.Component {
         }
       ]
     }
+    const answers = this.props.answers.map(answer => {
+      return (
+        <Answer onUserClick={this.props.onUserClick} answer={answer} data={data}/>
+      )
+    });
     return (
       <div className="allAnswers">
         <div className="howManyAnswers">
           <span className="bold_number_medium">{this.props.answers.howMany}</span>
           <span className="info_text">peers already answered</span>
           </div>
-        <Answer onUserClick={this.props.onUserClick} data={answer}/>
-        <Answer onUserClick={this.props.onUserClick} data={answer}/>
-        <Answer onUserClick={this.props.onUserClick} data={answer}/>
+        {answers}
 
       </div>
     );
@@ -72,6 +75,6 @@ Answers.defaultProps = {
 
 Answers.propTypes = {
   onUserClick: PropTypes.func.isRequired,
-  data: PropTypes.object.isRequired,
+  answers: PropTypes.array.isRequired,
 };
 export default Answers;

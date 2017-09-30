@@ -14,7 +14,7 @@ class Answer extends React.Component {
         <span className="clickable_text person_name" onClick={this.props.onUserClick}>{content.user.name}</span>
         <span className="subTitle">commented it</span>
         <p className="small_circle" />
-        <span className="info_text">{content.date.whenCommented}</span>
+        <span className="info_text">{content.statistics.creationDate}</span>
       </div>
     )
     return (
@@ -27,12 +27,12 @@ class Answer extends React.Component {
         <div className={`single_question_row_middle_item ${replyTopBorder}`}>
           <div className="answer_body">
             {whoCommented}
-            <p className="answer_content">{content.answer.text}</p>
+            <p className="answer_content">{content.content}</p>
           </div>
         </div>
         <div className={`single_question_row_right_item ${replyTopBorder}`}>
           <div className="votes">
-            <Voting votes={content.answer.votes} />
+            <Voting votes={content.statistics.score} />
           </div>
       </div>
       </div>
@@ -51,8 +51,8 @@ class Answer extends React.Component {
     return (
       <div className="answerContainer">
         <div className="answer">
-          {this.renderAnswer(this.props.data)}
-          {this.renderReplies(this.props.data.replies)}
+          {this.renderAnswer(this.props.answer)}
+          {this.renderReplies(this.props.answer.comments)}
         </div>
         <StickyButton text="CONTINUE discussion" />
       </div>
@@ -62,6 +62,6 @@ class Answer extends React.Component {
 
 Answer.propTypes = {
   onUserClick: PropTypes.func.isRequired,
-  data: PropTypes.object.isRequired,
+  answer: PropTypes.object.isRequired,
 };
 export default Answer;
