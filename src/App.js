@@ -4,6 +4,7 @@ import AllQuestionContainer from './components/allQuestions/AllQuestionsContaine
 import ModalWindowContainer from './components/modalWindow/ModalWindowContainer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import PageNotFound from './components/pageNotFound/pageNotFound';
+import SnackbarContainer from './components/common/snackbar/SnackbarContainer';
 
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
             <Route path="/single_question" component={SingleQuestionContainer} />
             <Route component={PageNotFound} />
           </Switch>
+          <SnackbarContainer />
         </div>
       </Router>
     );
