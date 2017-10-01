@@ -10,7 +10,7 @@ class AllQuestions extends React.Component {
   renderLoadMore() {
     return (
       <div className="all_questions_load_more">
-        <Button color="accent" onClick={() => this.props.loadMore(this.props.sortBy)}>
+        <Button color="accent" onClick={() => this.props.loadMore(this.props.sortBy, this.props.currentPage)}>
           load more questions
     </Button>
       </div>

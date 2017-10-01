@@ -5,6 +5,7 @@ export const ERROR = "ERROR";
 export const DISPLAY_QUESTION = "DISPLAY_QUESTION";
 export const SEARCH_BY_CRITERIA = "SEARCH_BY_CRITERIA";
 export const CLEAR_QUESTIONS = "CLEAR_QUESTIONS";
+export const CHANGE_CURRENT_PAGE = "CHANGE_CURRENT_PAGE";
 
 export const toggleModalWindow = () => {
   return { type: TOGGLE_MODAL_WINDOW };
@@ -28,4 +29,7 @@ export const displayQuestion = question => {
 
 export const searchByCriteria = criteria => {
   return { type: SEARCH_BY_CRITERIA, content: criteria };
+}
+export const increaseCurrentPage = () => {
+  return { type: CHANGE_CURRENT_PAGE};
 }

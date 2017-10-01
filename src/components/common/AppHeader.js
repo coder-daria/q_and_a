@@ -22,9 +22,9 @@ class AppHeader extends React.Component {
         <div className="search_header_sort_by">
           <div className="search_header_sorting">
             <span className="info_text">Sort by:</span>
-            <span className={`${disableRecent} clickable_text person_name`} onClick={() => this.props.changeSortBy("creation")}>recent</span>
+            <span className={`${disableRecent} clickable_text person_name`} onClick={() => this.props.changeSortBy("creation", this.props.currentPage)}>recent</span>
             <span className="info_text">or</span>
-            <span className={`${disableHot} clickable_text person_name`} onClick={() => this.props.changeSortBy("hot")}>hot</span>
+            <span className={`${disableHot} clickable_text person_name`} onClick={() => this.props.changeSortBy("hot", this.props.currentPage)}>hot</span>
           </div>
         </div>
       )
@@ -49,7 +49,7 @@ class AppHeader extends React.Component {
           <div className={`search_header_question_details ${singleQuestionHeader}`}>
             <form>
               <div>
-                <input type="radio" name="sortBy" value="My shelf" checked />My shelf
+                <input type="radio" name="sortBy" value="My shelf" defaultChecked />My shelf
               </div>
               <div>
                 <input type="radio" name="sortBy" value="All questions" />All questions

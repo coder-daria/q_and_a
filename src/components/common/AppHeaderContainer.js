@@ -7,13 +7,14 @@ import { reduxForm } from 'redux-form';
 
 const mapStateToProps = state => {
   return {
-    sortBy: state.state.sortBy
+    sortBy: state.state.sortBy,
+    currentPage: state.state.currentPage
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    changeSortBy: sortBy => dispatch(changeSearchBy(sortBy)),
+    changeSortBy: (sortBy, currentPage) => dispatch(changeSearchBy(sortBy, currentPage)),
     onSubmit: values => dispatch(searchQuestions(values.search))
   }
 };

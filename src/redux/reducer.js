@@ -2,6 +2,7 @@ import * as actions from './actions';
 
 const initialState = {
   showModal: false,
+  currentPage: 1,
   questions: [],
   snackbarMessage: "",
   error: false,
@@ -24,6 +25,8 @@ const reducer = (state = initialState, action) => {
       return Object.assign({}, state, {questions});
     case actions.NEW_QUESTIONS:
       return Object.assign({}, state, {questions: [...action.content]});
+      case actions.CHANGE_CURRENT_PAGE:
+      return Object.assign({}, state, {currentPage: state.currentPage + 1})
     default:
       return state;
   }

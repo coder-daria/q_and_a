@@ -15,6 +15,6 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-store.dispatch(getQuestions("votes"));
+store.dispatch(getQuestions("votes", 1));
 
 registerServiceWorker();

@@ -13,7 +13,6 @@ const getQuestion = questionId => dispatch => {
   .then(question => {
     const convertedQuestion = question.items.map(convertQuestionFromApi)[0];
     dispatch(actions.displayQuestion(convertedQuestion));
-    console.log(convertedQuestion);
   })
   .catch(error => showError(error, dispatch));
 }

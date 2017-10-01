@@ -4,8 +4,7 @@ import './unsafeHtml.css'
 
 const UnsafeHtml = (props) => {
   return (
-    <div className="unsafe_html"dangerouslySetInnerHTML={{__html: props.content}}>
-    </div>
+    <div className="unsafe_html"dangerouslySetInnerHTML={{__html: props.content}}/>
   );
 };
 

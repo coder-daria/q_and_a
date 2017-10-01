@@ -11,7 +11,7 @@
   text-transform: uppercase;
   font-weight: bold;
   flex-grow: 1;
-  /* background-color: pink; */
+   /* background-color: pink;  */
 }
  .add_question .add_button {
   color: rgb(2, 102, 182);
@@ -80,7 +80,6 @@
   margin-left: -1%;
   width: 66%;
   flex-basis: 10%;
-  /* background-color: yellow; */
 }
 .search form {
   display: flex;
@@ -90,11 +89,12 @@
   flex-basis: 75%;
   padding: 12px 20px 12px 40px;
   transition: width 0.4s ease-in-out;
-  color: rgb(216, 215, 216);
+  color: rgb(2, 102, 182); 
   font-size: 16px;
   border: 2px solid rgb(242, 242, 242);
   box-sizing: border-box;
   background-color: rgb(251, 251, 251);
+     /* background-color: yellow;    */
 }
 
 .search button{
