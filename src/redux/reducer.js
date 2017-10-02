@@ -28,24 +28,25 @@ const reducer = (state = initialState, action) => {
     case actions.CHANGE_CURRENT_PAGE:
       return Object.assign({}, state, { currentPage: state.currentPage + 1 });
     case actions.QUESTION_VOTES:
-      let chosenQuestionScore = state.selectedQuestion.statistics.score;
-      let changeQuestionScore = Object.assign({}, state.selectedQuestion.statistics,{ score: chosenQuestionScore + action.content});
+      const chosenQuestionScore = state.selectedQuestion.statistics.score;
+      const changeQuestionScore = Object.assign({}, state.selectedQuestion.statistics,{ score: chosenQuestionScore + action.content});
 
-      let question = Object.assign({}, state.selectedQuestion, {statistics: changeQuestionScore});
+      const question = Object.assign({}, state.selectedQuestion, {statistics: changeQuestionScore});
 
       return Object.assign({}, state, { selectedQuestion: question});
 
     case actions.ANSWER_VOTES:
-      const index = action.content[1];
-      const answerScore = state.selectedQuestion.answers[index].statistics.score;
+      const selectedAnswer = state.selectedQuestion.answers[action.content.answerIndex];
 
-      let statistics = Object.assign({}, state.selectedQuestion.answers[index].statistics,{ score: answerScore + action.content}); // copy of statistic
+      const statistics = Object.assign({}, selectedAnswer.statistics,{ score: selectedAnswer.statistics.score + action.content.increment});
 
-      let singleAnswer = Object.assign({}, state.selectedQuestion.answers[index], {statistics: statistics}); //copy of answer object
-      let answers = Object.assign({}, state.selectedQuestion, {answers: singleAnswer}); // copy of all answers
+      const singleAnswer = Object.assign({}, selectedAnswer, {statistics: statistics});
+      const answers = [...state.selectedQuestion.answers];
+      answers[action.content.answerIndex] = singleAnswer;
 
-      return Object.assign({}, state, {selectedQuestion: answers});
-      // return state;
+      const selectedQuestion = Object.assign({}, state.selectedQuestion, {answers});
+
+      return Object.assign({}, state, {selectedQuestion});
     default:
       return state;
   }

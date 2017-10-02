@@ -39,5 +39,5 @@ export const questionVotes = number => {
   return {type: QUESTION_VOTES, content: number};
 }
 export const answerVotes = (number, index) => {
-  return {type: ANSWER_VOTES, content: [number, index]};
+  return {type: ANSWER_VOTES, content: {increment: number, answerIndex: index}};
 }
