@@ -2,17 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ArrowUp from 'material-ui-icons/KeyboardArrowUp';
 import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
+import IconButton from 'material-ui/IconButton';
 
 const Voting = (props) => {
+  this.voteUp = ()=> {
+    props.upVote();
+  }
+  this.voteDown= ()=> {
+    props.downVote();
+  }
+  this.votes = () =>{
+    return props.votes >= 0 ? "upvotes" : "downvotes";
+  }
+  this.convertNumberToPositiveValue = () =>{
+    return props.votes >=0 ? props.votes : -(props.votes);
+  }
   return (
     <div className="votesCounter">
       <div className="voting_content">
-        <span className="bold_number_small">{props.votes}</span>
-        <span className="info_text">upvotes</span>
+        <span className="bold_number_small">{this.convertNumberToPositiveValue()}</span>
+        <span className="info_text">{this.votes()}</span>
       </div>
       <div className="voting_arrows">
-        <ArrowUp />
-        <ArrowDown />
+        <IconButton aria-label="Up" onClick={this.voteUp} >
+          <ArrowUp />
+        </IconButton>
+        <IconButton aria-label="Down" onClick={this.voteDown} >
+          <ArrowDown />
+        </IconButton>
       </div>
     </div>
   );

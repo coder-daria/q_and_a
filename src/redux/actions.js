@@ -6,6 +6,8 @@ export const DISPLAY_QUESTION = "DISPLAY_QUESTION";
 export const SEARCH_BY_CRITERIA = "SEARCH_BY_CRITERIA";
 export const CLEAR_QUESTIONS = "CLEAR_QUESTIONS";
 export const CHANGE_CURRENT_PAGE = "CHANGE_CURRENT_PAGE";
+export const UP_VOTE = "UP_VOTE";
+export const DOWN_VOTE = "DOWN_VOTE";
 
 export const toggleModalWindow = () => {
   return { type: TOGGLE_MODAL_WINDOW };
@@ -32,4 +34,10 @@ export const searchByCriteria = criteria => {
 }
 export const increaseCurrentPage = () => {
   return { type: CHANGE_CURRENT_PAGE};
+}
+export const upVote = () => {
+  return {type: UP_VOTE};
+}
+export const downVote = () => {
+  return {type: DOWN_VOTE};
 }

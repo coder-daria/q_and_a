@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SingleQuestion from './SingleQuestion';
-import {toggleModalWindow} from './../../redux/actions';
+import * as actions from './../../redux/actions';
 import { withRouter } from 'react-router-dom';
 import getQuestion from '../../asyncActions/getQuestion';
 
@@ -15,7 +15,9 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
   return {
     loadQuestion: questionId => dispatch(getQuestion(questionId)),
-    onUserClick: ()=> dispatch(toggleModalWindow())
+    onUserClick: ()=> dispatch(actions.toggleModalWindow()),
+    upVote: () => dispatch(actions.upVote()),
+    downVote: () => dispatch(actions.downVote())
   }
 };
 

@@ -43,7 +43,7 @@ class Question extends React.Component {
         <div className="single_question_row_right_item">
           <div className="votes">
             <p className="single_question_unfollow_body person_name">{this.props.user.unfollow}</p>
-            <Voting votes={this.props.question.statistics.score} />
+            <Voting upVote={this.props.upVote} downVote={this.props.downVote} votes={this.props.question.statistics.score} />
           </div>
         </div>
       </div>
