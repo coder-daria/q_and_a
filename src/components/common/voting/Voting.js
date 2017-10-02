@@ -5,12 +5,6 @@ import ArrowDown from 'material-ui-icons/KeyboardArrowDown';
 import IconButton from 'material-ui/IconButton';
 
 const Voting = (props) => {
-  this.voteUp = ()=> {
-    props.upVote();
-  }
-  this.voteDown= ()=> {
-    props.downVote();
-  }
   this.votes = () =>{
     return props.votes >= 0 ? "upvotes" : "downvotes";
   }
@@ -24,10 +18,10 @@ const Voting = (props) => {
         <span className="info_text">{this.votes()}</span>
       </div>
       <div className="voting_arrows">
-        <IconButton aria-label="Up" onClick={this.voteUp} >
+        <IconButton aria-label="Up" onClick={props.upVote} >
           <ArrowUp />
         </IconButton>
-        <IconButton aria-label="Down" onClick={this.voteDown} >
+        <IconButton aria-label="Down" onClick={props.downVote} >
           <ArrowDown />
         </IconButton>
       </div>
