@@ -4,11 +4,14 @@ import './singleQuestion.css';
 import Question from './questions/Question';
 import Answers from './answers/Answers';
 import AppHeaderContainer from '../common/AppHeaderContainer';
+import { Redirect } from 'react-router-dom';
 
 class SingleQuestion extends React.Component {
 
   componentDidMount() {
-    this.props.loadQuestion(this.props.questionId);
+    if(this.props.questionToFetch){
+      this.props.loadQuestion(this.props.questionToFetch.questionId);
+    }
   }
 
   renderContent = () => {
@@ -23,7 +26,12 @@ class SingleQuestion extends React.Component {
       </div>
     )
   }
+
   render() {
+    if(!this.props.questionToFetch) {
+      console.log("Redirecting to...");
+      return <Redirect to={"/"} />
+    }
     return (
       <div className="app_body">
         <AppHeaderContainer isSingleQuestion={true} />
@@ -35,15 +43,10 @@ class SingleQuestion extends React.Component {
   }
 }
 
-SingleQuestion.defaultProps = {
-  timeSinceLastChange: { unit: 4, time: "days ago" }
-};
-
 SingleQuestion.propTypes = {
   onUserClick: PropTypes.func.isRequired,
   loadQuestion: PropTypes.func.isRequired,
-  questionId: PropTypes.number.isRequired,
-  selectedQuestion: PropTypes.object,
+  questionToFetch: PropTypes.object,
   history: PropTypes.object.isRequired,
 };
 
