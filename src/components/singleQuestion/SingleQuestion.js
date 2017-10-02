@@ -12,13 +12,14 @@ class SingleQuestion extends React.Component {
   }
 
   renderContent = () => {
+    console.log(this.props.selectedQuestion);
     if(!this.props.selectedQuestion){
       return null;
     }
     return (
       <div className="single_question">
-        <Question question={this.props.selectedQuestion} onUserClick={this.props.onUserClick} history={this.props.history} />
-        <Answers question={this.props.selectedQuestion} onUserClick={this.props.onUserClick} />
+        <Question question={this.props.selectedQuestion} questionVotes={this.props.questionVotes} onUserClick={this.props.onUserClick} history={this.props.history} />
+        <Answers question={this.props.selectedQuestion} answerVotes={this.props.answerVotes} onUserClick={this.props.onUserClick} />
       </div>
     )
   }
@@ -42,7 +43,7 @@ SingleQuestion.propTypes = {
   onUserClick: PropTypes.func.isRequired,
   loadQuestion: PropTypes.func.isRequired,
   questionId: PropTypes.number.isRequired,
-  selectedQuestion: PropTypes.object.isRequired,
+  selectedQuestion: PropTypes.object,
   history: PropTypes.object.isRequired,
 };
 

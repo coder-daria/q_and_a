@@ -6,9 +6,9 @@ import '../../common/voting/voting.css';
 
 class Answers extends React.Component {
   render() {
-    const answers = this.props.question.answers.map(answer => {
+    const answers = this.props.question.answers.map((answer, index)=> {
       return (
-        <Answer onUserClick={this.props.onUserClick} answer={answer}/>
+        <Answer key={index} index={index} answerVotes={this.props.answerVotes} onUserClick={this.props.onUserClick} answer={answer}/>
       )
     });
     return (
@@ -26,6 +26,6 @@ class Answers extends React.Component {
 
 Answers.propTypes = {
   onUserClick: PropTypes.func.isRequired,
-  question: PropTypes.array.isRequired,
+  question: PropTypes.object.isRequired,
 };
 export default Answers;

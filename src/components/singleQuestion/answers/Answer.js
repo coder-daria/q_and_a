@@ -37,7 +37,7 @@ class Answer extends React.Component {
         </div>
         <div className={`single_question_row_right_item ${replyTopBorder}`}>
           <div className="votes">
-            <Voting votes={content.statistics.score} />
+            <Voting votes={content.statistics.score} index={this.props.index} content={this.props.answerVotes}/>
           </div>
       </div>
       </div>
