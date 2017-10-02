@@ -27,14 +27,19 @@ const reducer = (state = initialState, action) => {
       return Object.assign({}, state, { questions: [...action.content] });
     case actions.CHANGE_CURRENT_PAGE:
       return Object.assign({}, state, { currentPage: state.currentPage + 1 })
-    case actions.UP_VOTE:
-      let selectedQuestionScore = state.selectedQuestion.statistics.score;
-      let score = Object.assign({}, state.selectedQuestion.statistics,{ score: selectedQuestionScore + 1});
-      let selectedQuestion = Object.assign({}, state.selectedQuestion, {statistics: score})
-      return Object.assign({}, state, { selectedQuestion: selectedQuestion});
-    case actions.DOWN_VOTE:
+    // case actions.UP_VOTE:
+    //   let selectedQuestionScore = state.selectedQuestion.statistics.score;
+    //   let score = Object.assign({}, state.selectedQuestion.statistics,{ score: selectedQuestionScore + action.content});
+    //   let selectedQuestion = Object.assign({}, state.selectedQuestion, {statistics: score})
+    //   return Object.assign({}, state, { selectedQuestion: selectedQuestion});
+    // case actions.DOWN_VOTE:
+    //   let chosenQuestionScore = state.selectedQuestion.statistics.score;
+    //   let decreaseScore = Object.assign({}, state.selectedQuestion.statistics,{ score: chosenQuestionScore - action.content});
+    //   let chosenQuestion = Object.assign({}, state.selectedQuestion, {statistics: decreaseScore});
+    //   return Object.assign({}, state, { selectedQuestion: chosenQuestion});
+    case actions.VOTE:
       let chosenQuestionScore = state.selectedQuestion.statistics.score;
-      let decreaseScore = Object.assign({}, state.selectedQuestion.statistics,{ score: chosenQuestionScore - 1});
+      let decreaseScore = Object.assign({}, state.selectedQuestion.statistics,{ score: chosenQuestionScore + action.content});
       let chosenQuestion = Object.assign({}, state.selectedQuestion, {statistics: decreaseScore});
       return Object.assign({}, state, { selectedQuestion: chosenQuestion});
     default:

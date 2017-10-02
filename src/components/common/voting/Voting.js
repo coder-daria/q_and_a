@@ -18,10 +18,10 @@ const Voting = (props) => {
         <span className="info_text">{this.votes()}</span>
       </div>
       <div className="voting_arrows">
-        <IconButton aria-label="Up" onClick={props.upVote} >
+        <IconButton aria-label="Up" onClick={()=>props.vote(1)} >
           <ArrowUp />
         </IconButton>
-        <IconButton aria-label="Down" onClick={props.downVote} >
+        <IconButton aria-label="Down" onClick={()=>props.vote(-1)} >
           <ArrowDown />
         </IconButton>
       </div>
