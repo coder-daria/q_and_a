@@ -27,11 +27,25 @@ const reducer = (state = initialState, action) => {
       return Object.assign({}, state, { questions: [...action.content] });
     case actions.CHANGE_CURRENT_PAGE:
       return Object.assign({}, state, { currentPage: state.currentPage + 1 });
-    case actions.VOTE:
+    case actions.QUESTION_VOTES:
       let chosenQuestionScore = state.selectedQuestion.statistics.score;
-      let decreaseScore = Object.assign({}, state.selectedQuestion.statistics,{ score: chosenQuestionScore + action.content});
-      let chosenQuestion = Object.assign({}, state.selectedQuestion, {statistics: decreaseScore});
-      return Object.assign({}, state, { selectedQuestion: chosenQuestion});
+      let changeQuestionScore = Object.assign({}, state.selectedQuestion.statistics,{ score: chosenQuestionScore + action.content});
+
+      let question = Object.assign({}, state.selectedQuestion, {statistics: changeQuestionScore});
+
+      return Object.assign({}, state, { selectedQuestion: question});
+
+    case actions.ANSWER_VOTES:
+      const index = action.content[1];
+      const answerScore = state.selectedQuestion.answers[index].statistics.score;
+
+      let statistics = Object.assign({}, state.selectedQuestion.answers[index].statistics,{ score: answerScore + action.content}); // copy of statistic
+
+      let singleAnswer = Object.assign({}, state.selectedQuestion.answers[index], {statistics: statistics}); //copy of answer object
+      let answers = Object.assign({}, state.selectedQuestion, {answers: singleAnswer}); // copy of all answers
+
+      return Object.assign({}, state, {selectedQuestion: answers});
+      // return state;
     default:
       return state;
   }

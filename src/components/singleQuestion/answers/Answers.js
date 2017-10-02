@@ -8,7 +8,7 @@ class Answers extends React.Component {
   render() {
     const answers = this.props.question.answers.map((answer, index)=> {
       return (
-        <Answer key = {index} onUserClick={this.props.onUserClick} answer={answer}/>
+        <Answer key={index} index={index} answerVotes={this.props.answerVotes} onUserClick={this.props.onUserClick} answer={answer}/>
       )
     });
     return (

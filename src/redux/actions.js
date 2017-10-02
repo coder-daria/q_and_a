@@ -6,7 +6,8 @@ export const DISPLAY_QUESTION = "DISPLAY_QUESTION";
 export const SEARCH_BY_CRITERIA = "SEARCH_BY_CRITERIA";
 export const CLEAR_QUESTIONS = "CLEAR_QUESTIONS";
 export const CHANGE_CURRENT_PAGE = "CHANGE_CURRENT_PAGE";
-export const VOTE = "VOTE";
+export const QUESTION_VOTES = "QUESTION_VOTES";
+export const ANSWER_VOTES = "ANSWER_VOTES";
 
 export const toggleModalWindow = () => {
   return { type: TOGGLE_MODAL_WINDOW };
@@ -34,6 +35,9 @@ export const searchByCriteria = criteria => {
 export const increaseCurrentPage = () => {
   return { type: CHANGE_CURRENT_PAGE};
 }
-export const vote = number => {
-  return {type: VOTE, content: number};
+export const questionVotes = number => {
+  return {type: QUESTION_VOTES, content: number};
+}
+export const answerVotes = (number, index) => {
+  return {type: ANSWER_VOTES, content: [number, index]};
 }
