@@ -12,6 +12,7 @@ class SingleQuestion extends React.Component {
   }
 
   renderContent = () => {
+    console.log(this.props.selectedQuestion);
     if(!this.props.selectedQuestion){
       return null;
     }
@@ -42,7 +43,7 @@ SingleQuestion.propTypes = {
   onUserClick: PropTypes.func.isRequired,
   loadQuestion: PropTypes.func.isRequired,
   questionId: PropTypes.number.isRequired,
-  selectedQuestion: PropTypes.object.isRequired,
+  selectedQuestion: PropTypes.object,
   history: PropTypes.object.isRequired,
 };
 
