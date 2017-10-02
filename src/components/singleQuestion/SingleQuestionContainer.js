@@ -5,9 +5,9 @@ import { withRouter } from 'react-router-dom';
 import getQuestion from '../../asyncActions/getQuestion';
 
 const mapStateToProps = (state, ownProps) => {
-  const questionId = state.state.questions[ownProps.match.params.questionId].questionId;
+  const questionToFetch = state.state.questions[ownProps.match.params.questionId];
   return {
-    questionId,
+    questionToFetch,
     selectedQuestion: state.state.selectedQuestion
   };
 };
