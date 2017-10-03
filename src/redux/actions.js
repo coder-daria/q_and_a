@@ -13,35 +13,30 @@ export const COMMENT_VOTES = "COMMENT_VOTES";
 export const toggleModalWindow = () => {
   return { type: TOGGLE_MODAL_WINDOW };
 }
-
-export const moreQuestions = questions => {
-  return { type: MORE_QUESTIONS, content: questions };
-}
-
-export const newQuestions = questions => {
-  return { type: NEW_QUESTIONS, content: questions };
-}
-
 export const toggleError = message => {
   return { type: ERROR, content: message };
 }
-
 export const displayQuestion = question => {
   return { type: DISPLAY_QUESTION, content: question };
 }
-
 export const searchByCriteria = criteria => {
   return { type: SEARCH_BY_CRITERIA, content: criteria };
 }
+export const moreQuestions = questions => {
+  return { type: MORE_QUESTIONS, content: questions };
+}
+export const newQuestions = questions => {
+  return { type: NEW_QUESTIONS, content: questions };
+}
 export const increaseCurrentPage = () => {
-  return { type: CHANGE_CURRENT_PAGE};
+  return { type: CHANGE_CURRENT_PAGE };
 }
 export const questionVotes = number => {
-  return {type: QUESTION_VOTES, content: number};
+  return { type: QUESTION_VOTES, content: number };
 }
 export const answerVotes = (number, index) => {
-  return {type: ANSWER_VOTES, content: {increment: number, answerIndex: index}};
+  return { type: ANSWER_VOTES, content: { increment: number, answerIndex: index } };
 }
 export const commentVotes = (number, answerIndex, commentIndex) => {
-  return {type: COMMENT_VOTES, content: {increment: number, answerIndex: answerIndex, commentIndex: commentIndex}};
+  return { type: COMMENT_VOTES, content: { increment: number, answerIndex: answerIndex, commentIndex: commentIndex } };
 }
