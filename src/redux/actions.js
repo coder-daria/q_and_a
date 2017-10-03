@@ -8,6 +8,7 @@ export const CLEAR_QUESTIONS = "CLEAR_QUESTIONS";
 export const CHANGE_CURRENT_PAGE = "CHANGE_CURRENT_PAGE";
 export const QUESTION_VOTES = "QUESTION_VOTES";
 export const ANSWER_VOTES = "ANSWER_VOTES";
+export const COMMENT_VOTES = "COMMENT_VOTES";
 
 export const toggleModalWindow = () => {
   return { type: TOGGLE_MODAL_WINDOW };
@@ -40,4 +41,7 @@ export const questionVotes = number => {
 }
 export const answerVotes = (number, index) => {
   return {type: ANSWER_VOTES, content: {increment: number, answerIndex: index}};
+}
+export const commentVotes = (number, index) => {
+  return {type: COMMENT_VOTES, content: {increment: number, commentIndex: index}};
 }

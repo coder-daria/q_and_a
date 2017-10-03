@@ -22,7 +22,7 @@ class SingleQuestion extends React.Component {
     return (
       <div className="single_question">
         <Question question={this.props.selectedQuestion} questionVotes={this.props.questionVotes} onUserClick={this.props.onUserClick} history={this.props.history} />
-        <Answers question={this.props.selectedQuestion} answerVotes={this.props.answerVotes} onUserClick={this.props.onUserClick} />
+        <Answers question={this.props.selectedQuestion} answerVotes={this.props.answerVotes} commentVotes={this.props.commentVotes} onUserClick={this.props.onUserClick} />
       </div>
     )
   }

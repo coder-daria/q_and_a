@@ -20,6 +20,8 @@ class Answer extends React.Component {
         <span className="info_text">{humanizedTime}</span>
       </div>
     )
+    const answerOrCommentContent = isReply ? this.props.commentVotes: this.props.answerVotes;
+    const answerOrCommentIndex = isReply ? index : this.props.index;
     return (
       <div key={index} className="single_question_row main_answer">
         {space}
@@ -37,9 +39,11 @@ class Answer extends React.Component {
         </div>
         <div className={`single_question_row_right_item ${replyTopBorder}`}>
           <div className="votes">
-            <Voting votes={content.statistics.score} index={this.props.index} content={this.props.answerVotes}/>
+            <Voting votes={content.statistics.score} 
+              index={answerOrCommentIndex}
+              voting={answerOrCommentContent} />
           </div>
-      </div>
+        </div>
       </div>
     )
   }
