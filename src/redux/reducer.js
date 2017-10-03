@@ -42,15 +42,14 @@ const reducer = (state = initialState, action) => {
       return Object.assign({}, state, {selectedQuestion});
 
     case actions.COMMENT_VOTES:
-    // const selectedComment = state.selectedQuestion.answers[action.content.answerIndex].comments[action.content.commentIndex];
-    // const commentStatistics = Object.assign({}, selectedComment.statistics,{ score: selectedComment.statistics.score + action.content.increment});
-    // const singleComment = Object.assign({}, selectedComment, {statistics: commentStatistics});
-    // const comments = [...state.selectedQuestion.answers[action.content.answerIndex].comments];
-    // comments[action.content.commentIndex] = singleComment;
-    // const allAnswer= Object.assign({}, state.selectedQuestion.answers, {comments});
-    // const chosenQuestion= Object.assign({}, state.selectedQuestion, {allAnswer});
-    return state;
-    // return Object.assign({}, state, {chosenQuestion});
+    const selectedComment = state.selectedQuestion.answers[action.content.answerIndex].comments[action.content.commentIndex];
+    const commentStatistics = Object.assign({}, selectedComment.statistics,{ score: selectedComment.statistics.score + action.content.increment});
+    const singleComment = Object.assign({}, selectedComment, {statistics: commentStatistics});
+    const comments = [...state.selectedQuestion.answers[action.content.answerIndex].comments];
+    comments[action.content.commentIndex] = singleComment;
+    const allAnswer= Object.assign({}, state.selectedQuestion.answers[action.content.answerIndex], {comments});
+    const chosenQuestion= Object.assign({}, state.selectedQuestion, {answers: [allAnswer]});
+    return Object.assign({}, state, {selectedQuestion: chosenQuestion});
     default:
       return state;
   }

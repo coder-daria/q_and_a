@@ -9,6 +9,7 @@ import moment from 'moment';
 
 class Answer extends React.Component {
   renderAnswer(content, isReply, index) {
+    console.log("tutaj " + content.statistics.score);
     const space = isReply ? <div className="empty_space single_question_row_empty_space reply" /> : null;
     const replyTopBorder = isReply ? "border_top" : "";
     const humanizedTime = moment(content.statistics.creationDate * 1000).fromNow();
@@ -21,7 +22,6 @@ class Answer extends React.Component {
       </div>
     )
     const answerOrCommentContent = isReply ? this.props.commentVotes: this.props.answerVotes;
-    const answerOrCommentIndex = isReply ? index : this.props.index;
     return (
       <div key={index} className="single_question_row main_answer">
         {space}
@@ -40,7 +40,8 @@ class Answer extends React.Component {
         <div className={`single_question_row_right_item ${replyTopBorder}`}>
           <div className="votes">
             <Voting votes={content.statistics.score} 
-              index={answerOrCommentIndex}
+              answerIndex={this.props.index}
+              commentIndex={index}
               voting={answerOrCommentContent} />
           </div>
         </div>

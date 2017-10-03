@@ -42,6 +42,6 @@ export const questionVotes = number => {
 export const answerVotes = (number, index) => {
   return {type: ANSWER_VOTES, content: {increment: number, answerIndex: index}};
 }
-export const commentVotes = (number, index) => {
-  return {type: COMMENT_VOTES, content: {increment: number, commentIndex: index}};
+export const commentVotes = (number, answerIndex, commentIndex) => {
+  return {type: COMMENT_VOTES, content: {increment: number, answerIndex: answerIndex, commentIndex: commentIndex}};
 }

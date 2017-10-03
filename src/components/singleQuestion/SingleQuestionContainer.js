@@ -17,8 +17,8 @@ const mapDispatchToProps = dispatch => {
     loadQuestion: questionId => dispatch(getQuestion(questionId)),
     onUserClick: ()=> dispatch(actions.toggleModalWindow()),
     questionVotes: number => dispatch(actions.questionVotes(number)),
-    answerVotes: (number, index) => dispatch(actions.answerVotes(number, index)),
-    commentVotes: (number, index) => dispatch(actions.commentVotes(number, index))
+    answerVotes: (number, answerIndex) => dispatch(actions.answerVotes(number, answerIndex)),
+    commentVotes: (number, answerIndex, commentIndex) => dispatch(actions.commentVotes(number, answerIndex, commentIndex))
   }
 };
 
